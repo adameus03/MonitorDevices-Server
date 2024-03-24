@@ -1,0 +1,33 @@
+{
+  "name": "monitordevices-server",
+  "version": "1.0.0",
+  "description": "A server-side application for managing monitoring devices",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"No tests specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adameus03/MonitorDevices-Server.git"
+  },
+  "keywords": [
+    "device",
+    "management",
+    "device",
+    "monitoring",
+    "server"
+  ],
+  "author": "Jedrzej Kostyk <jedrek2504@github.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adameus03/MonitorDevices-Server/issues"
+  },
+  "homepage": "https://github.com/adameus03/MonitorDevices-Server#readme",
+  "dependencies": {
+    "express": "^4.19.1",
+    "sqlite3": "^5.1.7"
+  }
+}
