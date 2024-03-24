@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "gst.h": "c",
-        "rtsp-server.h": "c",
-        "jpeglib.h": "c"
-    }
-}
