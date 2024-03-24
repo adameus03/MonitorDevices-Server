@@ -36,7 +36,6 @@ bower_components
 *.sqlite3
 
 # Environment variables
-.env
 .env.local
 .env.*.local
 
@@ -80,9 +79,6 @@ typings/
 .yarn/install-state.gz
 .pnp.*
 
-# dotenv environment variables file
-.env
-
 # VSCode files
 .vscode/
 
@@ -92,3 +88,6 @@ typings/
 
 # Build dir for cmake
 /build
+
+# npm tsx outpur direcotry
+/transpiled
