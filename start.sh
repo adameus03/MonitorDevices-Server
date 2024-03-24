@@ -2,12 +2,12 @@
 SCRIPT_NICKNAME="Start script"
 VOLUME_GUARD_PATH="./helpers/persistent_volume_guard.sh"
 
-echo "$SCRIPT_NICKNAME: Running packages upgrade"
-apt update && apt upgrade
+# echo "$SCRIPT_NICKNAME: Running packages upgrade"
+# apk update && apk upgrade
 
-if [ ! $? -eq 0 ]; then
-    echo "$SCRIPT_NICKNAME: WARNING - Failed to update/upgrade the packages. Proceeding with the current version."
-fi
+# if [ ! $? -eq 0 ]; then
+#     echo "$SCRIPT_NICKNAME: WARNING - Failed to update/upgrade the packages. Proceeding with the current version."
+# fi
 
 echo "$SCRIPT_NICKNAME: Setting environment variables..."
 chmod u+rx ./helpers/config.sh
