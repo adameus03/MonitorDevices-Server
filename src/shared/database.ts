@@ -45,8 +45,29 @@ const User = sequelize.define('User', {
   tableName: 'users',
 });
 
+const Device = sequelize.define('Device', {
+  device_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    unique: true,
+    primaryKey: true,
+    autoIncrement: true,
+  },
+  mac_address: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    unique: true,
+  }
+}, {
+  tableName: 'device',
+});
+
+User.hasMany(Device, { foreignKey: 'user_id' });
+Device.belongsTo(User, { foreignKey: 'user_id' });
+
 // Exports
 export default {
   sequelize: sequelize,
   User: User,
+  Device: Device,
 };
