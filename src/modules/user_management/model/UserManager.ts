@@ -23,6 +23,10 @@ export class UserManager {
         }
     }
 
+    async GetUserData (user_id: String) {
+        return db.User.findAll({where: { user_id: user_id}});
+    }
+
 
     private static _instance: UserManager
     public static getInstance(): UserManager {
