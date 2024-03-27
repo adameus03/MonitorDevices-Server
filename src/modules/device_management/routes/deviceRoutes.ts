@@ -6,6 +6,7 @@ import deviceManager from "../model/DeviceManager";
 import utils from "../utils"
 import DeviceManager from "../model/DeviceManager";
 import { error } from "console";
+import { list } from "pm2";
 const router = express.Router();
 
 router.post("/register/device", async (req, res, next) => {
@@ -28,12 +29,11 @@ router.post("/register/device", async (req, res, next) => {
     }
 })
 
-/*router.get("/users/:user_id/devices", async (req, res, next) => {
+router.get("/users/:user_id/devices", async (req, res, next) => {
     const user_id = req.params.user_id;
-    console.log(user_id);
-    let s = utils.CheckUser_Id(user_id) 
+    const s = await utils.CheckUser_Id(user_id);
     if (s == null) {
-        let d = DeviceManager.GetDevicesByUser(user_id);
+        const d = await DeviceManager.GetDevicesByUser(user_id);
         if (d instanceof Error) {
             next(createError(500, "Failed to fetch devices by user ID"));
             next();
@@ -45,7 +45,8 @@ router.post("/register/device", async (req, res, next) => {
         next();
     }
 })
-*/                                              //Zawsze wyskakuje ERROR BAD REQUEST przy sprawdzeniu czy istnieje user_id
+
+
 
 
 export default {

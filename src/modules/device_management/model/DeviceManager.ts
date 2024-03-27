@@ -5,7 +5,7 @@ export class DeviceManager {
         if (await db.Device.findOne({where: {mac_address: mac_address}}))
             return "MAC ADDRESS ALREADY EXISTS";
         if (!(await db.User.findOne({where: {user_id: user_id}})))
-            return "USER NOT FOUND"
+            return "USER NOT FOUND";
         let d: any = await db.Device.create({
             mac_address: mac_address,
             user_id: user_id,
@@ -17,12 +17,12 @@ export class DeviceManager {
         try {
             const devices = await db.Device.findAll ({
                 where: {
-                    user_id: user_id
+                    user_id: user_id,
                 }
             });
             return devices;
-        } catch (e) {
-            return e;           //Jak?
+        } catch {
+            return "INTERNAL SERVER ERROR";
         }   
         
     }
