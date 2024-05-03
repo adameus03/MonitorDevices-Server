@@ -287,6 +287,7 @@ export class RawRegistrationPacket {
 		if (rawData.length != RawRegistrationPacket.SIZE) throw new Error(`Raw data for RawRegistrationPacket was of invalid size: ${rawData.length}`);
 		this.userID = rawData.slice(0, 16);
 		this.cameraID = rawData.slice(16, 32);
+		this.cameraAuthKey = rawData.slice(32, 48);
 		this.deviceMacAddress = rawData.slice(48, 54);
 	}
 
