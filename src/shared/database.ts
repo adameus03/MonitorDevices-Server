@@ -40,7 +40,7 @@ const User = sequelize.define('User', {
     type: DataTypes.STRING,
     allowNull: false,
     unique: true,
-  }
+  },
 }, {
   tableName: 'users',
 });
@@ -57,6 +57,22 @@ const Device = sequelize.define('Device', {
     type: DataTypes.STRING,
     allowNull: false,
     unique: true,
+  },
+  user_id: {
+    type: DataTypes.BLOB,
+    allowNull: false,
+    references: {
+      model: User,
+      key: "user_id",
+    }
+  },
+  auth_key: {
+    type: DataTypes.BLOB,
+    allowNull: false,
+  },
+  registration_first_stage: {
+    type: DataTypes.BOOLEAN,
+    allowNull: false,
   }
 }, {
   tableName: 'device',

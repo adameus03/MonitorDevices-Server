@@ -35,15 +35,6 @@ export class DeviceConnectingServer {
 	}
 }
 
-/**
- * Registration module rev-eng:
- * Client sends APP_CONTROL_OP_REGISTER with application_registration_section_t in packet.
- * Server decodes that to a pair: MessageFromDevice::RegisterDevice and RegistrationPacket
- * Server generates camera ID with at least one non-zero byte, saves it in a database, puts that into RegistrationPacket
- * Server encodes that from a pair: MessageFromDevice::RegisterDevice and RawRegistrationPacket
- * Server sends APP_CONTROL_OP_REGISTER with application_registration_section_t in packet to client
- */
-
 
 // Mock mode, run with `bun run src/device_bridge/app.ts`
 if (process.versions.bun) {
