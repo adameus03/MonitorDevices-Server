@@ -1,0 +1,31 @@
+meta {
+  name: user create
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8090/register/user
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "username": "user",
+    "password": "pwd1",
+    "email": "email@example.com"
+  }
+}
+
+body:form-urlencoded {
+  password: passwordi
+  username: user
+  email: aa@example.com
+}
+
+body:multipart-form {
+  username: usern
+  password: passw0rdi
+  email: emailium@example.com
+}
