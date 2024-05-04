@@ -1,3 +1,4 @@
+import { randomFillSync } from "crypto";
 import db from "../../../shared/database";
 
 export class UserManager {
@@ -7,7 +8,15 @@ export class UserManager {
         if (await db.User.findOne({where: {email: email}}))
             return "EMAIL ALREADY TAKEN";
 
+        // user_id type is BLOB - needs manual init
+        let userIDBuffer = new Uint8Array(16);
+        do {
+            randomFillSync(userIDBuffer);
+        } while (await db.User.findOne( { where: { user_id: Buffer.from(userIDBuffer) } }));
+        
+        
         let u: any = await db.User.create({
+            user_id: Buffer.from(userIDBuffer),
             username: username,
             password: password,
             email: email
@@ -23,8 +32,15 @@ export class UserManager {
         }
     }
 
-    async GetUserData (user_id: String) {
-        return db.User.findAll({where: { user_id: user_id}});
+    async GetUserData (user_name: String) {
+        return db.User.findAll({where: { username: user_name}});
+    }
+
+    async DoesUserExist(user_name: String) {
+        if (await db.User.findOne({where: {username: user_name}})) {
+            return true;
+        }
+        return false;
     }
 
 

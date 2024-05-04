@@ -8,6 +8,7 @@ import UserManager from "../model/UserManager";
 const router = express.Router();
 
 router.post("/register/user", async (req, res, next) => {
+    console.log(req.body)
     if (req.body.username && req.body.password && req.body.email) {
         try {
             let s = await userManager.CreateUser(req.body.username, req.body.password, req.body.email);
@@ -47,12 +48,13 @@ router.get("/login", async (req, res, next) => {
     }
 })
 
-router.get("/users/:user_id", async (req, res, next) => {
-    const user_id = req.params.user_id;
-    const s = await utils.CheckUser_Id(user_id);
-    if (s == null) {
+// Replaced with username - user id is binary and difficult to deal with
+router.get("/users/:user_name", async (req, res, next) => {
+    const user_name = req.params.user_name;
+    const s = await userManager.DoesUserExist(user_name);
+    if (s != null) {
         try {
-            res.status(200).send(await UserManager.GetUserData(user_id));
+            res.status(200).send(await UserManager.GetUserData(user_name));
         } catch {
             next(createError(500, 'INTERNAL SERVER ERROR'));
             next();
