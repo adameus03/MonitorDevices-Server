@@ -21,11 +21,17 @@ const sequelize = new Sequelize({
 // User model
 const User = sequelize.define('User', {
   user_id: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.BLOB,
     allowNull: false,
     unique: true,
     primaryKey: true,
-    autoIncrement: true,
+    validate: {
+      customValidator(value: Buffer) {
+        if (value.length != 16) {
+          throw new Error(`user_id is of incorrect size: ${value.length}`);
+        }
+      }
+    },
   },
   username: {
     type: DataTypes.STRING,
@@ -47,32 +53,45 @@ const User = sequelize.define('User', {
 
 const Device = sequelize.define('Device', {
   device_id: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.BLOB,
     allowNull: false,
     unique: true,
     primaryKey: true,
-    autoIncrement: true,
+    validate: {
+      customValidator(value: Buffer) {
+        if (value.length != 16) {
+          throw new Error(`device_id is of incorrect size: ${value.length}`);
+        }
+      }
+    },
   },
   mac_address: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    unique: true,
-  },
-  user_id: {
     type: DataTypes.BLOB,
     allowNull: false,
-    references: {
-      model: User,
-      key: "user_id",
-    }
+    unique: true,
+    validate: {
+      customValidator(value: Buffer) {
+        if (value.length != 16) {
+          throw new Error(`mac_address is of incorrect size: ${value.length}`);
+        }
+      }
+    },
   },
   auth_key: {
     type: DataTypes.BLOB,
     allowNull: false,
+    validate: {
+      customValidator(value: Buffer) {
+        if (value.length != 16) {
+          throw new Error(`auth_key is of incorrect size: ${value.length}`);
+        }
+      }
+    },
   },
   registration_first_stage: {
     type: DataTypes.BOOLEAN,
     allowNull: false,
+    defaultValue: true,
   }
 }, {
   tableName: 'device',

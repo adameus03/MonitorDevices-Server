@@ -7,33 +7,15 @@ import utils from "../utils"
 import DeviceManager from "../model/DeviceManager";
 import { error } from "console";
 import { list } from "pm2";
+import userManager from "../../user_management/model/UserManager";
 const router = express.Router();
 
-router.post("/register/device", async (req, res, next) => {
-    if (req.body.mac_address && req.body.user_id) {
-        try {
-            let s = await deviceManager.CreateDevice(req.body.mac_address, req.body.user_id);
-            if (s === null) {
-                res.sendStatus(200);
-            } else {
-                next(createError(400, s));
-                next();
-            }   
-        } catch (e) {
-            next(createError(500, 'INTERNAL SERVER ERROR'));
-            next();
-        }
-    } else {
-        next(createError(400, 'ONE OF THE REQUIRED FIELDS IS MISSING'));
-        next();
-    }
-})
+// Registering has been removed - you do not register over http, you do that over raw TCP from the device
 
-router.get("/users/:user_id/devices", async (req, res, next) => {
-    const user_id = req.params.user_id;
-    const s = await utils.CheckUser_Id(user_id);
-    if (s == null) {
-        const d = await DeviceManager.GetDevicesByUser(user_id);
+router.get("/users/:user_name/devices", async (req, res, next) => {
+    const user_name = req.params.user_name;
+    if (await userManager.DoesUserExist(user_name)) {
+        const d = await DeviceManager.GetDevicesByUser(user_name);
         if (d instanceof Error) {
             next(createError(500, "Failed to fetch devices by user ID"));
             next();
@@ -41,7 +23,7 @@ router.get("/users/:user_id/devices", async (req, res, next) => {
             res.status(200).send(d);
         }
     } else {
-        next(createError(400, s));
+        next(createError(400, "User not found"));
         next();
     }
 })
