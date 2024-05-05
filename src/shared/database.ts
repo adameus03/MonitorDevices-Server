@@ -97,12 +97,38 @@ const Device = sequelize.define('Device', {
   tableName: 'device',
 });
 
+const AuthenticationToken = sequelize.define('AuthenticationToken', {
+    token: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true
+    },
+
+    email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        references: {
+            model: User,
+            key: "email",
+        }
+    },
+
+    expired_date: {
+        type: DataTypes.DATE,
+        allowNull: false,
+    },
+}, {
+    tableName: 'AuthenticationToken',
+});
+
 User.hasMany(Device, { foreignKey: 'user_id' });
 Device.belongsTo(User, { foreignKey: 'user_id' });
+AuthenticationToken.hasMany(User, { foreignKey: 'email' });
 
 // Exports
 export default {
   sequelize: sequelize,
   User: User,
   Device: Device,
+  AuthenticationToken: AuthenticationToken,
 };
