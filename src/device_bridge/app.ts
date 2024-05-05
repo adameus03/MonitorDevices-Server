@@ -40,5 +40,5 @@ export class DeviceConnectingServer {
 if (process.versions.bun) {
 	console.log("======BUN START DEBUG======")
 	const server = new DeviceConnectingServer();
-	server.start(8090);
+	server.start(/*8090*/3334);
 }

@@ -1,3 +1,5 @@
+rtsp_server_gstreamer/build/
+
 # Node modules
 node_modules/
 

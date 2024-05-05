@@ -40,7 +40,7 @@ export class PacketFromDevice {
 	static decodePacket(rawData: Uint8Array): PacketFromDevice {
 		if (rawData.length < RawPacketControlSegment.SIZE) throw new Error(`rawData passed to decodePacket was too short: ${rawData.length}`);
 		const controlSegment = PacketControlSegment.makeFromRawBytes(rawData.slice(0, RawPacketControlSegment.SIZE));
-		if (rawData.length != RawPacketControlSegment.SIZE + controlSegment.dataLength[0]) throw new Error(`rawData passed to decodePacket had mismatched buffer length (${rawData.length}) and declared packet length (${controlSegment.dataLength[0]})`);
+		if (rawData.length != RawPacketControlSegment.SIZE + (controlSegment.dataLength as unknown as number)) throw new Error(`rawData passed to decodePacket had mismatched buffer length (${rawData.length}) and declared packet length (${controlSegment.dataLength})`);
 		let containedPacket: AllPossibleRawPackets;
 
 		switch (controlSegment.operationType) {
@@ -114,7 +114,7 @@ export class PacketFromDevice {
 	}
 
 	serialize(): Uint8Array {
-		const result = new Uint8Array(this.controlSegment.dataLength[0] + RawPacketControlSegment.SIZE);
+		const result = new Uint8Array(this.controlSegment.dataLength as unknown as number + RawPacketControlSegment.SIZE);
 		result.set(this.controlSegment.serialize());
 		result.set(this.messageContent.serialize(), RawPacketControlSegment.SIZE);
 		return result;
@@ -151,7 +151,7 @@ export class PacketControlSegment {
 	/**
 	 * Contains a single 32 bit number
 	 */
-	dataLength = new Uint32Array(1);
+	dataLength : Number = 0;
 	operationType = OperationType.Unknown;
 	isResponse = false;
 	
@@ -160,10 +160,23 @@ export class PacketControlSegment {
 	 * @param rawData Bytes representing data length are in small endian
 	 */
 	static makeFromRawBytes(rawData: Uint8Array): PacketControlSegment {
+		console.log("[dbg] Raw data");
+		console.log(rawData);
+		console.log("[dbg] End of rawData");
+		
 		const result = new PacketControlSegment();
 		const rawPacket = RawPacketControlSegment.fromRawBytes(rawData);
+		
+		console.log("[dbg] rawPacket = RawPacketControlSegment.fromRawBytes(rawData) --- contents");
+		console.log(rawPacket);
+		
 		result.sessionID = rawPacket.sessionID;
-		result.dataLength = new Uint32Array(rawPacket.dataLength.reverse().buffer); // Reverse endianness - TODO check what endianness the device sends
+		// Calculate data length from little endian bytes
+		result.dataLength = rawPacket.dataLength[0] 
+							+ (rawPacket.dataLength[1] << 8) 
+							+ (rawPacket.dataLength[2] << 16) 
+							+ (rawPacket.dataLength[3] << 24);
+		
 		// Check if most significant bit is set
 		if (rawPacket.operationByte[0] & 0b10000000) {
 			result.isResponse = true;
@@ -260,7 +273,13 @@ export class PacketControlSegment {
 	serialize(): Uint8Array {
 		const result = new Uint8Array(RawPacketControlSegment.SIZE);
 		result.set(this.sessionID);
-		result.set(new Uint8Array(this.dataLength.buffer).reverse(), this.sessionID.length);
+		
+		// Set data length uint8s in little endian
+		result[16] = this.dataLength as unknown as number & 0xFF;
+		result[17] = (this.dataLength as unknown as number >> 8) & 0xFF;
+		result[18] = (this.dataLength as unknown as number >> 16) & 0xFF;
+		result[19] = (this.dataLength as unknown as number >> 24) & 0xFF;
+		
 		result[20] = this.operationType + (this.isResponse ? 128 : 0);
 		return result;
 	}
