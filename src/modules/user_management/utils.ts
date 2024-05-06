@@ -1,17 +1,30 @@
-import { error } from "console";
 import jwt from "jsonwebtoken";
-
+import { QueryTypes } from "sequelize";
+import { Database } from "sqlite3";
+ 
 import db from '../../shared/database';
-
+import e from "express";
+    
 export class Utils {
-    async generate_token (payload: any, key: string) {
-        return jwt.sign(payload, key, { expiresIn: '30d' });
+
+    async getEmailByUsername(username: string) {
+        try {
+            var temp = await db.User.findOne({ where: { username: username } });
+            var email = temp?.dataValues.email;
+            return email;
+        } catch (error) {
+            return null;
+        }
+    }
+
+    async generate_token (key: string, email: string) {
+        return await jwt.sign({ email: email } , key, { expiresIn: "30h" });
     }; 
 
     async verify_token(token: string, email: string) {
         try {
             var temp = await db.AuthenticationToken.findOne({ where: { token: token, email: email } });
-            if (temp != null) {
+            if (temp != null && !(await this.isTokenExpired(token))) {
                 return true;
             } else {
                 return false;
@@ -21,14 +34,35 @@ export class Utils {
         }
     }
 
-    async save_token(token: string, username: string) {
-        var date = new Date();
-        var sqliteDate = date.toISOString;
-        let t: any = await db.AuthenticationToken.create({
-            token: token,
-            username: username,
-            expired_date: sqliteDate,
-        });
+    async isTokenExpired(token: string) {
+    try {
+        const authToken = await db.AuthenticationToken.findOne({ where: { token: token } });
+
+        if (!authToken) {
+            return true; 
+        }
+
+        var expired_date = authToken?.dataValues.expired_date;
+        
+        return expired_date <= new Date(); 
+    } catch (error) {
+        return true;
+    }
+}
+
+    async save_token(token: string, email: string) {
+        const date = new Date();
+        date.setDate(date.getDate() + 30);
+        var sqliteDate = date.toISOString().slice(0, 19).replace('T', ' ');
+        try {
+            let t: any = await db.AuthenticationToken.create({
+                token: token,
+                email: email,
+                expired_date: sqliteDate,
+            });
+        } catch (error) {
+            console.log(error);
+        }
     }
 
 

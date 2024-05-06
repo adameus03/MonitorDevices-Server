@@ -1,8 +1,9 @@
 import { randomFillSync } from "crypto";
+import CryptoJS from 'crypto-js';
 import db from "../../../shared/database";
 
 export class UserManager {
-    async CreateUser (username: String, password: String, email: String) {
+    async CreateUser (username: string, password: string, email: string) {
         if (await db.User.findOne({where: {username: username}}))
             return "USERNAME ALREADY EXISTS";
         if (await db.User.findOne({where: {email: email}}))
@@ -13,19 +14,25 @@ export class UserManager {
         do {
             randomFillSync(userIDBuffer);
         } while (await db.User.findOne( { where: { user_id: Buffer.from(userIDBuffer) } }));
-        
-        
-        let u: any = await db.User.create({
-            user_id: Buffer.from(userIDBuffer),
-            username: username,
-            password: password,
-            email: email
-        });
+
+        var hashPassword = CryptoJS.SHA256(password.toString());
+        try {
+            let u: any = await db.User.create({
+                user_id: Buffer.from(userIDBuffer),
+                username: username,
+                password: hashPassword.toString(),
+                email: email
+            });
+        } catch (error) {
+            console.log(error);
+            return error;
+        }
         return null;
     }
 
-    async LoginUser (username: String, password: String) {
-        if (await db.User.findOne({where: {username: username, password: password}})) {
+    async LoginUser(username: string, password: string) {
+        var hashedPassword = CryptoJS.SHA256(password.toString()).toString();
+        if (await db.User.findOne({where: {username: username, password: hashedPassword}})) {
             return null;
         } else {
             return "INVALID USERNAME OR PASSWORD";

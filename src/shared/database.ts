@@ -44,6 +44,7 @@ const User = sequelize.define('User', {
   },
   email: {
     type: DataTypes.STRING,
+    primaryKey: true,
     allowNull: false,
     unique: true,
   },
@@ -121,9 +122,7 @@ const AuthenticationToken = sequelize.define('AuthenticationToken', {
     tableName: 'AuthenticationToken',
 });
 
-User.hasMany(Device, { foreignKey: 'user_id' });
-Device.belongsTo(User, { foreignKey: 'user_id' });
-AuthenticationToken.hasMany(User, { foreignKey: 'email' });
+AuthenticationToken.belongsTo(User, { foreignKey: 'email' });
 
 // Exports
 export default {
