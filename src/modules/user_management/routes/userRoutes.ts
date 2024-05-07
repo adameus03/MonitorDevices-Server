@@ -14,13 +14,6 @@ router.post("/register/user", async (req, res, next) => {
         try {
             let s = await userManager.CreateUser(req.body.username, req.body.password, req.body.email);
             if (s == null) {
-                if (req.body.keyForToken) {                     // If the client has sent a key, create a token
-                    var token = await userUtils.generate_token(req.body.keyForToken, await userUtils.getEmailByUsername(req.body.username));
-                    if (token != null) {
-                        userUtils.save_token(token, await userUtils.getEmailByUsername(req.body.username));
-                        res.setHeader('Authorization', token);
-                    }
-                }
                 res.sendStatus(200);
             } else {
                 next(createError(400, s));
@@ -41,12 +34,11 @@ router.post("/login", async (req, res, next) => {
         try {
             let s = await userManager.LoginUser(req.body.username, req.body.password);
             if (s == null) {
-                if (req.body.keyForToken) {                     // If the client has sent a key, create a token
-                    var token = await userUtils.generate_token(req.body.keyForToken, await userUtils.getEmailByUsername(req.body.username));
-                    if (token != null) {
-                        userUtils.save_token(token, await userUtils.getEmailByUsername(req.body.username));
-                        res.setHeader('Authorization', token);
-                    }
+                var rand = Math.random();
+                var token = await userUtils.generate_token(rand.toString(), await userUtils.getEmailByUsername(req.body.username));
+                if (token != null) {
+                    userUtils.save_token(token, await userUtils.getEmailByUsername(req.body.username));
+                    res.setHeader('Authorization', token);
                 }
                 res.sendStatus(200);
 
