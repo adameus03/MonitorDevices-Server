@@ -12,8 +12,9 @@ export class DeviceConnectingServer {
 		this.serverInstance = new net.Server();
 		this.serverInstance.on("connection", (socket) => {
 			socket.on("data", (data) => {
-				console.log(`Received ${data.length} bytes`);
-				const packet = PacketFromDevice.decodePacket(data);
+				const dataTyped = new Uint8Array(data);
+				console.log(`Received ${dataTyped.length} bytes`);
+				const packet = PacketFromDevice.decodePacket(dataTyped);
 				console.log(`Decoded packet ${packet}`);
 				packet.controlSegment.isResponse = true;
 				switch (packet.controlSegment.operationType) {
@@ -21,6 +22,7 @@ export class DeviceConnectingServer {
 						registerDevice(packet.messageContent as RawRegistrationPacket);
 						packet.controlSegment.isResponse = true;
 						socket.write(packet.serialize());
+						break;
 					}
 					default: {
 						console.log("Unknown packet in server handler");
