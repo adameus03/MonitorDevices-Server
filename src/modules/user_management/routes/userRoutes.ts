@@ -68,6 +68,7 @@ router.post("/check-token", async (req, res, next) => {
     if (req.body.token && req.body.email) {
         var temp = await userUtils.verify_token(req.body.token, req.body.email);
         if (temp == true) {
+            userUtils.refresh_token(req.body.token);
             res.sendStatus(200);
         } else if (temp == false) {
             next(createError(400, "INVALID TOKEN"));
