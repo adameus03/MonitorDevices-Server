@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import { QueryTypes } from "sequelize";
+import { QueryTypes, where } from "sequelize";
 import { Database } from "sqlite3";
  
 import db from '../../shared/database';
@@ -62,6 +62,30 @@ export class Utils {
             });
         } catch (error) {
             console.log(error);
+        }
+    }
+
+    async refresh_token(token: string) {
+        const date = new Date();
+        date.setDate(date.getDate() + 30);
+        try {
+            db.AuthenticationToken.update({ expired_date: date }, { where: { token: token } });
+            return null;
+        } catch (error) {
+            return error;
+        }
+    }
+
+    async isTokenExists(token: string) {
+        try {
+            var temp = db.AuthenticationToken.findOne({ where: { token: token } })
+        } catch (error) {
+            return error;
+        }
+        if (temp != null) {
+            return true;
+        } else {
+            return false;
         }
     }
 
