@@ -319,7 +319,7 @@ export class RawInitiateConnectionPacket {
 	}
 
 	serialize(): Uint8Array {
-		const result = new Uint8Array(RawRegistrationPacket.SIZE);
+		const result = new Uint8Array(RawInitiateConnectionPacket.SIZE);
 		result.set(this.cameraID);
 		result.set(this.cameraAuthKey, this.cameraID.length);
 		return result;
