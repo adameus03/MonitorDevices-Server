@@ -27,18 +27,6 @@ import DeviceManager from "../modules/device_management/model/DeviceManager";
  */
 // data is pass by reference, no need to return
 export async function registerDevice(data: PacketFromDevice, sock: Socket) {
-	// Debug mode, run with bun instead of node
-	if (process.versions.bun) {
-		console.log("=====BUN enter registerDevice=====")
-		data.messageContent.cameraID = new Uint8Array([
-			0x00, 0x01, 0x02, 0x03,
-			0x04, 0x05, 0x06, 0x07,
-			0x08, 0x09, 0x0A, 0x0B,
-			0x0C, 0x0D, 0x0E, 0x0F,
-		]);
-		console.log("=====BUN exit registerDevice=====")
-		//return;
-	}
 	if (await UserManager.GetUserById(data.messageContent.userID)) {
 		const device = await DeviceManager.GetDeviceByID(data.messageContent.cameraID);
 		if (device) {
