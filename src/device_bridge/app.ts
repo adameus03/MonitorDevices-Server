@@ -51,15 +51,20 @@ export class DeviceConnectingServer {
 	 * Server remembers the session and authenticates further operations
 	 */
 	async canCreateNewConnection(packet: PacketFromDevice): Promise<boolean> {
+		if (process.versions.bun) console.log("====DEBUG entered canCreateNewConnections====");
+
 		const infoPacket = packet.messageContent as RawInitiateConnectionPacket; // needs to be called from a InitiateCommunication packet
 		const deviceDatabase = await DeviceManager.GetDeviceByID(infoPacket.cameraID);
 
 		if (!deviceDatabase) return false; // check if device ID exists
+		if (process.versions.bun) console.log("====DEBUG device exists in db====");
 
 		if (!areUint8ArraysEqual(deviceDatabase.get("auth_key") as Uint8Array, infoPacket.cameraAuthKey)) return false; // check if auth key is correct
+		if (process.versions.bun) console.log("====DEBUG auth key correct====");
 
 		if (this.connectedDevices.find(val => areUint8ArraysEqual(val.deviceID, infoPacket.cameraID))) return false; // check if device already connected
-
+		if (process.versions.bun) console.log("====DEBUG device not already connected, allowed to connect====");
+		
 		return true;
 	}
 
