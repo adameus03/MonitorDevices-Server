@@ -26,7 +26,7 @@ export enum OperationType {
 }
 
 // TODO update as other packets are implemented and used
-type AllPossibleRawPackets = RawRegistrationPacket/* | RawInitiateConnectionPacket*/;
+type AllPossibleRawPackets = RawRegistrationPacket | RawInitiateConnectionPacket;
 
 export class PacketFromDevice {
 	controlSegment;
@@ -55,7 +55,8 @@ export class PacketFromDevice {
 				throw new Error("Unimplemented op type");
 			}
 			case OperationType.InitiateConnection: {
-				throw new Error("Unimplemented op type");
+				containedPacket = new RawInitiateConnectionPacket(rawData.slice(RawPacketControlSegment.SIZE, RawPacketControlSegment.SIZE + RawInitiateConnectionPacket.SIZE));
+				break;
 			}
 			case OperationType.SetConfig: {
 				throw new Error("Unimplemented op type");
@@ -303,9 +304,32 @@ export class RawRegistrationPacket {
 
 /**
  * Packet for InitiateConnection, deserialized but not transformed to something more useful
+ * Same struct as application_initcomm_section_t in server_communications.c
  */
 export class RawInitiateConnectionPacket {
+	static SIZE = 32;                     // Sum of all field lengths
+
 	cameraID = new Uint8Array(16);        // CID_LENGTH in registration.h
 	cameraAuthKey = new Uint8Array(16);   // CKEY_LENGTH in registration.h
-	cameraSessionID = new Uint8Array(16); // COMM_CSID_LENGTH in server_communications.c
+	
+	constructor(rawData: Uint8Array) {
+		if (rawData.length != RawInitiateConnectionPacket.SIZE) throw new Error(`Raw data for RawInitiateConnectionPacket was of invalid size: ${rawData.length}`);
+		this.cameraID = rawData.slice(0, 16);
+		this.cameraAuthKey = rawData.slice(16, 32);
+	}
+
+	serialize(): Uint8Array {
+		const result = new Uint8Array(RawRegistrationPacket.SIZE);
+		result.set(this.cameraID);
+		result.set(this.cameraAuthKey, this.cameraID.length);
+		return result;
+	}
+}
+
+export class NoOperationPacket {
+	static SIZE = 0;
+
+	serialize(): Uint8Array {
+		return new Uint8Array(NoOperationPacket.SIZE);
+	}
 }
