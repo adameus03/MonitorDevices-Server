@@ -164,7 +164,7 @@ export class PacketControlSegment {
 		const result = new PacketControlSegment();
 		const rawPacket = RawPacketControlSegment.fromRawBytes(rawData);
 		result.sessionID = rawPacket.sessionID;
-		result.dataLength = new Uint32Array(rawPacket.dataLength.reverse().buffer); // Reverse endianness - TODO check what endianness the device sends
+		result.dataLength = new Uint32Array(rawPacket.dataLength.buffer);
 		// Check if most significant bit is set
 		if (rawPacket.operationByte[0] & 0b10000000) {
 			result.isResponse = true;
