@@ -30,10 +30,17 @@ export async function registerDevice(data: PacketFromDevice, sock: Socket) {
 	if (await UserManager.GetUserById(data.messageContent.userID)) {
 		const device = await DeviceManager.GetDeviceByID(data.messageContent.cameraID);
 		if (device) {
-			// Registration stage two
-			await device.update("auth_key", Buffer.from(data.messageContent.cameraAuthKey));
-			data.controlSegment.isResponse = true;
-			sock.write(data.serialize());
+			if (device.get("registration_first_stage") == true) {
+				// Registration stage two
+				device.set("auth_key", Buffer.from(data.messageContent.cameraAuthKey));
+				device.set("registration_first_stage", false);
+				await device.save();
+				data.controlSegment.isResponse = true;
+				sock.write(data.serialize());
+			} else {
+				// Device sent register packet despite having been registered already
+				sock.end();
+			}
 		} else {
 			// Registration stage one
 			const generatedDeviceID = new Uint8Array(16);
