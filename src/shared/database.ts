@@ -72,7 +72,7 @@ const Device = sequelize.define('Device', {
     unique: true,
     validate: {
       customValidator(value: Buffer) {
-        if (value.length != 16) {
+        if (value.length != 6) {
           throw new Error(`mac_address is of incorrect size: ${value.length}`);
         }
       }
