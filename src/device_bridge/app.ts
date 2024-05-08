@@ -22,6 +22,9 @@ export class DeviceConnectingServer {
 							socket.removeAllListeners(); // unbind old listeners - no need to init connections or register
 							this.createNewConnection(socket, packet);
 							console.log("Connected new device");
+						} else {
+							console.log("Device not allowed to connect");
+							socket.end();
 						}
 						break;
 					}
