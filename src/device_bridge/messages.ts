@@ -261,7 +261,7 @@ export class PacketControlSegment {
 	serialize(): Uint8Array {
 		const result = new Uint8Array(RawPacketControlSegment.SIZE);
 		result.set(this.sessionID);
-		result.set(new Uint8Array(this.dataLength.buffer).reverse(), this.sessionID.length);
+		result.set(new Uint8Array(this.dataLength.buffer), this.sessionID.length);
 		result[20] = this.operationType + (this.isResponse ? 128 : 0);
 		return result;
 	}

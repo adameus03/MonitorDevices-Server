@@ -64,7 +64,7 @@ export class DeviceConnectingServer {
 
 		if (this.connectedDevices.find(val => areUint8ArraysEqual(val.deviceID, infoPacket.cameraID))) return false; // check if device already connected
 		if (process.versions.bun) console.log("====DEBUG device not already connected, allowed to connect====");
-		
+
 		return true;
 	}
 
