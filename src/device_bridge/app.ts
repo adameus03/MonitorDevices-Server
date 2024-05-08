@@ -19,9 +19,7 @@ export class DeviceConnectingServer {
 				packet.controlSegment.isResponse = true;
 				switch (packet.controlSegment.operationType) {
 					case OperationType.RegisterDevice: {
-						registerDevice(packet.messageContent as RawRegistrationPacket);
-						packet.controlSegment.isResponse = true;
-						socket.write(packet.serialize());
+						registerDevice(packet, socket);
 						break;
 					}
 					default: {
