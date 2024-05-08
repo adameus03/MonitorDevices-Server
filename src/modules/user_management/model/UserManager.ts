@@ -43,6 +43,10 @@ export class UserManager {
         return db.User.findAll({where: { username: user_name}});
     }
 
+	async GetUserById(userID: Uint8Array) {
+		return db.User.findOne({ where: { user_id: Buffer.from(userID) } });
+	}
+
     async DoesUserExist(user_name: String) {
         if (await db.User.findOne({where: {username: user_name}})) {
             return true;
