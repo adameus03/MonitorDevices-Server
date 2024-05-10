@@ -87,15 +87,18 @@ export class DeviceConnectingServer {
 		socket.on("data", data => {
 			const dataTyped = new Uint8Array(data);
 			const packet = PacketFromDevice.decodePacket(dataTyped);
+			deviceInfo.lastPacketReceived = Date.now();
 			switch (packet.controlSegment.operationType) {
-				case OperationType.NoOperation: {
-					deviceInfo.lastPacketReceived = Date.now();
-				}
 				default: {
 					console.log("Unknown packet type");
 					break;
 				}
 			}
+		});
+
+		socket.on("close", () => {
+			if (process.versions.bun) console.log("====DEBUG device disconnected====");
+			this.connectedDevices = this.connectedDevices.filter(info => info != deviceInfo); // Ugly - remove the session after something disconnects
 		})
 	}
 
