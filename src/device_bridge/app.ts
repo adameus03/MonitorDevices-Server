@@ -1,6 +1,6 @@
 import * as net from "net";
 
-import { OperationType, PacketControlSegment, PacketFromDevice, RawInitiateConnectionPacket, RawRegistrationPacket } from "./messages";
+import { OperationType, PacketControlSegment, PacketFromDevice, RawInitiateConnectionPacket, RawRegistrationPacket, RawUnregisterPacket } from "./messages";
 import { registerDevice } from "./registration";
 import { areUint8ArraysEqual } from "./utils";
 import DeviceManager from "../modules/device_management/model/DeviceManager";
@@ -89,6 +89,11 @@ export class DeviceConnectingServer {
 			const packet = PacketFromDevice.decodePacket(dataTyped);
 			deviceInfo.lastPacketReceived = Date.now();
 			switch (packet.controlSegment.operationType) {
+				case OperationType.ForceUnregister: {
+					const infoPacket = packet.messageContent as RawUnregisterPacket;
+					console.log(`Received (somehow) unregister packet with succeeded value of ${infoPacket.succeeded[0]}`);
+					break;
+				}
 				default: {
 					console.log("Unknown packet type");
 					break;
@@ -100,6 +105,48 @@ export class DeviceConnectingServer {
 			if (process.versions.bun) console.log("====DEBUG device disconnected====");
 			this.connectedDevices = this.connectedDevices.filter(info => info != deviceInfo); // Ugly - remove the session after something disconnects
 		})
+	}
+
+	unregisterConnectedSession(sessionID: Uint8Array) {
+		if (process.versions.bun) console.log("====DEBUG unregistering device====");
+
+		if (sessionID.length != 16) throw new Error(`sessionID is of invalid length: (${sessionID.length})`);
+		if (process.versions.bun) console.log("====DEBUG sessionID is of valid length====");
+
+		const session = this.connectedDevices.find(val => areUint8ArraysEqual(val.sessionID, sessionID));
+		if (!session) throw new Error("Specified sessionID does not exist");
+		if (process.versions.bun) console.log("====DEBUG session found====");
+
+		const requestControl = new PacketControlSegment();
+		requestControl.operationType = OperationType.ForceUnregister;
+		requestControl.sessionID = session.sessionID;
+		requestControl.dataLength = new Uint32Array([RawUnregisterPacket.SIZE]);
+
+		const request = new PacketFromDevice(requestControl, new RawUnregisterPacket(new Uint8Array([0])));
+
+		session.socket.write(request.serialize());
+		session.socket.end(); // Ignore any response - it doesn't matter
+		if (process.versions.bun) console.log("====DEBUG session ended====");
+
+		this.unregisterDeviceByID(session.deviceID);
+	}
+
+	/**
+	 * Only removes device from database
+	 * Do not use on connected devices
+	 */
+	unregisterDeviceByID(deviceID: Uint8Array) {
+		if (process.versions.bun) console.log("====DEBUG removing device from database====");
+
+		if (deviceID.length != 16) throw new Error(`deviceID is of invalid length: (${deviceID.length})`);
+		if (process.versions.bun) console.log("====DEBUG deviceID is of valid length====");
+
+		const session = this.connectedDevices.find(val => areUint8ArraysEqual(val.deviceID, deviceID));
+		if (session) throw new Error("Specified deviceID exists as a session, use `unregisterConnectedSession` instead");
+		if (process.versions.bun) console.log("====DEBUG session does not exist====");
+		
+		DeviceManager.DeleteDeviceByID(deviceID);
+		if (process.versions.bun) console.log("====DEBUG device removed from database====");
 	}
 
 	start(port: number) {
