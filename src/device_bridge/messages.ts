@@ -26,7 +26,7 @@ export enum OperationType {
 }
 
 // TODO update as other packets are implemented and used
-type AllPossibleRawPackets = RawRegistrationPacket | RawInitiateConnectionPacket;
+type AllPossibleRawPackets = RawRegistrationPacket | RawInitiateConnectionPacket | RawUnregisterPacket;
 
 export class PacketFromDevice {
 	controlSegment;
@@ -331,5 +331,22 @@ export class NoOperationPacket {
 
 	serialize(): Uint8Array {
 		return new Uint8Array(NoOperationPacket.SIZE);
+	}
+}
+
+export class RawUnregisterPacket {
+	static SIZE = 1;
+
+	succeeded = new Uint8Array(1); // simple bool flag
+
+	constructor(rawData: Uint8Array) {
+		if (rawData.length != RawUnregisterPacket.SIZE) throw new Error(`Raw data for RawUnregisterPacket was of invalid size: ${rawData.length}`);
+		this.succeeded = rawData.slice(0, 1);
+	}
+
+	serialize(): Uint8Array {
+		const result = new Uint8Array(RawUnregisterPacket.SIZE);
+		result.set(this.succeeded);
+		return result;
 	}
 }

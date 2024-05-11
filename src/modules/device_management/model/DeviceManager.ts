@@ -41,6 +41,10 @@ export class DeviceManager {
         
     }
 
+    async DeleteDeviceByID(camera_id: Uint8Array) {
+        await db.Device.destroy({ where: { device_id: Buffer.from(camera_id) }});
+    }
+
 
     private static _instance: DeviceManager
     public static getInstance(): DeviceManager {
