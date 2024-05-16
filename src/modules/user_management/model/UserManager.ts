@@ -30,12 +30,12 @@ export class UserManager {
         return null;
     }
 
-    async LoginUser(username: string, password: string) {
+    async LoginUser(email: string, password: string) {
         var hashedPassword = CryptoJS.SHA256(password.toString()).toString();
-        if (await db.User.findOne({where: {username: username, password: hashedPassword}})) {
+        if (await db.User.findOne({where: {email: email, password: hashedPassword}})) {
             return null;
         } else {
-            return "INVALID USERNAME OR PASSWORD";
+            return "INVALID EMAIL OR PASSWORD";
         }
     }
 
