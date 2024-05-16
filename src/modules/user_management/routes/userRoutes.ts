@@ -30,14 +30,14 @@ router.post("/register/user", async (req, res, next) => {
 });
 
 router.post("/login", async (req, res, next) => {
-    if (req.body.username && req.body.password) {
+    if (req.body.email && req.body.password) {
         try {
-            let s = await userManager.LoginUser(req.body.username, req.body.password);
+            let s = await userManager.LoginUser(req.body.email, req.body.password);
             if (s == null) {
                 var rand = Math.random();
-                var token = await userUtils.generate_token(rand.toString(), await userUtils.getEmailByUsername(req.body.username));
+                var token = await userUtils.generate_token(rand.toString(), req.body.email);
                 if (token != null) {
-                    userUtils.save_token(token, await userUtils.getEmailByUsername(req.body.username));
+                    userUtils.save_token(token, req.body.email);
                     res.setHeader('Authorization', token);
                 }
                 res.sendStatus(200);
