@@ -1,8 +1,6 @@
 import EventEmitter from "events";
 import { ImagePacket, ImagePacketType } from "./messages";
 import { areUint8ArraysEqual } from "./utils";
-import exifr from "exifr";
-import { writeFileSync } from "fs";
 
 /**
  * Only handles frames for one session.
@@ -36,8 +34,6 @@ export class DeviceVideoManager extends EventEmitter {
 					newResult.set(currentPacket, previousResult.length);
 					return newResult;
 				});
-			
-			//const image = await exifr.parse(fullImageData);
 			this.emit("newFrame", fullImageData);
 			this.packets = [];
 		}
