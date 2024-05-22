@@ -1,20 +1,21 @@
 import * as net from "net";
 
-import { ImagePacket, NoOperationPacket, OperationType, PacketControlSegment, PacketData, RawInitiateConnectionPacket, RawRegistrationPacket, RawUnregisterPacket } from "./messages";
+import { ImagePacket, NoDataPacket, OperationType, PacketControlSegment, PacketData, RawInitiateConnectionPacket, RawRegistrationPacket, RawUnregisterPacket } from "./messages";
 import { registerDevice } from "./registration";
 import { areUint8ArraysEqual } from "./utils";
 import DeviceManager from "../modules/device_management/model/DeviceManager";
 import { randomFillSync } from "crypto";
 import { DeviceVideoManager } from "./videoManager";
 import { createSocket } from "dgram";
-import { writeFileSync } from "fs";
+import EventEmitter from "events";
 
-export class DeviceConnectingServer {
+export class DeviceConnectingServer extends EventEmitter {
 	private serverInstance;
-	private connectedDevices: ConnectedDeviceInfo[] = [];
+	private connectedDevices: ConnectedDevice[] = [];
 	private videoFrameReceiver;
 
 	constructor() {
+		super();
 		this.serverInstance = new net.Server();
 		this.serverInstance.on("connection", (socket) => {
 			socket.on("data", async (data) => {
@@ -96,7 +97,7 @@ export class DeviceConnectingServer {
 		packet.controlSegment.sessionID = sessionID;
 		packet.controlSegment.isResponse = true;
 
-		const deviceInfo = new ConnectedDeviceInfo(socket, infoPacket.cameraID, sessionID);
+		const deviceInfo = new ConnectedDevice(socket, infoPacket.cameraID, sessionID);
 		this.connectedDevices.push(deviceInfo);
 
 		socket.write(packet.serialize());
@@ -121,7 +122,10 @@ export class DeviceConnectingServer {
 		socket.on("close", () => {
 			if (process.versions.bun) console.log("====DEBUG device disconnected====");
 			this.connectedDevices = this.connectedDevices.filter(info => info != deviceInfo); // Ugly - remove the session after something disconnects
-		})
+			deviceInfo.emit("disconnected", deviceInfo);
+		});
+
+		this.emit("deviceConnected", deviceInfo);
 	}
 
 	unregisterConnectedSession(sessionID: Uint8Array) {
@@ -172,7 +176,7 @@ export class DeviceConnectingServer {
 	}
 }
 
-class ConnectedDeviceInfo {
+class ConnectedDevice extends EventEmitter {
 	socket: net.Socket;
 	deviceID: Uint8Array = new Uint8Array(16);
 	sessionID: Uint8Array = new Uint8Array(16);
@@ -180,28 +184,35 @@ class ConnectedDeviceInfo {
 	videoManager: DeviceVideoManager;
 
 	constructor(socket: net.Socket, deviceID: Uint8Array, sessionID: Uint8Array) {
+		super();
 		this.socket = socket;
 		this.deviceID = deviceID;
 		this.sessionID = sessionID;
 		this.videoManager = new DeviceVideoManager(sessionID);
+	}
 
-		this.videoManager.on("newFrame", (frameData: Uint8Array) => {
-			writeFileSync("./frame.jpg", frameData);
-		});
+	beginStream() {
+		const packetControl = new PacketControlSegment();
+		packetControl.operationType = OperationType.BeginStream;
+		packetControl.sessionID = this.sessionID;
+		packetControl.dataLength = new Uint32Array([0]);
+		const noDataSegment = new NoDataPacket();
 
-		// TODO: remove debug code
-		setTimeout(() => {
-			console.log("Sending debug request to start streaming");
-			const packetControl = new PacketControlSegment();
-			packetControl.operationType = OperationType.BeginStream;
-			packetControl.sessionID = this.sessionID;
-			packetControl.dataLength = new Uint32Array([0]);
-			const noDataSegment = new NoOperationPacket();
+		const fullPacket = new PacketData(packetControl, noDataSegment);
 
-			const fullPacket = new PacketData(packetControl, noDataSegment);
+		this.socket.write(fullPacket.serialize());
+	}
 
-			this.socket.write(fullPacket.serialize());
-		}, 2000);
+	endStream() {
+		const packetControl = new PacketControlSegment();
+		packetControl.operationType = OperationType.StopStream;
+		packetControl.sessionID = this.sessionID;
+		packetControl.dataLength = new Uint32Array([0]);
+		const noDataSegment = new NoDataPacket();
+
+		const fullPacket = new PacketData(packetControl, noDataSegment);
+
+		this.socket.write(fullPacket.serialize());
 	}
 }
 

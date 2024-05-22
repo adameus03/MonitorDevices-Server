@@ -26,7 +26,7 @@ export enum OperationType {
 }
 
 // TODO update as other packets are implemented and used
-type AllPossibleRawPackets = RawRegistrationPacket | RawInitiateConnectionPacket | RawUnregisterPacket | NoOperationPacket;
+type AllPossibleRawPackets = RawRegistrationPacket | RawInitiateConnectionPacket | RawUnregisterPacket | NoDataPacket;
 
 export class PacketData {
 	controlSegment;
@@ -68,12 +68,12 @@ export class PacketData {
 				throw new Error("Unimplemented op type");
 			}
 			case OperationType.BeginStream: {
-				//throw new Error("Unimplemented op type");
-				containedPacket = new NoOperationPacket(); // Empty 
+				containedPacket = new NoDataPacket(); // Empty 
 				break;
 			}
 			case OperationType.StopStream: {
-				throw new Error("Unimplemented op type");
+				containedPacket = new NoDataPacket(); // Empty 
+				break;
 			}
 			case OperationType.BeginMotionAnalysis: {
 				throw new Error("Unimplemented op type");
@@ -327,11 +327,11 @@ export class RawInitiateConnectionPacket {
 	}
 }
 
-export class NoOperationPacket {
+export class NoDataPacket {
 	static SIZE = 0;
 
 	serialize(): Uint8Array {
-		return new Uint8Array(NoOperationPacket.SIZE);
+		return new Uint8Array(NoDataPacket.SIZE);
 	}
 }
 
@@ -369,7 +369,7 @@ export class ImagePacket {
 	packetID = new Uint32Array(1);
 	packetType = ImagePacketType.OnlyChunk;
 	sessionID = new Uint8Array(16);
-	data = new Uint8Array(16354);
+	data = new Uint8Array(1); // Dynamically sized
 
 	static makeFromRawBytes(rawData: Uint8Array): ImagePacket {
 		const rawPacket = RawImagePacket.makeFromRawBytes(rawData);
@@ -405,15 +405,14 @@ export class ImagePacket {
 }
 
 class RawImagePacket {
-	static SIZE = 16384;
 
 	packetID = new Uint8Array(4);     // 32-bit number
 	packetType = new Uint8Array(1);   // Representation of ImagePacketType
 	sessionID = new Uint8Array(16);   // COMM_CSID_LENGTH in server_communications.c
-	data = new Uint8Array(16354);     // As per the documentation
+	data = new Uint8Array(1);         // As per the documentation - irrelevant, will be as long as it wants to 
 
 	static makeFromRawBytes(rawData: Uint8Array): RawImagePacket {
-		if (rawData.length != RawImagePacket.SIZE) throw new Error(`rawData passed to RawImagePacket.makeFromRawBytes was too short: ${rawData.length}`);
+		if (rawData.length < 22) throw new Error(`rawData passed to RawImagePacket.makeFromRawBytes was too short: ${rawData.length}`);
 		const result = new RawImagePacket();
 
 		result.packetID = rawData.slice(0, 4);
