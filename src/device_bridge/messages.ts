@@ -68,7 +68,9 @@ export class PacketData {
 				throw new Error("Unimplemented op type");
 			}
 			case OperationType.BeginStream: {
-				throw new Error("Unimplemented op type");
+				//throw new Error("Unimplemented op type");
+				containedPacket = new NoOperationPacket(); // Empty 
+				break;
 			}
 			case OperationType.StopStream: {
 				throw new Error("Unimplemented op type");
