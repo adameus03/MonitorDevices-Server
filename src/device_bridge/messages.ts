@@ -157,7 +157,6 @@ export class PacketControlSegment {
 	isResponse = false;
 	
 	/**
-	 * 
 	 * @param rawData Bytes representing data length are in small endian
 	 */
 	static makeFromRawBytes(rawData: Uint8Array): PacketControlSegment {
@@ -347,6 +346,79 @@ export class RawUnregisterPacket {
 	serialize(): Uint8Array {
 		const result = new Uint8Array(RawUnregisterPacket.SIZE);
 		result.set(this.succeeded);
+		return result;
+	}
+}
+
+
+
+/* ================
+ * | UDP ELEMENTS |
+ * ================ */
+
+export enum ImagePacketType {
+	MiddleChunk,            // JFIF_INTERMEDIATE_CHUNK
+	FirstChunk,             // JFIF_FIRST_CHUNK
+	LastChunk,              // JFIF_LAST_CHUNK
+	OnlyChunk,              // JFIF_ONLY_CHUNK
+}
+
+export class ImagePacket {
+	packetID = new Uint32Array(1);
+	packetType = ImagePacketType.OnlyChunk;
+	sessionID = new Uint8Array(16);
+	data = new Uint8Array(16354);
+
+	static makeFromRawBytes(rawData: Uint8Array): ImagePacket {
+		const rawPacket = RawImagePacket.makeFromRawBytes(rawData);
+		const result = new ImagePacket();
+
+		result.packetID = new Uint32Array(rawPacket.packetID.buffer);
+		switch (rawPacket.packetType[0]) {
+			case 0x00: {
+				result.packetType = ImagePacketType.MiddleChunk
+				break;
+			}
+			case 0x01: {
+				result.packetType = ImagePacketType.FirstChunk;
+				break;
+			}
+			case 0x02: {
+				result.packetType = ImagePacketType.LastChunk;
+				break;
+			}
+			case 0x03: {
+				result.packetType = ImagePacketType.OnlyChunk;
+				break;
+			}
+			default: {
+				throw new Error("unknown packet type byte");
+			}
+		}
+		result.sessionID = rawPacket.sessionID;
+		result.data = rawPacket.data;
+
+		return result;
+	}
+}
+
+class RawImagePacket {
+	static SIZE = 16384;
+
+	packetID = new Uint8Array(4);     // 32-bit number
+	packetType = new Uint8Array(1);   // Representation of ImagePacketType
+	sessionID = new Uint8Array(16);   // COMM_CSID_LENGTH in server_communications.c
+	data = new Uint8Array(16354);     // As per the documentation
+
+	static makeFromRawBytes(rawData: Uint8Array): RawImagePacket {
+		if (rawData.length != RawImagePacket.SIZE) throw new Error(`rawData passed to RawImagePacket.makeFromRawBytes was too short: ${rawData.length}`);
+		const result = new RawImagePacket();
+
+		result.packetID = rawData.slice(0, 4);
+		result.packetType = rawData.slice(4, 5);
+		result.sessionID = rawData.slice(5, 21);
+		result.data = rawData.slice(21);
+
 		return result;
 	}
 }
