@@ -1,14 +1,18 @@
 import * as net from "net";
 
-import { OperationType, PacketControlSegment, PacketFromDevice, RawInitiateConnectionPacket, RawRegistrationPacket, RawUnregisterPacket } from "./messages";
+import { ImagePacket, OperationType, PacketControlSegment, PacketFromDevice, RawInitiateConnectionPacket, RawRegistrationPacket, RawUnregisterPacket } from "./messages";
 import { registerDevice } from "./registration";
 import { areUint8ArraysEqual } from "./utils";
 import DeviceManager from "../modules/device_management/model/DeviceManager";
 import { randomFillSync } from "crypto";
+import { DeviceVideoManager } from "./videoManager";
+import { createSocket } from "dgram";
+import { writeFileSync } from "fs";
 
 export class DeviceConnectingServer {
 	private serverInstance;
 	private connectedDevices: ConnectedDeviceInfo[] = [];
+	private videoFrameReceiver;
 
 	constructor() {
 		this.serverInstance = new net.Server();
@@ -38,6 +42,19 @@ export class DeviceConnectingServer {
 					}
 				}
 			})
+		});
+
+		// Initialize UDP socket
+		this.videoFrameReceiver = createSocket("udp4", message => {
+			if (process.versions.bun) console.log(`====DEBUG UDP frame received of length ${message.length}`);
+
+			const dataTyped = new Uint8Array(message);
+			const packet = ImagePacket.makeFromRawBytes(dataTyped);
+			const deviceInfo = this.connectedDevices.find(val => areUint8ArraysEqual(val.sessionID, packet.sessionID));
+
+			if (!deviceInfo) throw new Error("Received image packet for nonexistent session");
+
+			deviceInfo.videoManager.addPacket(packet);
 		});
 	}
 
@@ -151,6 +168,7 @@ export class DeviceConnectingServer {
 
 	start(port: number) {
 		this.serverInstance.listen(port);
+		this.videoFrameReceiver.bind(port);
 	}
 }
 
@@ -159,11 +177,17 @@ class ConnectedDeviceInfo {
 	deviceID: Uint8Array = new Uint8Array(16);
 	sessionID: Uint8Array = new Uint8Array(16);
 	lastPacketReceived: EpochTimeStamp = Date.now();
+	videoManager: DeviceVideoManager;
 
 	constructor(socket: net.Socket, deviceID: Uint8Array, sessionID: Uint8Array) {
 		this.socket = socket;
 		this.deviceID = deviceID;
 		this.sessionID = sessionID;
+		this.videoManager = new DeviceVideoManager(sessionID);
+
+		this.videoManager.on("newFrame", (frameData: Uint8Array) => {
+			writeFileSync("./frame.jpg", frameData);
+		});
 	}
 }
 
