@@ -1,5 +1,5 @@
 import { Socket } from "net";
-import { PacketFromDevice, RawRegistrationPacket } from "./messages";
+import { PacketData, RawRegistrationPacket } from "./messages";
 import UserManager from "../modules/user_management/model/UserManager";
 import { randomFillSync } from "crypto";
 import DeviceManager from "../modules/device_management/model/DeviceManager";
@@ -26,7 +26,7 @@ import DeviceManager from "../modules/device_management/model/DeviceManager";
  * @param data Packet to put auth key into.
  */
 // data is pass by reference, no need to return
-export async function registerDevice(data: PacketFromDevice, sock: Socket) {
+export async function registerDevice(data: PacketData, sock: Socket) {
 	const registrationData = data.messageContent as RawRegistrationPacket;
 	if (await UserManager.GetUserById(registrationData.userID)) {
 		const device = await DeviceManager.GetDeviceByID(registrationData.cameraID);

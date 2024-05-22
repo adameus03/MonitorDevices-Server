@@ -26,9 +26,9 @@ export enum OperationType {
 }
 
 // TODO update as other packets are implemented and used
-type AllPossibleRawPackets = RawRegistrationPacket | RawInitiateConnectionPacket | RawUnregisterPacket;
+type AllPossibleRawPackets = RawRegistrationPacket | RawInitiateConnectionPacket | RawUnregisterPacket | NoOperationPacket;
 
-export class PacketFromDevice {
+export class PacketData {
 	controlSegment;
 	messageContent;
 
@@ -37,7 +37,7 @@ export class PacketFromDevice {
 		this.messageContent = rawData;
 	}
 
-	static decodePacket(rawData: Uint8Array): PacketFromDevice {
+	static decodePacket(rawData: Uint8Array): PacketData {
 		if (rawData.length < RawPacketControlSegment.SIZE) throw new Error(`rawData passed to decodePacket was too short: ${rawData.length}`);
 		const controlSegment = PacketControlSegment.makeFromRawBytes(rawData.slice(0, RawPacketControlSegment.SIZE));
 		if (rawData.length != RawPacketControlSegment.SIZE + controlSegment.dataLength[0]) throw new Error(`rawData passed to decodePacket had mismatched buffer length (${rawData.length}) and declared packet length (${controlSegment.dataLength[0]})`);
@@ -111,7 +111,7 @@ export class PacketFromDevice {
 			}
 		}
 
-		return new PacketFromDevice(controlSegment, containedPacket);
+		return new PacketData(controlSegment, containedPacket);
 	}
 
 	serialize(): Uint8Array {

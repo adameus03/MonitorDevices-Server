@@ -1,6 +1,6 @@
 import * as net from "net";
 
-import { ImagePacket, OperationType, PacketControlSegment, PacketFromDevice, RawInitiateConnectionPacket, RawRegistrationPacket, RawUnregisterPacket } from "./messages";
+import { ImagePacket, NoOperationPacket, OperationType, PacketControlSegment, PacketData, RawInitiateConnectionPacket, RawRegistrationPacket, RawUnregisterPacket } from "./messages";
 import { registerDevice } from "./registration";
 import { areUint8ArraysEqual } from "./utils";
 import DeviceManager from "../modules/device_management/model/DeviceManager";
@@ -19,7 +19,7 @@ export class DeviceConnectingServer {
 		this.serverInstance.on("connection", (socket) => {
 			socket.on("data", async (data) => {
 				const dataTyped = new Uint8Array(data);
-				const packet = PacketFromDevice.decodePacket(dataTyped);
+				const packet = PacketData.decodePacket(dataTyped);
 				switch (packet.controlSegment.operationType) {
 					case OperationType.InitiateConnection: {
 						if (await this.canCreateNewConnection(packet)) {
@@ -67,7 +67,7 @@ export class DeviceConnectingServer {
 	 * Server serializes and sends APP_CONTROL_OP_INITCOMM with application_initcomm_section_t to client
 	 * Server remembers the session and authenticates further operations
 	 */
-	async canCreateNewConnection(packet: PacketFromDevice): Promise<boolean> {
+	async canCreateNewConnection(packet: PacketData): Promise<boolean> {
 		if (process.versions.bun) console.log("====DEBUG entered canCreateNewConnections====");
 
 		const infoPacket = packet.messageContent as RawInitiateConnectionPacket; // needs to be called from a InitiateCommunication packet
@@ -85,7 +85,7 @@ export class DeviceConnectingServer {
 		return true;
 	}
 
-	async createNewConnection(socket: net.Socket, packet: PacketFromDevice) {
+	async createNewConnection(socket: net.Socket, packet: PacketData) {
 		const infoPacket = packet.messageContent as RawInitiateConnectionPacket; // needs to be called from a InitiateCommunication packet
 		const sessionID = new Uint8Array(16);
 
@@ -103,7 +103,7 @@ export class DeviceConnectingServer {
 
 		socket.on("data", data => {
 			const dataTyped = new Uint8Array(data);
-			const packet = PacketFromDevice.decodePacket(dataTyped);
+			const packet = PacketData.decodePacket(dataTyped);
 			deviceInfo.lastPacketReceived = Date.now();
 			switch (packet.controlSegment.operationType) {
 				case OperationType.ForceUnregister: {
@@ -139,7 +139,7 @@ export class DeviceConnectingServer {
 		requestControl.sessionID = session.sessionID;
 		requestControl.dataLength = new Uint32Array([RawUnregisterPacket.SIZE]);
 
-		const request = new PacketFromDevice(requestControl, new RawUnregisterPacket(new Uint8Array([0])));
+		const request = new PacketData(requestControl, new RawUnregisterPacket(new Uint8Array([0])));
 
 		session.socket.write(request.serialize());
 		session.socket.end(); // Ignore any response - it doesn't matter
@@ -188,6 +188,20 @@ class ConnectedDeviceInfo {
 		this.videoManager.on("newFrame", (frameData: Uint8Array) => {
 			writeFileSync("./frame.jpg", frameData);
 		});
+
+		// TODO: remove debug code
+		setTimeout(() => {
+			console.log("Sending debug request to start streaming");
+			const packetControl = new PacketControlSegment();
+			packetControl.operationType = OperationType.BeginStream;
+			packetControl.sessionID = this.sessionID;
+			packetControl.dataLength = new Uint32Array([0]);
+			const noDataSegment = new NoOperationPacket();
+
+			const fullPacket = new PacketData(packetControl, noDataSegment);
+
+			this.socket.write(fullPacket.serialize());
+		}, 2000);
 	}
 }
 
