@@ -1,0 +1,19 @@
+import { VerticalBox, Button, HorizontalBox, StandardListView } from "std-widgets.slint";
+export component MainWindow inherits Window {
+	in-out property <image> frame;
+	in-out property <[StandardListViewItem]> cameras;
+
+	callback change-camera(int);
+
+	HorizontalBox {
+		StandardListView {
+			model: root.cameras;
+			current-item-changed(index) => {
+				root.change-camera(index);
+			}
+		}
+		Image {
+			source: root.frame;
+		}
+	}
+}

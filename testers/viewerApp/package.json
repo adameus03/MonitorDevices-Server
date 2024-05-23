@@ -1,0 +1,17 @@
+{
+  "name": "viewerapp",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "slint-ui": "^1.6.0"
+  },
+  "trustedDependencies": [
+    "slint-ui"
+  ]
+}
