@@ -1,0 +1,9 @@
+[package]
+name = "fake_device"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5.4", features = ["derive"] }
+deku = { git = "https://github.com/sharksforarms/deku" } # git because hasn't been updated on cargo in a while
+rand = "0.8.5"
