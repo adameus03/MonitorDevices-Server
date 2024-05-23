@@ -176,7 +176,7 @@ export class DeviceConnectingServer extends EventEmitter {
 	}
 }
 
-class ConnectedDevice extends EventEmitter {
+export class ConnectedDevice extends EventEmitter {
 	socket: net.Socket;
 	deviceID: Uint8Array = new Uint8Array(16);
 	sessionID: Uint8Array = new Uint8Array(16);
