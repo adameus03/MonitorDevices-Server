@@ -157,8 +157,6 @@ export class DeviceConnectingServer extends EventEmitter {
 	 * Do not use on connected devices
 	 */
 	unregisterDeviceByID(deviceID: Uint8Array) {
-		if (process.versions.bun) console.log("====DEBUG removing device from database====");
-
 		if (deviceID.length != 16) throw new Error(`deviceID is of invalid length: (${deviceID.length})`);
 		if (process.versions.bun) console.log("====DEBUG deviceID is of valid length====");
 
@@ -168,6 +166,18 @@ export class DeviceConnectingServer extends EventEmitter {
 		
 		DeviceManager.DeleteDeviceByID(deviceID);
 		if (process.versions.bun) console.log("====DEBUG device removed from database====");
+	}
+
+	getSessionByDeviceID(deviceID: Uint8Array) {
+		if (process.versions.bun) console.log("====DEBUG getSessionByDeviceID====");
+		if (deviceID.length != 16) throw new Error(`deviceID is of invalid length: (${deviceID.length})`);
+		return this.connectedDevices.find(val => areUint8ArraysEqual(val.deviceID, deviceID));
+	}
+
+	getSessionBySessionID(sessionID: Uint8Array) {
+		if (process.versions.bun) console.log("====DEBUG getSessionBySessionID====");
+		if (sessionID.length != 16) throw new Error(`sessionID is of invalid length: (${sessionID.length})`);
+		return this.connectedDevices.find(val => areUint8ArraysEqual(val.sessionID, sessionID));
 	}
 
 	start(port: number) {
