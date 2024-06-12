@@ -181,7 +181,7 @@ export class DeviceConnectingServer extends EventEmitter {
 	}
 
 	start(port: number) {
-		this.serverInstance.listen(port);
+		this.serverInstance.listen(port, "0.0.0.0");
 		this.videoFrameReceiver.bind(port);
 	}
 }
