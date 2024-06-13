@@ -22,7 +22,7 @@ dotenv.config();
 const port = normalizePort(process.env.PORT || '8090');
 app.set('port', port);
 
-const server = http.createServer(app);
+const server = app.createServer();
 
 /**
  * Listen on provided port, on all network interfaces.
