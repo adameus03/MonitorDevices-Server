@@ -12,8 +12,6 @@ const app = new WebSocketExpress();
 app.use(express.json());
 app.use(userRoutes.router);
 app.use(deviceRoutes.router);
-const server = app.createServer();
-server.listen(8091, "0.0.0.0");
 
 let userIDBuffer = new Uint8Array(16);
 randomFillSync(userIDBuffer);
