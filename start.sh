@@ -1,4 +1,7 @@
 #!/bin/sh
+
+# [WARNING] [TODO] Not tested - WIP
+
 SCRIPT_NICKNAME="Start script"
 VOLUME_GUARD_PATH="./helpers/persistent_volume_guard.sh"
 
@@ -21,6 +24,9 @@ if [ $? -eq 0 ]; then
 
         if [ $? -eq 0 ]; then
             echo "$SCRIPT_NICKNAME: Launching core application..."
+            # Start the inference engine
+            ./analysis/inference &
+            # Start the node server
             npm run pm2
         else
             echo "$SCRIPT_NICKNAME: ERROR - Failed to setup database sync"
