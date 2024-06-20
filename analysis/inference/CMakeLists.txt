@@ -8,7 +8,7 @@ if(NOT TENSORFLOW_SOURCE_DIR)
 endif()
 
 add_subdirectory(
-  "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/tensorflow/tensorflow/lite"
+  "${TENSORFLOW_SOURCE_DIR}/tensorflow/lite"
   "${CMAKE_CURRENT_BINARY_DIR}/tensorflow-lite" EXCLUDE_FROM_ALL)
 
 add_executable(inference main.cc)
