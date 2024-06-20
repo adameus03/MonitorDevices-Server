@@ -1,0 +1,9 @@
+[submodule "analysis/tensorflow"]
+	path = analysis/tensorflow
+	url = https://github.com/tensorflow/tensorflow
+[submodule "analysis/ruy"]
+	path = analysis/ruy
+	url = https://github.com/google/ruy
+[submodule "analysis/flatbuffers"]
+	path = analysis/flatbuffers
+	url = https://github.com/google/flatbuffers
