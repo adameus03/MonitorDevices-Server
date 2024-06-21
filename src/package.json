@@ -1,0 +1,58 @@
+{
+  "name": "monitordevices-server",
+  "version": "1.0.0",
+  "description": "A server-side application for managing monitoring devices",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "pm2": "npx tsc && pm2 start processes.json --no-daemon",
+    "start": "npx tsc && node ./transpiled/bin/www.js",
+    "test": "echo \"No tests specified\"",
+    "migrate": "node ./transpiled/bin/migrate.js",
+    "migrate-and-pm2": "npm run migrate && npm run pm2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adameus03/MonitorDevices-Server.git"
+  },
+  "keywords": [
+    "device",
+    "management",
+    "device",
+    "monitoring",
+    "server"
+  ],
+  "author": "Jedrzej Kostyk <jedrek2504@github.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adameus03/MonitorDevices-Server/issues"
+  },
+  "homepage": "https://github.com/adameus03/MonitorDevices-Server#readme",
+  "dependencies": {
+    "@andreekeberg/imagedata": "^1.0.2",
+    "@types/crypto-js": "^4.2.2",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/ws": "^8.5.10",
+    "crypto-js": "^4.2.0",
+    "debug": "^4.3.4",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-ws": "^5.0.2",
+    "jsonwebtoken": "^9.0.2",
+    "pm2": "^5.4.0",
+    "sequelize": "^6.37.1",
+    "sqlite3": "^5.1.7",
+    "websocket-express": "^3.1.0",
+    "ws": "^8.17.0"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.12",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.30",
+    "@types/sequelize": "^4.28.20",
+    "typescript": "^5.4.5"
+  }
+}
