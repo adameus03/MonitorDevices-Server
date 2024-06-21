@@ -118,6 +118,7 @@ router.ws('/web-socket', async (req, res) => {
 
                     }
                 } catch (error) {
+					console.log(error);
                     ws.send(JSON.stringify({ type: 'error', message: 'Internal Server Error' }));
                 }
             });
