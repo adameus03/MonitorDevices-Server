@@ -12,17 +12,6 @@ const app = new WebSocketExpress();
 app.use(express.json());
 app.use(userRoutes.router);
 app.use(deviceRoutes.router);
-const server = app.createServer();
-server.listen(8091);
-
-let userIDBuffer = new Uint8Array(16);
-randomFillSync(userIDBuffer);
-var a = Buffer.from(userIDBuffer).toString('utf8');
-console.log(Buffer.from(userIDBuffer));
-console.log(a);
-var b = Buffer.from(a, 'utf8');
-console.log(b);
-console.log(b.toString('utf8'));
 
 // Set up the device server to be globally available
 const deviceServer = new DeviceConnectingServer();

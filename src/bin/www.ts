@@ -22,12 +22,12 @@ dotenv.config();
 const port = normalizePort(process.env.PORT || '8090');
 app.set('port', port);
 
-const server = http.createServer(app);
+const server = app.createServer();
 
 /**
  * Listen on provided port, on all network interfaces.
  */
-server.listen(port);
+server.listen(port, "0.0.0.0" as any);
 server.on('error', onError);
 server.on('listening', onListening);
 

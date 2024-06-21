@@ -13,6 +13,6 @@ server.on("deviceConnected", (connector: devices.ConnectedDevice) => {
 	});
 });
 
-server.start(8090);
+server.start(3333);
 
 window.run();

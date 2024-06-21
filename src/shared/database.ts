@@ -93,6 +93,17 @@ const Device = sequelize.define('Device', {
     type: DataTypes.BOOLEAN,
     allowNull: false,
     defaultValue: true,
+  },
+  user_id: {
+    type: DataTypes.BLOB,
+    allowNull: false,
+    validate: {
+      customValidator(value: Buffer) {
+        if (value.length != 16) {
+          throw new Error(`user_id is of incorrect size: ${value.length}`);
+        }
+      }
+    }
   }
 }, {
   tableName: 'device',
@@ -123,6 +134,15 @@ const AuthenticationToken = sequelize.define('AuthenticationToken', {
 });
 
 AuthenticationToken.belongsTo(User, { foreignKey: 'email' });
+
+Device.belongsTo(User, {
+  foreignKey: "user_id",
+  targetKey: "user_id"
+});
+User.hasMany(Device, {
+  foreignKey: "user_id",
+  sourceKey: "user_id"
+});
 
 // Exports
 export default {
