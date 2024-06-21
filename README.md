@@ -10,7 +10,7 @@ In order to build the Docker container image, execute in the main directory:
 To run the container, execute:
 `docker run -it sau:0`
 
-Docker Compose integration is planned as well, but not available for now (it would be helpful not to rebuild the image when testing changed code, so a directory mapping could be setup using docker-compose, todo).
+Docker Compose integration is planned as well, but not available for now (it would be helpful not to rebuild the image when testing changed code (it's not too long but still), so a directory mapping could be setup using docker-compose, todo).
 
 ## Requirements
 
