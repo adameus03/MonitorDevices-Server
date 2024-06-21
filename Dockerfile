@@ -54,7 +54,7 @@ COPY analysis/inference/surveillance_mobilenet_10_epochs_fixed_LS_90_balanced.tf
 
 WORKDIR /opt/app
 RUN mkdir /sau
-#CMD ["/bin/sh", "./start.sh"]
+CMD ["/bin/sh", "./start.sh"]
 #CMD ["top"]
-ENTRYPOINT ["tail"]
-CMD ["-f","/dev/null"]
+#ENTRYPOINT ["tail"]
+#CMD ["-f","/dev/null"]

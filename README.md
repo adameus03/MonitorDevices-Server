@@ -1,5 +1,17 @@
 # MonitorDevices-Server
 
+# Running with Docker (IMPORTANT)
+
+You can run the project using a Docker container (it will be required for integration with AI inference).
+
+In order to build the Docker container image, execute in the main directory:
+`docker build . -t sau:0`
+
+To run the container, execute:
+`docker run -it sau:0`
+
+Docker Compose integration is planned as well, but not available for now (it would be helpful not to rebuild the image when testing changed code, so a directory mapping could be setup using docker-compose, todo).
+
 ## Requirements
 
 Before running the application locally, make sure you have the following prerequisites installed:
