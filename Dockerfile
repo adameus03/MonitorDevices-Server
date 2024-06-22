@@ -7,6 +7,7 @@ WORKDIR /opt/app
 
 RUN apt-get update && apt-get upgrade
 RUN apt-get install -y git libeigen3-dev libabsl-dev libgemmlowp-dev libneon-2-sse-dev libfarmhash-dev libpthreadpool-dev libpthreadpool-dev
+RUN apt-get install -y libjpeg-dev libturbojpeg0 libturbojpeg0-dev
 RUN apt-get install -y cmake
 # apt-utils?
 
@@ -44,17 +45,24 @@ RUN mkdir helpers
 COPY helpers ./helpers
 EXPOSE $expose_port
 
+RUN mkdir -p /opt/app/analysis/inference
+RUN mkdir -p /opt/app/analysis/sauas
 
-# # Copy C/CXX build files to the container
-WORKDIR /opt/app/analysis
+# Copy C/CXX inference build files to the container
+WORKDIR /opt/app/analysis/inference
 COPY analysis/inference/build/ ./
 
 # Copy the tflite model to the container
 COPY analysis/inference/surveillance_mobilenet_10_epochs_fixed_LS_90_balanced.tflite ../
 
+# Copy sauas addon build files to the container
+WORKDIR /opt/app/analysis/sauas
+COPY analysis/sauas/build/ ./
+
+
 WORKDIR /opt/app
 RUN mkdir /sau
 CMD ["/bin/sh", "./start.sh"]
-#CMD ["top"]
-#ENTRYPOINT ["tail"]
-#CMD ["-f","/dev/null"]
+##CMD ["top"]
+# ENTRYPOINT ["tail"]
+# CMD ["-f","/dev/null"]
