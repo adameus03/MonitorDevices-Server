@@ -59,6 +59,14 @@ COPY analysis/inference/surveillance_mobilenet_10_epochs_fixed_LS_90_balanced.tf
 WORKDIR /opt/app/analysis/sauas
 COPY analysis/sauas/build/ ./
 
+# Copy mock programs to the container (for now just the fake device)
+WORKDIR /opt/app
+RUN mkdir -p /opt/app/fake
+WORKDIR /opt/app/fake
+RUN mkdir fakedev
+COPY testers/fake_device/target ./fakedev
+# Copy fakedev images to the container
+COPY testers/fake_device/*.jpg ./fakedev/
 
 WORKDIR /opt/app
 RUN mkdir /sau

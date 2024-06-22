@@ -33,9 +33,22 @@ if [ $? -eq 0 ]; then
             fi
             ./inference/inference &
             cd ..
-            echo "$SCRIPT_NICKNAME: Launching core application (Node.js)"
-            # Start the node server
-            npm run pm2
+            # Start mocks
+            chmod u+x ./fake.sh
+            if [ $? -eq 0 ]; then
+                echo "$SCRIPT_NICKNAME: Launching mocks..."
+                ./fake.sh &
+                if [ $? -eq 0 ]; then
+                    echo "$SCRIPT_NICKNAME: Mocks started successfully"
+                    echo "$SCRIPT_NICKNAME: Launching core application (Node.js)"
+                    # Start the node server
+                    npm run pm2
+                else
+                    echo "$SCRIPT_NICKNAME: ERROR - Failed to start the mocks"
+                fi
+            else
+                echo "$SCRIPT_NICKNAME: ERROR - Failed to start the mocks"
+            fi
         else
             echo "$SCRIPT_NICKNAME: ERROR - Failed to setup database sync"
         fi
