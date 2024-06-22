@@ -23,9 +23,17 @@ if [ $? -eq 0 ]; then
         npm run migrate
 
         if [ $? -eq 0 ]; then
-            echo "$SCRIPT_NICKNAME: Launching core application..."
             # Start the inference engine
-            ./analysis/inference &
+            cd ./analysis
+            if [ $? -eq 0 ]; then
+                echo "$SCRIPT_NICKNAME: Launching inference engine..."
+            else
+                echo "$SCRIPT_NICKNAME: ERROR - Failed to navigate to the analysis directory!"
+                exit 1
+            fi
+            ./inference/inference &
+            cd ..
+            echo "$SCRIPT_NICKNAME: Launching core application (Node.js)"
             # Start the node server
             npm run pm2
         else
