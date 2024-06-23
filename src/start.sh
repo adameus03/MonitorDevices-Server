@@ -43,6 +43,7 @@ if [ $? -eq 0 ]; then
                     echo "$SCRIPT_NICKNAME: Launching core application (Node.js)"
                     # Start the node server
                     npm run pm2
+                    # npm run start
                 else
                     echo "$SCRIPT_NICKNAME: ERROR - Failed to start the mocks"
                 fi

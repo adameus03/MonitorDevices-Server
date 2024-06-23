@@ -19,7 +19,7 @@ fn main() {
 	let image_file = read(config.file_path).unwrap();
 
 	let mut stream = TcpStream::connect("127.0.0.1:3333").unwrap();
-	let user_id = [0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F]; // update as necessary - maybe include sqlx?
+	let user_id = [0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x62, 0x62, 0x62, 0x62, 0x62, 0x62, 0x62, 0x62]; // update as necessary - maybe include sqlx?
 
 	let mac_addr: [u8; 6] = rand::random();
 	let auth_key: [u8; 16] = rand::random();
@@ -90,7 +90,7 @@ fn main() {
 	println!("Starting video stream");
 
 	let sender = UdpSocket::bind("127.0.0.1:0").unwrap();
-	sender.connect("127.0.0.1:8090").unwrap();
+	sender.connect("127.0.0.1:3333").unwrap();
 	let mut packet_counter = 0u32;
 
 	loop {
@@ -100,7 +100,7 @@ fn main() {
 		for frame in frames {
 			let frame_packet_bytes = frame.to_bytes().unwrap();
 			let bytes_sent = sender.send(&frame_packet_bytes).unwrap();
-			println!("Packet ID {} send {} bytes", packet_counter, bytes_sent);
+			//println!("Packet ID {} send {} bytes", packet_counter, bytes_sent);
 			thread::sleep(Duration::from_millis(20));
 		}
 		thread::sleep(Duration::from_millis(20));

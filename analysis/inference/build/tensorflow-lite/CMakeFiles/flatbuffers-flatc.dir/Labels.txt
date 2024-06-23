@@ -1,0 +1,13 @@
+# Target labels
+ flatbuffers-flatc
+# Source files and their labels
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/tensorflow-lite/CMakeFiles/flatbuffers-flatc
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/tensorflow-lite/CMakeFiles/flatbuffers-flatc.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/tensorflow-lite/CMakeFiles/flatbuffers-flatc-complete.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers-flatc/src/flatbuffers-flatc-stamp/flatbuffers-flatc-build.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers-flatc/src/flatbuffers-flatc-stamp/flatbuffers-flatc-configure.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers-flatc/src/flatbuffers-flatc-stamp/flatbuffers-flatc-download.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers-flatc/src/flatbuffers-flatc-stamp/flatbuffers-flatc-install.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers-flatc/src/flatbuffers-flatc-stamp/flatbuffers-flatc-mkdir.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers-flatc/src/flatbuffers-flatc-stamp/flatbuffers-flatc-patch.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers-flatc/src/flatbuffers-flatc-stamp/flatbuffers-flatc-update.rule

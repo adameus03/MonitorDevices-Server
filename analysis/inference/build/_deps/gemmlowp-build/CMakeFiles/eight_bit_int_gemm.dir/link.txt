@@ -1,0 +1,2 @@
+/usr/bin/ar qc libeight_bit_int_gemm.a CMakeFiles/eight_bit_int_gemm.dir/__/eight_bit_int_gemm/eight_bit_int_gemm.cc.o
+/usr/bin/ranlib libeight_bit_int_gemm.a

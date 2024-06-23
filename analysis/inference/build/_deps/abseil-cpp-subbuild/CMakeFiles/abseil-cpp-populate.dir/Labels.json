@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/abseil-cpp-subbuild/CMakeFiles/abseil-cpp-populate"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/abseil-cpp-subbuild/CMakeFiles/abseil-cpp-populate.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/abseil-cpp-subbuild/CMakeFiles/abseil-cpp-populate-complete.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/abseil-cpp-populate-stamp/abseil-cpp-populate-build.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/abseil-cpp-populate-stamp/abseil-cpp-populate-configure.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/abseil-cpp-populate-stamp/abseil-cpp-populate-download.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/abseil-cpp-populate-stamp/abseil-cpp-populate-install.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/abseil-cpp-populate-stamp/abseil-cpp-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/abseil-cpp-populate-stamp/abseil-cpp-populate-patch.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/abseil-cpp-populate-stamp/abseil-cpp-populate-test.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/abseil-cpp-populate-stamp/abseil-cpp-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"abseil-cpp-populate"
+		],
+		"name" : "abseil-cpp-populate"
+	}
+}

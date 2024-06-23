@@ -1,0 +1,14 @@
+# Target labels
+ xnnpack-populate
+# Source files and their labels
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/xnnpack-subbuild/CMakeFiles/xnnpack-populate
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/xnnpack-subbuild/CMakeFiles/xnnpack-populate.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/xnnpack-subbuild/CMakeFiles/xnnpack-populate-complete.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/xnnpack-populate-stamp/xnnpack-populate-build.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/xnnpack-populate-stamp/xnnpack-populate-configure.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/xnnpack-populate-stamp/xnnpack-populate-download.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/xnnpack-populate-stamp/xnnpack-populate-install.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/xnnpack-populate-stamp/xnnpack-populate-mkdir.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/xnnpack-populate-stamp/xnnpack-populate-patch.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/xnnpack-populate-stamp/xnnpack-populate-test.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/xnnpack-populate-stamp/xnnpack-populate-update.rule

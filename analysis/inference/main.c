@@ -21,27 +21,29 @@ typedef struct {
 static int SHM_ID = -1;
 static sau_shm_t* __sauas = NULL;
 
+#define OPTLOG if(0)
+
 void handle_sauas() {
     printf("[handle_sauas] Entered sauas-handling loop\n");
     while(1){
-        printf("[handle_sauas] Waiting for sauas\n");
+        OPTLOG printf("[handle_sauas] Waiting for sauas\n");
         sem_wait(&__sauas->fromSauas_semph);
-        printf("[handle_sauas] Done waiting for sauas\n");
+        OPTLOG printf("[handle_sauas] Done waiting for sauas\n");
 
         tl_infer_agent_input_t input = {
             .puData = __sauas->buf,
             .len = __sauas->buf_sz
         };
 
-        printf("[handle_sauas] Feeding input to the inference agent\n");
+        OPTLOG printf("[handle_sauas] Feeding input to the inference agent\n");
         tl_infer_agent_feed_input(&input);
-        printf("[handle_sauas] Performing inference\n");
+        OPTLOG printf("[handle_sauas] Performing inference\n");
         tl_infer_agent_perform_inference();
-        printf("[handle_sauas] Fetching output from the inference agent\n");
+        OPTLOG printf("[handle_sauas] Fetching output from the inference agent\n");
         tl_infer_agent_output_t output = tl_infer_agent_get_output();
         __sauas->output = output;
-        printf("[handle_sauas] Inference output: %d\n", output);
-        printf("[handle_sauas] Posting to sauas\n");
+        OPTLOG printf("[handle_sauas] Inference output: %d\n", output);
+        OPTLOG printf("[handle_sauas] Posting to sauas\n");
         sem_post(&__sauas->toSauas_semph);
     }
 

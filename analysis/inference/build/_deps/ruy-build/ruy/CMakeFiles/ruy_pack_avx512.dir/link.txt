@@ -1,0 +1,2 @@
+/usr/bin/ar qc libruy_pack_avx512.a CMakeFiles/ruy_pack_avx512.dir/pack_avx512.cc.o
+/usr/bin/ranlib libruy_pack_avx512.a

@@ -37,6 +37,8 @@ static sem_t multicall_guard_semph;
 #define SAUAS_CRITICAL_SECTION_BEGIN sem_wait(&multicall_guard_semph);
 #define SAUAS_CRITICAL_SECTION_END sem_post(&multicall_guard_semph);
 
+#define OPTLOG if(0) 
+
 void agent_infer(const FunctionCallbackInfo<Value>& args){
     Local<Object> bufferObj = args[0].As<Object>();
     uint8_t* dataBuffer = (uint8_t*) node::Buffer::Data(bufferObj);
@@ -55,33 +57,33 @@ void agent_infer(const FunctionCallbackInfo<Value>& args){
 
     // printf("[sau_analysis_service] Inference output: %d\n", output);
 
-    fprintf(stdout, "[sau_analysis_service] Waiting for critical section\n");
+    OPTLOG fprintf(stdout, "[sau_analysis_service] Waiting for critical section\n");
     SAUAS_CRITICAL_SECTION_BEGIN
 
-    fprintf(stdout, "[sau_analysis_service] Entered critical section\n");
-    fprintf(stdout, "[sau_analysis_service] Setting buffer size\n");
+    OPTLOG fprintf(stdout, "[sau_analysis_service] Entered critical section\n");
+    OPTLOG fprintf(stdout, "[sau_analysis_service] Setting buffer size\n");
     __inference->buf_sz = node::Buffer::Length(bufferObj);
-    fprintf(stdout, "[sau_analysis_service] Copying buffer data to shared memory\n");
+    OPTLOG fprintf(stdout, "[sau_analysis_service] Copying buffer data to shared memory\n");
     memcpy(__inference->buf, dataBuffer, __inference->buf_sz);
-    fprintf(stdout, "[sau_analysis_service] Posting to inference\n");
+    OPTLOG fprintf(stdout, "[sau_analysis_service] Posting to inference\n");
     sem_post(&__inference->toInference_semph);
-    fprintf(stdout, "[sau_analysis_service] Waiting for inference output\n");
+    OPTLOG fprintf(stdout, "[sau_analysis_service] Waiting for inference output\n");
     sem_wait(&__inference->fromInference_semph);
-    fprintf(stdout, "[sau_analysis_service] Inference output obtained\n");
+    OPTLOG fprintf(stdout, "[sau_analysis_service] Inference output obtained\n");
     uint8_t output = __inference->output;
-    fprintf(stdout, "[sau_analysis_service] Inference output: %u\n", output);
+    OPTLOG fprintf(stdout, "[sau_analysis_service] Inference output: %u\n", output);
 
-    fprintf(stdout, "[sau_analysis_service] Exiting critical section\n");
+    OPTLOG fprintf(stdout, "[sau_analysis_service] Exiting critical section\n");
 
     SAUAS_CRITICAL_SECTION_END
 
-    fprintf(stdout, "[sau_analysis_service] Sending output to Node.js\n");
+    OPTLOG fprintf(stdout, "[sau_analysis_service] Sending output to Node.js\n");
 
     Isolate* isolate = Isolate::GetCurrent();
     HandleScope scope(isolate);
     args.GetReturnValue().Set(Number::New(isolate, output));
 
-    fprintf(stdout, "[sau_analysis_service] Output returned to Node.js\n");
+    OPTLOG fprintf(stdout, "[sau_analysis_service] Output returned to Node.js\n");
 }
 
 static void setup() {

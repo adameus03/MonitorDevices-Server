@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FXdiv-download/CMakeFiles/fxdiv"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FXdiv-download/CMakeFiles/fxdiv.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FXdiv-download/CMakeFiles/fxdiv-complete.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FXdiv-download/fxdiv-prefix/src/fxdiv-stamp/fxdiv-build.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FXdiv-download/fxdiv-prefix/src/fxdiv-stamp/fxdiv-configure.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FXdiv-download/fxdiv-prefix/src/fxdiv-stamp/fxdiv-download.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FXdiv-download/fxdiv-prefix/src/fxdiv-stamp/fxdiv-install.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FXdiv-download/fxdiv-prefix/src/fxdiv-stamp/fxdiv-mkdir.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FXdiv-download/fxdiv-prefix/src/fxdiv-stamp/fxdiv-patch.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FXdiv-download/fxdiv-prefix/src/fxdiv-stamp/fxdiv-test.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FXdiv-download/fxdiv-prefix/src/fxdiv-stamp/fxdiv-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"fxdiv"
+		],
+		"name" : "fxdiv"
+	}
+}

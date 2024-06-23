@@ -1,0 +1,2 @@
+/usr/bin/ar qc libruy_context.a CMakeFiles/ruy_context.dir/context.cc.o
+/usr/bin/ranlib libruy_context.a

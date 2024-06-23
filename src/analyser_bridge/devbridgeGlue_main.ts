@@ -25,7 +25,7 @@ export class DevbridgeGlue extends EventEmitter {
                     let report: AnalysisResultReport = new AnalysisResultReport(dev, frameData, analysisResult);
                     this.emit("analysisResult", report);
                 } else {
-                    console.log(`[${DevbridgeGlue.TAG}] Analysis result: should not notify`);
+                    //console.log(`[${DevbridgeGlue.TAG}] Analysis result: should not notify`);
                 }
             });
         });
