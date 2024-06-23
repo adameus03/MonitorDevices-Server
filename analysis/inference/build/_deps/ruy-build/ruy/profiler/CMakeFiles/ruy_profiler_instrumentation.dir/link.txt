@@ -1,0 +1,2 @@
+/usr/bin/ar qc libruy_profiler_instrumentation.a CMakeFiles/ruy_profiler_instrumentation.dir/instrumentation.cc.o
+/usr/bin/ranlib libruy_profiler_instrumentation.a

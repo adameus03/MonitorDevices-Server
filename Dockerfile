@@ -1,6 +1,7 @@
 # [WARNING] [TODO] Not tested yet
 
-ARG expose_port=80
+ARG expose_port_1=8090
+ARG expose_port_2=3333
 FROM debian:bookworm
 RUN mkdir -p /opt/app
 WORKDIR /opt/app
@@ -43,7 +44,9 @@ COPY .env ./transpiled/bin/
 
 RUN mkdir helpers
 COPY helpers ./helpers
-EXPOSE $expose_port
+EXPOSE $expose_port_1
+EXPOSE $expose_port_2
+
 
 RUN mkdir -p /opt/app/analysis/inference
 RUN mkdir -p /opt/app/analysis/sauas

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libruy_context_get_ctx.a CMakeFiles/ruy_context_get_ctx.dir/context_get_ctx.cc.o
+/usr/bin/ranlib libruy_context_get_ctx.a

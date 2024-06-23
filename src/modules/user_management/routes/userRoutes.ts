@@ -30,37 +30,50 @@ router.post("/register/user", async (req, res, next) => {
 });
 
 router.post("/login", async (req, res, next) => {
+    console.log("[dbg] In /login handler");
     if (req.body.email && req.body.password) {
+	console.log("[dbg] In /login email&password condition");
         try {
-            let s = await userManager.LoginUser(req.body.email, req.body.password);
-            if (s == null) {
+            let user = await userManager.LoginUser(req.body.email, req.body.password);
+            if (user) {
+		console.log("[dbg] In /login if(user)");
                 var rand = Math.random();
                 var token = await userUtils.generate_token(rand.toString(), req.body.email);
                 if (token != null) {
-                    userUtils.save_token(token, req.body.email);
-                    res.setHeader('Authorization', token);
+		    console.log("[dbg] In /login if(token != null)");
+                    await userUtils.save_token(token, req.body.email);
+		    console.log("[dbg] In /login before res.setHeader");
+                    await res.setHeader('Authorization', token);
                 }
-                res.sendStatus(200);
-
+		console.log(`UUUUU USERNAME: ${user.get('username')}`);
+                res.status(200).json({ username: user.get('username') });
+                console.log("-- [login] after res,sendStatus --");
             } else {
-                next(createError(400, s));
+		console.log("[dbg] In /login else(user)");
+                next(createError(400, "INVALID EMAIL OR PASSWORD"));
                 next();
             } 
         } catch (e) {
+	    console.log(`[dbg] In /login CATCHED ERROR: ${e}`);
+	    console.log("[dbg] In /login catch(e)");
             next(createError(500, 'INTERNAL SERVER ERROR' + e));
+	    console.log("[dbg] In /login catch(e) after next(createError)");
             next();
         }
     } else {
+	console.log("[dbg] In /login else clause of email&password");
         next(createError(400, 'ONE OF THE REQUIRED FIELDS IS MISSING'));
         next();
     }
 })
 
 router.post("/check-token", async (req, res, next) => {
+    console.log("--- In check-token --");
     if (req.body.token && req.body.email) {
+	console.log("-- Condition satisfied --");
         var temp = await userUtils.verify_token(req.body.token, req.body.email);
         if (temp == true) {
-            userUtils.refresh_token(req.body.token);
+            await userUtils.refresh_token(req.body.token);
             res.sendStatus(200);
         } else if (temp == false) {
             next(createError(400, "INVALID TOKEN"));
@@ -69,8 +82,10 @@ router.post("/check-token", async (req, res, next) => {
             next(createError(500, "INTERNAL SERVER ERROR"));
             next();
         }
-        next(createError(400, "INVALID TOKEN"));
-        next();
+        //next(createError(400, "INVALID TOKEN"));
+        //next();
+    } else {
+    	console.log("-- Condition NOT satisfied --");
     }
     
 })

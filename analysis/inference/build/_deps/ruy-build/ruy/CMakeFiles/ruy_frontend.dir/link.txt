@@ -1,0 +1,2 @@
+/usr/bin/ar qc libruy_frontend.a CMakeFiles/ruy_frontend.dir/frontend.cc.o
+/usr/bin/ranlib libruy_frontend.a

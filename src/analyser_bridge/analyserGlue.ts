@@ -12,7 +12,7 @@ export class AnalyserGlue {
 
     processFrame(frameData: Uint8Array): AnalysisResult {
         let buf = Buffer.from(frameData);
-        let _result: Number = sauas.agent_process_frame(buf);
+        let _result: Number = sauas.agent_infer(buf);
         let result = _result.valueOf();
         if (result > 0) {
             return new AnalysisResult(true);

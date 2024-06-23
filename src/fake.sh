@@ -6,14 +6,14 @@ SCRIPT_NICKNAME="Faker"
 # If not create such user
 # (It is required for the fake device to work)
 
-if [[ $(sqlite3 $SQLITE_DBS_LOCATION/monitordevicesdb.sqlite "SELECT * FROM users WHERE user_id = X'000102030405060708090a0b0c0d0e0f'") ]]; then
+if [[ $(sqlite3 $SQLITE_DBS_LOCATION/monitordevicesdb.sqlite "SELECT * FROM users WHERE user_id = X'61616161616161616262626262626262'") ]]; then
     echo "$SCRIPT_NICKNAME: Fake user exists"
 else
     echo "$SCRIPT_NICKNAME: Fake user does not exist, creating..."
     
-    sqlite3 $SQLITE_DBS_LOCATION/monitordevicesdb.sqlite "INSERT INTO users (user_id, username, password, email, createdAt, updatedAt) VALUES(X'000102030405060708090a0b0c0d0e0f', 'test_user', 'test_password', 'test_user@testmail.com', '2007-01-01 10:00:00', '2007-01-01 10:00:00')";
+    sqlite3 $SQLITE_DBS_LOCATION/monitordevicesdb.sqlite "INSERT INTO users (user_id, username, password, email, createdAt, updatedAt) VALUES(X'61616161616161616262626262626262', 'test_user', '10a6e6cc8311a3e2bcc09bf6c199adecd5dd59408c343e926b129c4914f3cb01', 'test_user@testmail.com', '2007-01-01 10:00:00', '2007-01-01 10:00:00')";
 
-    if [[ $(sqlite3 $SQLITE_DBS_LOCATION/monitordevicesdb.sqlite "SELECT * FROM users WHERE user_id = X'000102030405060708090a0b0c0d0e0f'") ]]; then
+    if [[ $(sqlite3 $SQLITE_DBS_LOCATION/monitordevicesdb.sqlite "SELECT * FROM users WHERE user_id = X'61616161616161616262626262626262'") ]]; then
         echo "$SCRIPT_NICKNAME: Fake user created successfully"
     else
         echo "$SCRIPT_NICKNAME: ERROR - Failed to create fake user"

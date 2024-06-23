@@ -1,0 +1,2 @@
+/usr/bin/ar qc libruy_have_built_path_for_avx.a CMakeFiles/ruy_have_built_path_for_avx.dir/have_built_path_for_avx.cc.o
+/usr/bin/ranlib libruy_have_built_path_for_avx.a

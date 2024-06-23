@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfft2d_fft4f2d.a CMakeFiles/fft2d_fft4f2d.dir/__/__/fft2d/fft4f2d.c.o
+/usr/bin/ranlib libfft2d_fft4f2d.a
