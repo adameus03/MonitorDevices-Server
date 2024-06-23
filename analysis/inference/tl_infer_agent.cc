@@ -90,6 +90,8 @@ void tl_infer_agent_feed_input(tl_infer_agent_input_t* pInput) {
                               model_settings.kNumRows, 
                               &pResizedRgbData, 
                               &resizedRgbDataLen);
+    
+    free(pRgbData);
 
     // Copy the resized RGB data to the input tensor
     for (int i = 0; i < model_settings.kMaxImageSize; i += 3) {
@@ -107,6 +109,7 @@ void tl_infer_agent_feed_input(tl_infer_agent_input_t* pInput) {
         input[i + 2] *= TL_AGENT_INPUT_CHANNEL_BLUE_NORMALIZATION__STDEV;
     }
 
+    free(pResizedRgbData);
 }
 
 void tl_infer_agent_perform_inference() {
