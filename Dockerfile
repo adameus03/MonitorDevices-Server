@@ -2,6 +2,7 @@
 
 ARG expose_port_1=8090
 ARG expose_port_2=3333
+ARG expose_port_3=3334
 FROM debian:bookworm
 RUN mkdir -p /opt/app
 WORKDIR /opt/app
@@ -46,6 +47,7 @@ RUN mkdir helpers
 COPY helpers ./helpers
 EXPOSE $expose_port_1
 EXPOSE $expose_port_2
+EXPOSE $expose_port_3
 
 
 RUN mkdir -p /opt/app/analysis/inference

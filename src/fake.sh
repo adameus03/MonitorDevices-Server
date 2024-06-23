@@ -22,7 +22,7 @@ else
 fi
 
 # Sleep to drastically increase the chance of node server starting before the fake device
-sleep 5
+sleep 10
 # Start fake device
 cd ./fake/fakedev
 if [ $? -eq 0 ]; then
