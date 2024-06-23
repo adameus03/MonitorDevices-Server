@@ -1,0 +1,2 @@
+/usr/bin/ar qc libruy_pack_arm.a CMakeFiles/ruy_pack_arm.dir/pack_arm.cc.o
+/usr/bin/ranlib libruy_pack_arm.a

@@ -100,10 +100,10 @@ fn main() {
 		for frame in frames {
 			let frame_packet_bytes = frame.to_bytes().unwrap();
 			let bytes_sent = sender.send(&frame_packet_bytes).unwrap();
-			println!("Packet ID {} send {} bytes", packet_counter, bytes_sent);
+			//println!("Packet ID {} send {} bytes", packet_counter, bytes_sent);
 			thread::sleep(Duration::from_millis(20));
 		}
-		thread::sleep(Duration::from_millis(20));
+		thread::sleep(Duration::from_millis(200));
 	}
 
 }

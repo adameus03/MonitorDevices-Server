@@ -1,0 +1,2 @@
+/usr/bin/ar qc libruy_have_built_path_for_avx512.a CMakeFiles/ruy_have_built_path_for_avx512.dir/have_built_path_for_avx512.cc.o
+/usr/bin/ranlib libruy_have_built_path_for_avx512.a

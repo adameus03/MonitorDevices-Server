@@ -1,0 +1,2 @@
+/usr/bin/ar qc libruy_kernel_arm.a CMakeFiles/ruy_kernel_arm.dir/kernel_arm32.cc.o CMakeFiles/ruy_kernel_arm.dir/kernel_arm64.cc.o
+/usr/bin/ranlib libruy_kernel_arm.a

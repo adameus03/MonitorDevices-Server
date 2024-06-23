@@ -32,11 +32,7 @@ export class UserManager {
 
     async LoginUser(email: string, password: string) {
         var hashedPassword = CryptoJS.SHA256(password.toString()).toString();
-        if (await db.User.findOne({where: {email: email, password: hashedPassword}})) {
-            return null;
-        } else {
-            return "INVALID EMAIL OR PASSWORD";
-        }
+        return await db.User.findOne({where: {email: email, password: hashedPassword}})
     }
 
     async GetUserData (user_name: String) {

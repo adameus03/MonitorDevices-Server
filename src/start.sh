@@ -23,11 +23,33 @@ if [ $? -eq 0 ]; then
         npm run migrate
 
         if [ $? -eq 0 ]; then
-            echo "$SCRIPT_NICKNAME: Launching core application..."
             # Start the inference engine
-            ./analysis/inference &
-            # Start the node server
-            npm run pm2
+            cd ./analysis
+            if [ $? -eq 0 ]; then
+                echo "$SCRIPT_NICKNAME: Launching inference engine..."
+            else
+                echo "$SCRIPT_NICKNAME: ERROR - Failed to navigate to the analysis directory!"
+                exit 1
+            fi
+            ./inference/inference &
+            cd ..
+            # Start mocks
+            chmod u+x ./fake.sh
+            if [ $? -eq 0 ]; then
+                echo "$SCRIPT_NICKNAME: Launching mocks..."
+                ./fake.sh &
+                if [ $? -eq 0 ]; then
+                    echo "$SCRIPT_NICKNAME: Mocks started successfully"
+                    echo "$SCRIPT_NICKNAME: Launching core application (Node.js)"
+                    # Start the node server
+                    npm run pm2
+                    # npm run start
+                else
+                    echo "$SCRIPT_NICKNAME: ERROR - Failed to start the mocks"
+                fi
+            else
+                echo "$SCRIPT_NICKNAME: ERROR - Failed to start the mocks"
+            fi
         else
             echo "$SCRIPT_NICKNAME: ERROR - Failed to setup database sync"
         fi

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libruy_apply_multiplier.a CMakeFiles/ruy_apply_multiplier.dir/apply_multiplier.cc.o
+/usr/bin/ranlib libruy_apply_multiplier.a

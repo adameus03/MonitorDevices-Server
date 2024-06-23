@@ -1,0 +1,2 @@
+/usr/bin/ar qc libruy_ctx.a CMakeFiles/ruy_ctx.dir/ctx.cc.o
+/usr/bin/ranlib libruy_ctx.a

@@ -1,0 +1,12 @@
+# This is a generated file and its contents are an internal implementation detail.
+# The download step will be re-executed if anything in this file changes.
+# No other meaning or use of this file is supported.
+
+method=url
+command=/usr/bin/cmake;-P;/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/neon2sse-subbuild/neon2sse-populate-prefix/src/neon2sse-populate-stamp/download-neon2sse-populate.cmake;COMMAND;/usr/bin/cmake;-P;/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/neon2sse-subbuild/neon2sse-populate-prefix/src/neon2sse-populate-stamp/verify-neon2sse-populate.cmake;COMMAND;/usr/bin/cmake;-P;/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/neon2sse-subbuild/neon2sse-populate-prefix/src/neon2sse-populate-stamp/extract-neon2sse-populate.cmake
+source_dir=/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/neon2sse
+work_dir=/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build
+url(s)=https://storage.googleapis.com/mirror.tensorflow.org/github.com/intel/ARM_NEON_2_x86_SSE/archive/a15b489e1222b2087007546b4912e21293ea86ff.tar.gz
+hash=SHA256=019fbc7ec25860070a1d90e12686fc160cfb33e22aa063c80f52b363f1361e9d
+no_extract=
+

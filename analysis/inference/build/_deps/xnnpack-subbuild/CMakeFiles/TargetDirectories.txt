@@ -1,0 +1,3 @@
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/xnnpack-subbuild/CMakeFiles/xnnpack-populate.dir
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/xnnpack-subbuild/CMakeFiles/edit_cache.dir
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/xnnpack-subbuild/CMakeFiles/rebuild_cache.dir
