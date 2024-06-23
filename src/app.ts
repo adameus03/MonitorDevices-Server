@@ -16,7 +16,9 @@ app.use(deviceRoutes.router);
 
 // Set up the device server to be globally available
 export const deviceServer = new DeviceConnectingServer();
-deviceServer.start(3333);
+deviceServer.startTCP(3334);
+deviceServer.startUDP(3333);
+
 app.locals["deviceConnector"] = deviceServer;
 
 const inferringService = new DevbridgeGlue();

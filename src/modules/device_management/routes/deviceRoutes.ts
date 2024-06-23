@@ -6,6 +6,7 @@ import db from "../../../shared/database";
 import { Model, UnknownConstraintError } from 'sequelize';
 import { type } from 'os';
 import { isUtf8 } from 'buffer';
+import { ConnectedDevice } from '../../../device_bridge/app';
 
 const router = new Router();
 
@@ -75,18 +76,26 @@ router.ws('/web-socket', async (req, res) => {
                 createdAt: device.get('createdAt')
             }));
 
+            // Declare session here to use it in both ws handlers
+            let session: ConnectedDevice;
+
             ws.send(JSON.stringify({ type: 'device_list', devices: deviceList }));
 
             ws.on('message', async (message) => {
-                try {
+                 console.log("@@@ ws.on('message', ...) @@@");
+		 try {
+	            console.log("@@@ before JSON.parse @@@");
                     let data = JSON.parse(message.toString('utf-8'));
+	            console.log("@@@ After JSON.parse @@@");
                     if (data.type === 'select_device') {
+			console.log("@@@ data.type === 'select_device' @@@");
                         //Get buffer id from websocket message
-                        let selectedDeviceId = Buffer.from(data.device_id.data);            
+                        let selectedDeviceId = Buffer.from(data.device_id.data);
+			console.log("@@@ After Buffer.from @@@");
                         if (typeof devices != 'string') {
-
+		            console.log("@@@ data.type === 'select_device' @@@");
                             let selectedDevice;
-                            //Find recieved id in devices
+                            //Find received id in devices
                             for (let i = 0; i < devices.length; i++) {                     
                                 if (devices[i].get('device_id') == selectedDeviceId.toString()) {
                                     selectedDevice = devices[i];
@@ -94,30 +103,42 @@ router.ws('/web-socket', async (req, res) => {
                                 }
                             }
 
-                            if (!selectedDevice) {  
+                            if (!selectedDevice) {
+				console.log("@@@ !selectedDevice @@@");
                                 ws.send(JSON.stringify({ type: 'error', message: 'Invalid device ID' }));
                                 return;
                             }
+			    console.log("@@@ selectedDevice @@@");
 
                             //Get device id as a buffer and find session to this device_id
                             const device_id = new Uint8Array(selectedDevice.get('device_id') as Buffer);    
-                            const session = req.app.locals.deviceConnector.getSessionByDeviceID(device_id);
+			    console.log("@@@ before deviceConnector.getSessionByDeviceID @@@");
+                            session = req.app.locals.deviceConnector.getSessionByDeviceID(device_id); // using outer scope session
+			    console.log("@@@ after deviceConnector.getSessionByDeviceID @@@");
 
                             if (!session || typeof session == undefined) {
+				console.log("@@@ !session || typeof session == undefined @@@");
                                 ws.send(JSON.stringify({ type: 'error', message: 'No session for this device' }));
+				console.log("@@@ Sent 'No session for this device' @@@");
                                 return;
                             }
+
+                            
 
                             //Send frames
                             session.videoManager.on('newFrame', (frameData: any) => {                       
                                 console.log(`New frame received from device ${session.deviceID}`);
                                 ws.send(frameData);
                             });
+
+                            session.beginStream();
                         }
                     } else {
-
+			console.log("@@@ else @@@");
                     }
                 } catch (error) {
+		    console.log("@@@ catch (error) @@@");
+		    console.log(`@@@ error = ${error} @@@`);
                     ws.send(JSON.stringify({ type: 'error', message: 'Internal Server Error' }));
                 }
             });
@@ -125,12 +146,15 @@ router.ws('/web-socket', async (req, res) => {
             ws.on('close', () => {
                 console.log('Close connection ' + username);
                 clients = clients.filter(client => client.username !== username);
+
+                session.endStream();
             });
         } else {
             ws.close(500, 'Iternal server error');
             clients = clients.filter(client => client.username !== username);
         }
     } catch (error) {
+	console.log("@@@ In error before ws.close @@@");
         ws.close(500, 'Internal Server Error');
     }
 });

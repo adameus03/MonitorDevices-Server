@@ -18,7 +18,7 @@ fn main() {
 
 	let image_file = read(config.file_path).unwrap();
 
-	let mut stream = TcpStream::connect("127.0.0.1:3333").unwrap();
+	let mut stream = TcpStream::connect("127.0.0.1:3334").unwrap();
 	let user_id = [0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x62, 0x62, 0x62, 0x62, 0x62, 0x62, 0x62, 0x62]; // update as necessary - maybe include sqlx?
 
 	let mac_addr: [u8; 6] = rand::random();
