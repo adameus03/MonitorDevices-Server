@@ -1,0 +1,11 @@
+# Hashes of file build rules.
+b01644a9ddb47344bdb9002c971d1b7f /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/xnnpack-populate-stamp/xnnpack-populate-build
+84d3692a9d66cc1c7f66afcab407e0dd /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/xnnpack-populate-stamp/xnnpack-populate-configure
+da82ac9d6dfa2977e3932a70c7bc6fdb /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/xnnpack-populate-stamp/xnnpack-populate-download
+88207b58bdeddb09e5683b9301f9db8a /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/xnnpack-populate-stamp/xnnpack-populate-install
+5ac355a3cfe02cb23ffb0c45728efbfa /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/xnnpack-populate-stamp/xnnpack-populate-mkdir
+2315955d6daa63c3e61b0b1d113b1b0c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/xnnpack-populate-stamp/xnnpack-populate-patch
+115523fd4e99504e8aa0d255caf41292 /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/xnnpack-populate-stamp/xnnpack-populate-test
+6cc445c40e695eec7040c05d9c3a23d2 /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/xnnpack-populate-stamp/xnnpack-populate-update
+5d7c811dc87254c32d56f2899af06238 CMakeFiles/xnnpack-populate
+9a3b824bf4f81bc1b79d08d88de97ea1 CMakeFiles/xnnpack-populate-complete

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libruy_wait.a CMakeFiles/ruy_wait.dir/wait.cc.o
+/usr/bin/ranlib libruy_wait.a

@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/xnnpack-subbuild/CMakeFiles/xnnpack-populate"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/xnnpack-subbuild/CMakeFiles/xnnpack-populate.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/xnnpack-subbuild/CMakeFiles/xnnpack-populate-complete.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/xnnpack-populate-stamp/xnnpack-populate-build.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/xnnpack-populate-stamp/xnnpack-populate-configure.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/xnnpack-populate-stamp/xnnpack-populate-download.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/xnnpack-populate-stamp/xnnpack-populate-install.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/xnnpack-populate-stamp/xnnpack-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/xnnpack-populate-stamp/xnnpack-populate-patch.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/xnnpack-populate-stamp/xnnpack-populate-test.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/xnnpack-populate-stamp/xnnpack-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"xnnpack-populate"
+		],
+		"name" : "xnnpack-populate"
+	}
+}

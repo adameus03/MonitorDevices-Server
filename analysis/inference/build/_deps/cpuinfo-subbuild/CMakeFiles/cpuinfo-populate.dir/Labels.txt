@@ -1,0 +1,14 @@
+# Target labels
+ cpuinfo-populate
+# Source files and their labels
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/cpuinfo-subbuild/CMakeFiles/cpuinfo-populate
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/cpuinfo-subbuild/CMakeFiles/cpuinfo-populate.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/cpuinfo-subbuild/CMakeFiles/cpuinfo-populate-complete.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/cpuinfo-subbuild/cpuinfo-populate-prefix/src/cpuinfo-populate-stamp/cpuinfo-populate-build.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/cpuinfo-subbuild/cpuinfo-populate-prefix/src/cpuinfo-populate-stamp/cpuinfo-populate-configure.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/cpuinfo-subbuild/cpuinfo-populate-prefix/src/cpuinfo-populate-stamp/cpuinfo-populate-download.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/cpuinfo-subbuild/cpuinfo-populate-prefix/src/cpuinfo-populate-stamp/cpuinfo-populate-install.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/cpuinfo-subbuild/cpuinfo-populate-prefix/src/cpuinfo-populate-stamp/cpuinfo-populate-mkdir.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/cpuinfo-subbuild/cpuinfo-populate-prefix/src/cpuinfo-populate-stamp/cpuinfo-populate-patch.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/cpuinfo-subbuild/cpuinfo-populate-prefix/src/cpuinfo-populate-stamp/cpuinfo-populate-test.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/cpuinfo-subbuild/cpuinfo-populate-prefix/src/cpuinfo-populate-stamp/cpuinfo-populate-update.rule

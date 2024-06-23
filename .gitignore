@@ -1,6 +1,6 @@
 #Application-specific
 analysis/tflite_build
-analysis/inference/build
+#analysis/inference/build
 analysis-old
 
 # Node modules

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libprofiling_info_proto.a CMakeFiles/profiling_info_proto.dir/profiling_info.pb.cc.o
+/usr/bin/ranlib libprofiling_info_proto.a

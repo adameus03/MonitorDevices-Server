@@ -1,0 +1,73 @@
+_deps/xnnpack-build/CMakeFiles/microkernels-prod.dir/src/amalgam/gen/scalar.c.o: \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/amalgam/gen/scalar.c \
+ /usr/include/stdc-predef.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FP16-source/include/fp16/fp16.h \
+ /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+ /usr/include/features.h /usr/include/features-time64.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/bits/timesize.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/long-double.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/time64.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h /usr/include/math.h \
+ /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+ /usr/include/x86_64-linux-gnu/bits/floatn.h \
+ /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+ /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FP16-source/include/fp16/bitcasts.h \
+ /usr/include/assert.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FXdiv-source/include/fxdiv.h \
+ /usr/lib/gcc/x86_64-linux-gnu/12/include/stddef.h \
+ /usr/lib/gcc/x86_64-linux-gnu/12/include/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/12/include/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+ /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/include/simd/f32-scalar.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/common.h \
+ /usr/include/string.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/argmaxpool.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/avgpool.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/microparams.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/conv.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/dwconv.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/fill.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/gavgpool.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/gemm.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/ibilinear.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/igemm.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/lut.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/math.h \
+ /usr/lib/gcc/x86_64-linux-gnu/12/include/stdbool.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/maxpool.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/packw.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/pad.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/pavgpool.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/prelu.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/raddstoreexpminusmax.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/reduce.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/spmm.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/transpose.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/unaligned.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/unpool.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/vbinary.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/vcvt.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/vlrelu.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/vmulcaddc.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/vunary.h \
+ /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/zip.h

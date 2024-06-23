@@ -1,0 +1,2 @@
+/usr/bin/ar qc libruy_cpuinfo.a CMakeFiles/ruy_cpuinfo.dir/cpuinfo.cc.o
+/usr/bin/ranlib libruy_cpuinfo.a
