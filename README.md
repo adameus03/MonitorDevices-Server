@@ -10,7 +10,9 @@ In order to build the Docker container image, execute in the main directory:
 To run the container, execute:
 `docker run -it sau:0`
 
-Docker Compose integration is planned as well, but not available for now (it would be helpful not to rebuild the image when testing changed code (it's not too long but still), so a directory mapping could be setup using docker-compose, todo).
+To persist the /sau volume (with the database), please use:
+`docker run -p 8090:8090 -p 3333:3333 -p 3334:3334 --network host -it -v sauvolume:/sau sau:0` 
+for running the container
 
 ## Requirements
 
