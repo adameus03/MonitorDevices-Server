@@ -17,17 +17,16 @@ export class DeviceVideoManager extends EventEmitter {
 	}
 
 	async addPacket(packet: ImagePacket) {
-		//if (process.versions.bun) 
-		console.log("====DEBUG adding image packet=====");
+		// console.log("====DEBUG adding image packet=====");
 
 		if (!areUint8ArraysEqual(this.sessionID, packet.sessionID)) throw new Error("Session ID mismatch between packet and manager");
 		if (this.packets.map(packet => packet.packetID[0]).includes(packet.packetID[0])) throw new Error(`Received double packet ID: ${packet.packetID[0]}`);
 		
-		console.log("$$$ Pushing packet");
+		// console.log("$$$ Pushing packet");
 		this.packets.push(packet);
-		console.log("$$$ Pushed packet");
+		// console.log("$$$ Pushed packet");
 		if (packet.packetType == ImagePacketType.OnlyChunk || packet.packetType == ImagePacketType.LastChunk) {
-			console.log("$$$ packet.packetType == ImagePacketType.OnlyChunk || packet.packetType == ImagePacketType.LastChunk");
+			// console.log("$$$ packet.packetType == ImagePacketType.OnlyChunk || packet.packetType == ImagePacketType.LastChunk");
 			// Shouldn't need to cut off data after EOI marker - JFIF should handle it on its own
 			const fullImageData = this.packets
 				.sort((a, b) => a.packetID[0] - b.packetID[0])
@@ -38,9 +37,9 @@ export class DeviceVideoManager extends EventEmitter {
 					newResult.set(currentPacket, previousResult.length);
 					return newResult;
 				});
-			console.log("$$$ Emiting new frame...");
+			// console.log("$$$ Emiting new frame...");
 			this.emit("newFrame", fullImageData);
-			console.log("$$$ Emitted new frame");
+			// console.log("$$$ Emitted new frame");
 			this.packets = [];
 		}
 	}

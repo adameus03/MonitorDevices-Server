@@ -223,24 +223,24 @@ export class DeviceConnectingServer extends EventEmitter {
 		});
 
 		this.videoFrameReceiver.on('message', (msg: any, info: any) => {
-			console.log('!!! Received %d bytes from %s:%d\n',msg.length, info.address, info.port);
+			// console.log('!!! Received %d bytes from %s:%d\n',msg.length, info.address, info.port);
 
-			console.log(`### DEBUG UDP frame received of length ${msg.length}`);
+			// console.log(`### DEBUG UDP frame received of length ${msg.length}`);
 
 			const dataTyped = new Uint8Array(msg);
 
-			console.log(`### Creating ImagePacket from raw bytes...`)
+			// console.log(`### Creating ImagePacket from raw bytes...`)
 			const packet = ImagePacket.makeFromRawBytes(dataTyped);
-			console.log("### Seeking deviceInfo...")
+			// console.log("### Seeking deviceInfo...")
 			const deviceInfo = this.connectedDevices.find(val => areUint8ArraysEqual(val.sessionID, packet.sessionID));
 
 			if (!deviceInfo) {
 				console.log("### Didn't find the device!");
 				throw new Error("### Received image packet for nonexistent session");
 			} else {
-				console.log("### Found the device, adding packet to videoManager for the device");
+				// console.log("### Found the device, adding packet to videoManager for the device");
 				deviceInfo.videoManager.addPacket(packet);
-				console.log("### Done adding packet");
+				// console.log("### Done adding packet");
 			}
 		});
 
