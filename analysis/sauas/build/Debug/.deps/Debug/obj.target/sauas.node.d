@@ -1,0 +1,1 @@
+cmd_Debug/obj.target/sauas.node := g++ -o Debug/obj.target/sauas.node -shared -pthread -rdynamic -m64  -Wl,-soname=sauas.node -Wl,--start-group Debug/obj.target/sauas/sau_analysis_service.o -Wl,--end-group -lnode

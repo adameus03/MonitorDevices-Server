@@ -8,9 +8,12 @@ In order to build the Docker container image, execute in the main directory:
 `docker build . -t sau:0`
 
 To run the container, execute:
-`docker run -it sau:0`
+`docker run -p 8090:8090 -p 3333:3333 -p 3334:3334 --network host -it sau:0`
 
 Docker Compose integration is planned as well, but not available for now (it would be helpful not to rebuild the image when testing changed code (it's not too long but still), so a directory mapping could be setup using docker-compose, todo).
+
+WARNING:
+After a few container image builds you can notice an increased disk space usage. You can run `docker system prune` to remove dangling resources and save yourself from buying a bigger drive
 
 ## Requirements
 

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libruy_tune.a CMakeFiles/ruy_tune.dir/tune.cc.o
+/usr/bin/ranlib libruy_tune.a

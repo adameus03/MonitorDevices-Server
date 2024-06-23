@@ -1,0 +1,14 @@
+# Target labels
+ fp16
+# Source files and their labels
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FP16-download/CMakeFiles/fp16
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FP16-download/CMakeFiles/fp16.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FP16-download/CMakeFiles/fp16-complete.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FP16-download/fp16-prefix/src/fp16-stamp/fp16-build.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FP16-download/fp16-prefix/src/fp16-stamp/fp16-configure.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FP16-download/fp16-prefix/src/fp16-stamp/fp16-download.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FP16-download/fp16-prefix/src/fp16-stamp/fp16-install.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FP16-download/fp16-prefix/src/fp16-stamp/fp16-mkdir.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FP16-download/fp16-prefix/src/fp16-stamp/fp16-patch.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FP16-download/fp16-prefix/src/fp16-stamp/fp16-test.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FP16-download/fp16-prefix/src/fp16-stamp/fp16-update.rule

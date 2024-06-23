@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpthreadpool.a "CMakeFiles/pthreadpool.dir/src/portable-api.c.o" CMakeFiles/pthreadpool.dir/src/memory.c.o CMakeFiles/pthreadpool.dir/src/pthreads.c.o CMakeFiles/pthreadpool.dir/src/fastpath.c.o
+/usr/bin/ranlib libpthreadpool.a

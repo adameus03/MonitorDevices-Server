@@ -1,0 +1,3 @@
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/pthreadpool-download/CMakeFiles/pthreadpool.dir
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/pthreadpool-download/CMakeFiles/edit_cache.dir
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/pthreadpool-download/CMakeFiles/rebuild_cache.dir

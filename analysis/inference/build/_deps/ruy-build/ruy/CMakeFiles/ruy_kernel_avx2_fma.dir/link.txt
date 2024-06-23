@@ -1,0 +1,2 @@
+/usr/bin/ar qc libruy_kernel_avx2_fma.a CMakeFiles/ruy_kernel_avx2_fma.dir/kernel_avx2_fma.cc.o
+/usr/bin/ranlib libruy_kernel_avx2_fma.a

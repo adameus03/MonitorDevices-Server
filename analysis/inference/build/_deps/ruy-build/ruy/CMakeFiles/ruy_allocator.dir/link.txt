@@ -1,0 +1,2 @@
+/usr/bin/ar qc libruy_allocator.a CMakeFiles/ruy_allocator.dir/allocator.cc.o
+/usr/bin/ranlib libruy_allocator.a

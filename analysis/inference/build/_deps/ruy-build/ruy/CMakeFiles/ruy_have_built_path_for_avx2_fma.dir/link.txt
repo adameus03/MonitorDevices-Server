@@ -1,0 +1,2 @@
+/usr/bin/ar qc libruy_have_built_path_for_avx2_fma.a CMakeFiles/ruy_have_built_path_for_avx2_fma.dir/have_built_path_for_avx2_fma.cc.o
+/usr/bin/ranlib libruy_have_built_path_for_avx2_fma.a
