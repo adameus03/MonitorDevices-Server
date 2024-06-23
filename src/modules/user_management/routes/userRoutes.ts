@@ -6,6 +6,7 @@ import userManager from "../model/UserManager";
 import userUtils from "../../user_management/utils";
 import UserManager from "../model/UserManager";
 import { AUTH } from "sqlite3";
+import jwt, { JwtPayload } from "jsonwebtoken";
 const router = express.Router();
 
 router.post("/register/user", async (req, res, next) => {
@@ -106,6 +107,23 @@ router.get("/users/:user_name", async (req, res, next) => {
         next();
     }
    
+})
+
+router.get("/self_user", async (req, res, next) => {
+	// Retrieve information (username only currently) about the self user based on the auth token
+	let token = req.header("Authorization");
+	if (!token) next(createError(401, "TOKEN NOT SUPPLIED"));
+	token = token?.split(" ")[1];
+	console.log(token);
+	const jwtContent = jwt.decode(token as string, {
+		complete: false
+	}) as JwtPayload;
+	console.log(jwtContent);
+	const email = jwtContent["email"];
+	if (!email) next(createError(401, "INVALID TOKEN"));
+	const user = await db.User.findOne({ where: { email: email }});
+	if (!user) next(createError(401, "INVALID TOKEN"));
+	res.status(200).send({ username: user?.get("username") });
 })
 
 export default {
