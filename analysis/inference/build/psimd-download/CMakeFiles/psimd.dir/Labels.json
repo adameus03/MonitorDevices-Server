@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/psimd-download/CMakeFiles/psimd"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/psimd-download/CMakeFiles/psimd.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/psimd-download/CMakeFiles/psimd-complete.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/psimd-download/psimd-prefix/src/psimd-stamp/psimd-build.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/psimd-download/psimd-prefix/src/psimd-stamp/psimd-configure.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/psimd-download/psimd-prefix/src/psimd-stamp/psimd-download.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/psimd-download/psimd-prefix/src/psimd-stamp/psimd-install.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/psimd-download/psimd-prefix/src/psimd-stamp/psimd-mkdir.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/psimd-download/psimd-prefix/src/psimd-stamp/psimd-patch.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/psimd-download/psimd-prefix/src/psimd-stamp/psimd-test.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/psimd-download/psimd-prefix/src/psimd-stamp/psimd-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"psimd"
+		],
+		"name" : "psimd"
+	}
+}

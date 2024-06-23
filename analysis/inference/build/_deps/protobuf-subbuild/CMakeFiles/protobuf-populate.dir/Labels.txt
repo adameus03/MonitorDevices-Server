@@ -1,0 +1,14 @@
+# Target labels
+ protobuf-populate
+# Source files and their labels
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/protobuf-subbuild/CMakeFiles/protobuf-populate
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/protobuf-subbuild/CMakeFiles/protobuf-populate.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/protobuf-subbuild/CMakeFiles/protobuf-populate-complete.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/protobuf-populate-stamp/protobuf-populate-build.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/protobuf-populate-stamp/protobuf-populate-configure.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/protobuf-populate-stamp/protobuf-populate-download.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/protobuf-populate-stamp/protobuf-populate-install.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/protobuf-populate-stamp/protobuf-populate-mkdir.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/protobuf-populate-stamp/protobuf-populate-patch.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/protobuf-populate-stamp/protobuf-populate-test.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/src/protobuf-populate-stamp/protobuf-populate-update.rule

@@ -1,0 +1,207 @@
+[
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIC -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatbuffers.dir/src/idl_parser.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_parser.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_parser.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIC -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatbuffers.dir/src/idl_gen_text.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_text.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_text.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIC -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatbuffers.dir/src/reflection.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/reflection.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/reflection.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIC -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatbuffers.dir/src/util.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/util.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/util.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/idl_parser.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_parser.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_parser.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/idl_gen_text.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_text.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_text.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/reflection.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/reflection.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/reflection.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/util.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/util.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/util.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/idl_gen_binary.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_binary.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_binary.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/idl_gen_cpp.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_cpp.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_cpp.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/idl_gen_csharp.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_csharp.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_csharp.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/idl_gen_dart.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_dart.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_dart.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/idl_gen_kotlin.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_kotlin.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_kotlin.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/idl_gen_kotlin_kmp.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_kotlin_kmp.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_kotlin_kmp.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/idl_gen_go.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_go.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_go.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/idl_gen_java.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_java.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_java.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/idl_gen_ts.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_ts.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_ts.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/idl_gen_php.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_php.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_php.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/idl_gen_python.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_python.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_python.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/idl_gen_lobster.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_lobster.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_lobster.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/idl_gen_rust.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_rust.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_rust.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/idl_gen_fbs.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_fbs.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_fbs.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/idl_gen_grpc.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_grpc.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_grpc.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/idl_gen_json_schema.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_json_schema.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_json_schema.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/idl_gen_swift.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_swift.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/idl_gen_swift.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/file_name_saving_file_manager.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/file_name_saving_file_manager.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/file_name_saving_file_manager.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/file_binary_writer.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/file_binary_writer.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/file_binary_writer.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/file_writer.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/file_writer.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/file_writer.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/flatc.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/flatc.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/flatc.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/flatc_main.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/flatc_main.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/flatc_main.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/binary_annotator.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/binary_annotator.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/binary_annotator.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/annotated_binary_text_gen.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/annotated_binary_text_gen.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/annotated_binary_text_gen.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/bfbs_gen_lua.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/bfbs_gen_lua.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/bfbs_gen_lua.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/bfbs_gen_nim.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/bfbs_gen_nim.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/bfbs_gen_nim.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/src/code_generators.cpp.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/code_generators.cpp",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/src/code_generators.cpp"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/grpc/src/compiler/cpp_generator.cc.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc/src/compiler/cpp_generator.cc",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc/src/compiler/cpp_generator.cc"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/grpc/src/compiler/go_generator.cc.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc/src/compiler/go_generator.cc",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc/src/compiler/go_generator.cc"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/grpc/src/compiler/java_generator.cc.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc/src/compiler/java_generator.cc",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc/src/compiler/java_generator.cc"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/grpc/src/compiler/python_generator.cc.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc/src/compiler/python_generator.cc",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc/src/compiler/python_generator.cc"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/grpc/src/compiler/swift_generator.cc.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc/src/compiler/swift_generator.cc",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc/src/compiler/swift_generator.cc"
+},
+{
+  "directory": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/flatbuffers-build",
+  "command": "/usr/bin/c++ -DEIGEN_MPL2_ONLY -DFLATBUFFERS_LOCALE_INDEPENDENT=1 -DNOMINMAX=1 -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/include -I/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc -O3 -DNDEBUG -fPIE -Wall -pedantic -Wextra -Wno-unused-parameter -Wold-style-cast -fsigned-char -Wnon-virtual-dtor -Wunused-result -Wunused-parameter -Werror=unused-parameter -Wmissing-declarations -Wzero-as-null-pointer-constant -faligned-new -Wextra-semi -std=c++17 -o CMakeFiles/flatc.dir/grpc/src/compiler/ts_generator.cc.o -c /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc/src/compiler/ts_generator.cc",
+  "file": "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers/grpc/src/compiler/ts_generator.cc"
+}
+]

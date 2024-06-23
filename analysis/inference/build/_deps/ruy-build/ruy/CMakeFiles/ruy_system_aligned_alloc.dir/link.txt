@@ -1,0 +1,2 @@
+/usr/bin/ar qc libruy_system_aligned_alloc.a CMakeFiles/ruy_system_aligned_alloc.dir/system_aligned_alloc.cc.o
+/usr/bin/ranlib libruy_system_aligned_alloc.a

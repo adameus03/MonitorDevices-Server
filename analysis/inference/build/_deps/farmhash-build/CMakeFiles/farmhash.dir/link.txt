@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfarmhash.a CMakeFiles/farmhash.dir/__/__/farmhash/src/farmhash.cc.o
+/usr/bin/ranlib libfarmhash.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libruy_block_map.a CMakeFiles/ruy_block_map.dir/block_map.cc.o
+/usr/bin/ranlib libruy_block_map.a

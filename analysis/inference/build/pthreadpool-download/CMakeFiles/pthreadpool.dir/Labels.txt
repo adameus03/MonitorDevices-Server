@@ -1,0 +1,14 @@
+# Target labels
+ pthreadpool
+# Source files and their labels
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/pthreadpool-download/CMakeFiles/pthreadpool
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/pthreadpool-download/CMakeFiles/pthreadpool.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/pthreadpool-download/CMakeFiles/pthreadpool-complete.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/pthreadpool-download/pthreadpool-prefix/src/pthreadpool-stamp/pthreadpool-build.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/pthreadpool-download/pthreadpool-prefix/src/pthreadpool-stamp/pthreadpool-configure.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/pthreadpool-download/pthreadpool-prefix/src/pthreadpool-stamp/pthreadpool-download.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/pthreadpool-download/pthreadpool-prefix/src/pthreadpool-stamp/pthreadpool-install.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/pthreadpool-download/pthreadpool-prefix/src/pthreadpool-stamp/pthreadpool-mkdir.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/pthreadpool-download/pthreadpool-prefix/src/pthreadpool-stamp/pthreadpool-patch.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/pthreadpool-download/pthreadpool-prefix/src/pthreadpool-stamp/pthreadpool-test.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/pthreadpool-download/pthreadpool-prefix/src/pthreadpool-stamp/pthreadpool-update.rule

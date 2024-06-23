@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfft2d_shrtdct.a CMakeFiles/fft2d_shrtdct.dir/__/__/fft2d/shrtdct.c.o
+/usr/bin/ranlib libfft2d_shrtdct.a

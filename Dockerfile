@@ -1,12 +1,15 @@
 # [WARNING] [TODO] Not tested yet
 
-ARG expose_port=80
+ARG expose_port_1=8090
+ARG expose_port_2=3333
+ARG expose_port_3=3334
 FROM debian:bookworm
 RUN mkdir -p /opt/app
 WORKDIR /opt/app
 
 RUN apt-get update && apt-get upgrade
 RUN apt-get install -y git libeigen3-dev libabsl-dev libgemmlowp-dev libneon-2-sse-dev libfarmhash-dev libpthreadpool-dev libpthreadpool-dev
+RUN apt-get install -y libjpeg-dev libturbojpeg0 libturbojpeg0-dev
 RUN apt-get install -y cmake
 # apt-utils?
 
@@ -42,19 +45,37 @@ COPY .env ./transpiled/bin/
 
 RUN mkdir helpers
 COPY helpers ./helpers
-EXPOSE $expose_port
+EXPOSE $expose_port_1
+EXPOSE $expose_port_2
+EXPOSE $expose_port_3
 
 
-# # Copy C/CXX build files to the container
-WORKDIR /opt/app/analysis
+RUN mkdir -p /opt/app/analysis/inference
+RUN mkdir -p /opt/app/analysis/sauas
+
+# Copy C/CXX inference build files to the container
+WORKDIR /opt/app/analysis/inference
 COPY analysis/inference/build/ ./
 
 # Copy the tflite model to the container
 COPY analysis/inference/surveillance_mobilenet_10_epochs_fixed_LS_90_balanced.tflite ../
 
+# Copy sauas addon build files to the container
+WORKDIR /opt/app/analysis/sauas
+COPY analysis/sauas/build/ ./
+
+# Copy mock programs to the container (for now just the fake device)
+WORKDIR /opt/app
+RUN mkdir -p /opt/app/fake
+WORKDIR /opt/app/fake
+RUN mkdir fakedev
+COPY testers/fake_device/target ./fakedev
+# Copy fakedev images to the container
+COPY testers/fake_device/*.jpg ./fakedev/
+
 WORKDIR /opt/app
 RUN mkdir /sau
 CMD ["/bin/sh", "./start.sh"]
-#CMD ["top"]
-#ENTRYPOINT ["tail"]
-#CMD ["-f","/dev/null"]
+##CMD ["top"]
+# ENTRYPOINT ["tail"]
+# CMD ["-f","/dev/null"]
