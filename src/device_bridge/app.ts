@@ -9,11 +9,10 @@ import { DeviceVideoManager } from "./videoManager";
 import { createSocket } from "dgram";
 import EventEmitter from "events";
 
-
 export class DeviceConnectingServer extends EventEmitter {
 	private serverInstance;
 	private connectedDevices: ConnectedDevice[] = [];
-	private videoFrameReceiver: any;
+	private videoFrameReceiver;
 
 	constructor() {
 		super();
@@ -46,35 +45,18 @@ export class DeviceConnectingServer extends EventEmitter {
 			})
 		});
 
-		// // Initialize UDP socket
-		// this.videoFrameReceiver = createSocket("udp4", message => {
-		// 	//if (process.versions.bun) 
-		// 	console.log(`### DEBUG UDP frame received of length ${message.length}`);
+		// Initialize UDP socket
+		this.videoFrameReceiver = createSocket("udp4", message => {
+			if (process.versions.bun) console.log(`====DEBUG UDP frame received of length ${message.length}`);
 
-		// 	const dataTyped = new Uint8Array(message);
+			const dataTyped = new Uint8Array(message);
+			const packet = ImagePacket.makeFromRawBytes(dataTyped);
+			const deviceInfo = this.connectedDevices.find(val => areUint8ArraysEqual(val.sessionID, packet.sessionID));
 
-		// 	console.log(`### Creating ImagePacket from raw bytes...`)
-		// 	const packet = ImagePacket.makeFromRawBytes(dataTyped);
-		// 	console.log("### Seeking deviceInfo...")
-		// 	const deviceInfo = this.connectedDevices.find(val => areUint8ArraysEqual(val.sessionID, packet.sessionID));
+			if (!deviceInfo) throw new Error("Received image packet for nonexistent session");
 
-		// 	if (!deviceInfo) {
-		// 		console.log("### Didn't find the device!");
-		// 		throw new Error("### Received image packet for nonexistent session");
-		// 	} else {
-		// 		console.log("### Found the device, adding packet to videoManager for the device");
-		// 		deviceInfo.videoManager.addPacket(packet);
-		// 		console.log("### Done adding packet");
-		// 	}
-		// });
-
-		// const udpPort = 3333;
-		// this.videoFrameReceiver.bind(udpPort, () => {
-		// 	console.log("### Listening for UDP packets on port ${udpPort}");
-		// });
-
-		
-
+			deviceInfo.videoManager.addPacket(packet);
+		});
 	}
 
 	/*
@@ -92,24 +74,13 @@ export class DeviceConnectingServer extends EventEmitter {
 		const infoPacket = packet.messageContent as RawInitiateConnectionPacket; // needs to be called from a InitiateCommunication packet
 		const deviceDatabase = await DeviceManager.GetDeviceByID(infoPacket.cameraID);
 
-		if (!deviceDatabase) { // check if device ID exists
-			console.log("DEVICE ID DOES NOT EXIST");
-			return false;
-		}
+		if (!deviceDatabase) return false; // check if device ID exists
 		if (process.versions.bun) console.log("====DEBUG device exists in db====");
 
-		if (!areUint8ArraysEqual(deviceDatabase.get("auth_key") as Uint8Array, infoPacket.cameraAuthKey)) {
-			console.log("AUTH_KEY IS INCORRECT");
-			return false; // check if auth key is correct
-		}
+		if (!areUint8ArraysEqual(deviceDatabase.get("auth_key") as Uint8Array, infoPacket.cameraAuthKey)) return false; // check if auth key is correct
 		if (process.versions.bun) console.log("====DEBUG auth key correct====");
 
-		// check if the device is already connected
-		let connectedDevice = this.connectedDevices.find(val => areUint8ArraysEqual(val.deviceID, infoPacket.cameraID));
-		if (connectedDevice) {
-			console.log("WARNING: DEVICE ALREADY CONNECTED");
-			//return false;
-		}
+		if (this.connectedDevices.find(val => areUint8ArraysEqual(val.deviceID, infoPacket.cameraID))) return false; // check if device already connected
 		if (process.versions.bun) console.log("====DEBUG device not already connected, allowed to connect====");
 
 		return true;
@@ -136,7 +107,7 @@ export class DeviceConnectingServer extends EventEmitter {
 			const packet = PacketData.decodePacket(dataTyped);
 			deviceInfo.lastPacketReceived = Date.now();
 			switch (packet.controlSegment.operationType) {
-				case OperationType.ForceUnregister: { // [TODO] WRONG - it should the other way around;
+				case OperationType.ForceUnregister: {
 					const infoPacket = packet.messageContent as RawUnregisterPacket;
 					console.log(`Received (somehow) unregister packet with succeeded value of ${infoPacket.succeeded[0]}`);
 					break;
@@ -209,55 +180,8 @@ export class DeviceConnectingServer extends EventEmitter {
 		return this.connectedDevices.find(val => areUint8ArraysEqual(val.sessionID, sessionID));
 	}
 
-	startTCP(port: number) { // THIS IS TCP
+	start(port: number) {
 		this.serverInstance.listen(port, "0.0.0.0");
-		//this.videoFrameReceiver.bind(port); // go away
-	}
-
-	startUDP(port: number) { // THIS IS UDP
-		this.videoFrameReceiver = createSocket("udp6");
-
-		this.videoFrameReceiver.on('error', (error: any) => {
-			console.log('Error: ' + error);
-  			this.videoFrameReceiver.close();
-		});
-
-		this.videoFrameReceiver.on('message', (msg: any, info: any) => {
-			console.log('!!! Received %d bytes from %s:%d\n',msg.length, info.address, info.port);
-
-			console.log(`### DEBUG UDP frame received of length ${msg.length}`);
-
-			const dataTyped = new Uint8Array(msg);
-
-			console.log(`### Creating ImagePacket from raw bytes...`)
-			const packet = ImagePacket.makeFromRawBytes(dataTyped);
-			console.log("### Seeking deviceInfo...")
-			const deviceInfo = this.connectedDevices.find(val => areUint8ArraysEqual(val.sessionID, packet.sessionID));
-
-			if (!deviceInfo) {
-				console.log("### Didn't find the device!");
-				throw new Error("### Received image packet for nonexistent session");
-			} else {
-				console.log("### Found the device, adding packet to videoManager for the device");
-				deviceInfo.videoManager.addPacket(packet);
-				console.log("### Done adding packet");
-			}
-		});
-
-		this.on('listening', () => {
-			var address = this.videoFrameReceiver.address();
-			var port = address.port;
-			var family = address.family;
-			var ipaddr = address.address;
-			console.log('UDP Server is listening at port' + port);
-			console.log('UDP Server ip :' + ipaddr);
-			console.log('UDP Server is IP4/IP6 : ' + family);
-		});
-
-		this.videoFrameReceiver.on('close', ()=>{
-			console.log('UDP Server: socket has been closed !!! What to do now?');
-		});
-
 		this.videoFrameReceiver.bind(port);
 	}
 }
@@ -303,9 +227,9 @@ export class ConnectedDevice extends EventEmitter {
 }
 
 
-// // Mock mode, run with `bun run src/device_bridge/app.ts`
-// if (process.versions.bun) {
-// 	console.log("======BUN START DEBUG======")
-// 	const server = new DeviceConnectingServer();
-// 	server.start(8090); // [DEATH NOTE] magic numbers
-// }
+// Mock mode, run with `bun run src/device_bridge/app.ts`
+if (process.versions.bun) {
+	console.log("======BUN START DEBUG======")
+	const server = new DeviceConnectingServer();
+	server.start(8090);
+}
