@@ -1,0 +1,14 @@
+# Target labels
+ ruy-populate
+# Source files and their labels
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/ruy-subbuild/CMakeFiles/ruy-populate
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/ruy-subbuild/CMakeFiles/ruy-populate.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/ruy-subbuild/CMakeFiles/ruy-populate-complete.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/ruy-subbuild/ruy-populate-prefix/src/ruy-populate-stamp/ruy-populate-build.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/ruy-subbuild/ruy-populate-prefix/src/ruy-populate-stamp/ruy-populate-configure.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/ruy-subbuild/ruy-populate-prefix/src/ruy-populate-stamp/ruy-populate-download.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/ruy-subbuild/ruy-populate-prefix/src/ruy-populate-stamp/ruy-populate-install.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/ruy-subbuild/ruy-populate-prefix/src/ruy-populate-stamp/ruy-populate-mkdir.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/ruy-subbuild/ruy-populate-prefix/src/ruy-populate-stamp/ruy-populate-patch.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/ruy-subbuild/ruy-populate-prefix/src/ruy-populate-stamp/ruy-populate-test.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/ruy-subbuild/ruy-populate-prefix/src/ruy-populate-stamp/ruy-populate-update.rule

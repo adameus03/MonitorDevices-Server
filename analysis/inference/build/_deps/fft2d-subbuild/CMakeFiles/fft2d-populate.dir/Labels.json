@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/fft2d-subbuild/CMakeFiles/fft2d-populate"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/fft2d-subbuild/CMakeFiles/fft2d-populate.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/fft2d-subbuild/CMakeFiles/fft2d-populate-complete.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/fft2d-subbuild/fft2d-populate-prefix/src/fft2d-populate-stamp/fft2d-populate-build.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/fft2d-subbuild/fft2d-populate-prefix/src/fft2d-populate-stamp/fft2d-populate-configure.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/fft2d-subbuild/fft2d-populate-prefix/src/fft2d-populate-stamp/fft2d-populate-download.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/fft2d-subbuild/fft2d-populate-prefix/src/fft2d-populate-stamp/fft2d-populate-install.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/fft2d-subbuild/fft2d-populate-prefix/src/fft2d-populate-stamp/fft2d-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/fft2d-subbuild/fft2d-populate-prefix/src/fft2d-populate-stamp/fft2d-populate-patch.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/fft2d-subbuild/fft2d-populate-prefix/src/fft2d-populate-stamp/fft2d-populate-test.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/fft2d-subbuild/fft2d-populate-prefix/src/fft2d-populate-stamp/fft2d-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"fft2d-populate"
+		],
+		"name" : "fft2d-populate"
+	}
+}

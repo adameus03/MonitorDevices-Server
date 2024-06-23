@@ -1,0 +1,14 @@
+# Target labels
+ fxdiv
+# Source files and their labels
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FXdiv-download/CMakeFiles/fxdiv
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FXdiv-download/CMakeFiles/fxdiv.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FXdiv-download/CMakeFiles/fxdiv-complete.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FXdiv-download/fxdiv-prefix/src/fxdiv-stamp/fxdiv-build.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FXdiv-download/fxdiv-prefix/src/fxdiv-stamp/fxdiv-configure.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FXdiv-download/fxdiv-prefix/src/fxdiv-stamp/fxdiv-download.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FXdiv-download/fxdiv-prefix/src/fxdiv-stamp/fxdiv-install.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FXdiv-download/fxdiv-prefix/src/fxdiv-stamp/fxdiv-mkdir.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FXdiv-download/fxdiv-prefix/src/fxdiv-stamp/fxdiv-patch.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FXdiv-download/fxdiv-prefix/src/fxdiv-stamp/fxdiv-test.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/FXdiv-download/fxdiv-prefix/src/fxdiv-stamp/fxdiv-update.rule

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libruy_kernel_avx512.a CMakeFiles/ruy_kernel_avx512.dir/kernel_avx512.cc.o
+/usr/bin/ranlib libruy_kernel_avx512.a

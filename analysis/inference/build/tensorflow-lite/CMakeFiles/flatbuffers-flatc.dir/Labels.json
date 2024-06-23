@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/tensorflow-lite/CMakeFiles/flatbuffers-flatc"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/tensorflow-lite/CMakeFiles/flatbuffers-flatc.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/tensorflow-lite/CMakeFiles/flatbuffers-flatc-complete.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers-flatc/src/flatbuffers-flatc-stamp/flatbuffers-flatc-build.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers-flatc/src/flatbuffers-flatc-stamp/flatbuffers-flatc-configure.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers-flatc/src/flatbuffers-flatc-stamp/flatbuffers-flatc-download.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers-flatc/src/flatbuffers-flatc-stamp/flatbuffers-flatc-install.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers-flatc/src/flatbuffers-flatc-stamp/flatbuffers-flatc-mkdir.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers-flatc/src/flatbuffers-flatc-stamp/flatbuffers-flatc-patch.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/flatbuffers-flatc/src/flatbuffers-flatc-stamp/flatbuffers-flatc-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"flatbuffers-flatc"
+		],
+		"name" : "flatbuffers-flatc"
+	}
+}

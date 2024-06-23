@@ -1,0 +1,2 @@
+/usr/bin/ar qc libruy_trmul.a CMakeFiles/ruy_trmul.dir/trmul.cc.o
+/usr/bin/ranlib libruy_trmul.a

@@ -1,0 +1,14 @@
+# Target labels
+ psimd
+# Source files and their labels
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/psimd-download/CMakeFiles/psimd
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/psimd-download/CMakeFiles/psimd.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/psimd-download/CMakeFiles/psimd-complete.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/psimd-download/psimd-prefix/src/psimd-stamp/psimd-build.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/psimd-download/psimd-prefix/src/psimd-stamp/psimd-configure.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/psimd-download/psimd-prefix/src/psimd-stamp/psimd-download.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/psimd-download/psimd-prefix/src/psimd-stamp/psimd-install.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/psimd-download/psimd-prefix/src/psimd-stamp/psimd-mkdir.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/psimd-download/psimd-prefix/src/psimd-stamp/psimd-patch.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/psimd-download/psimd-prefix/src/psimd-stamp/psimd-test.rule
+/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/psimd-download/psimd-prefix/src/psimd-stamp/psimd-update.rule

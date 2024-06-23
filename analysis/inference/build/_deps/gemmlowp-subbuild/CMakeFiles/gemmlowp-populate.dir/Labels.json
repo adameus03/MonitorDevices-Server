@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/gemmlowp-subbuild/CMakeFiles/gemmlowp-populate"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/gemmlowp-subbuild/CMakeFiles/gemmlowp-populate.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/gemmlowp-subbuild/CMakeFiles/gemmlowp-populate-complete.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/gemmlowp-subbuild/gemmlowp-populate-prefix/src/gemmlowp-populate-stamp/gemmlowp-populate-build.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/gemmlowp-subbuild/gemmlowp-populate-prefix/src/gemmlowp-populate-stamp/gemmlowp-populate-configure.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/gemmlowp-subbuild/gemmlowp-populate-prefix/src/gemmlowp-populate-stamp/gemmlowp-populate-download.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/gemmlowp-subbuild/gemmlowp-populate-prefix/src/gemmlowp-populate-stamp/gemmlowp-populate-install.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/gemmlowp-subbuild/gemmlowp-populate-prefix/src/gemmlowp-populate-stamp/gemmlowp-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/gemmlowp-subbuild/gemmlowp-populate-prefix/src/gemmlowp-populate-stamp/gemmlowp-populate-patch.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/gemmlowp-subbuild/gemmlowp-populate-prefix/src/gemmlowp-populate-stamp/gemmlowp-populate-test.rule"
+		},
+		{
+			"file" : "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/_deps/gemmlowp-subbuild/gemmlowp-populate-prefix/src/gemmlowp-populate-stamp/gemmlowp-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"gemmlowp-populate"
+		],
+		"name" : "gemmlowp-populate"
+	}
+}
