@@ -103,7 +103,7 @@ fn main() {
 			//println!("Packet ID {} send {} bytes", packet_counter, bytes_sent);
 			thread::sleep(Duration::from_millis(20));
 		}
-		thread::sleep(Duration::from_millis(20));
+		thread::sleep(Duration::from_millis(200));
 	}
 
 }
