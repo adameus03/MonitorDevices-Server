@@ -81,7 +81,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_cpuinfo.dir/cpuinfo.cc.o: ruy/ruy/cpuinfo.cc 
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/cstdint \
@@ -102,7 +101,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_cpuinfo.dir/cpuinfo.cc.o: ruy/ruy/cpuinfo.cc 
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/functional \
   /usr/include/c++/12/bits/stl_function.h \
   /usr/include/c++/12/backward/binders.h \
@@ -186,8 +184,6 @@ ruy/ruy/platform.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
-
 /usr/include/stdc-predef.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
@@ -199,8 +195,6 @@ ruy/ruy/platform.h:
 /usr/include/c++/12/bits/move.h:
 
 /usr/include/features-time64.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 

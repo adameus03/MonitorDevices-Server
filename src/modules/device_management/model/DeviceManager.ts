@@ -1,5 +1,14 @@
 import db from "../../../shared/database";
 
+import Persistence from "../../persistence/exports/api";
+
+/**
+ * @warning This implementation uses null as a return value to indicate success. This is not a good practice.
+ * @warning This implementation uses strings as return values to indicate errors. This is not a good practice.
+ * @todo Refactor the original implementation to use a more descriptive return values.
+ * @todo Refactor the original implementation to use a more streamlined error handling.
+ * @assignedTo PavelRadkevich @deadline 2024-08-31 @status NOT_STARTED @mailNotifs
+ */
 export class DeviceManager {
     async CreateDevice (camera_id: Uint8Array, mac_address: Uint8Array, auth_key: Uint8Array, user_id: Uint8Array) {
         if (await db.Device.findOne({ where: { device_id: Buffer.from(camera_id) }})) {
@@ -15,7 +24,11 @@ export class DeviceManager {
             auth_key: Buffer.from(auth_key),
             user_id: Buffer.from(user_id),
         });
-        return null;
+
+        // Notify the persistence module
+        Persistence.DevStorageManager.createDevDirectory(camera_id);
+
+        return null; 
     }
 
     async GetDeviceByID(camera_id: Uint8Array) {
@@ -43,6 +56,9 @@ export class DeviceManager {
 
     async DeleteDeviceByID(camera_id: Uint8Array) {
         await db.Device.destroy({ where: { device_id: Buffer.from(camera_id) }});
+
+        // Notify the persistence module
+        Persistence.DevStorageManager.deleteDevDirectory(camera_id);
     }
 
 

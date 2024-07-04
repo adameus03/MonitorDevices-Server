@@ -11,6 +11,7 @@ analysis-old/
 Dockerfile
 .dockerignore
 #helpers/
+analysis/tags/
 analysis/tensorflow/
 analysis/tflite_build/
 analysis/ruy/

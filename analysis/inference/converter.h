@@ -45,6 +45,19 @@ void converter_resize_skip_rgb(uint8_t* pRgbData,
                            uint8_t** ppResizedRgbData_out, 
                            uint32_t* pResizedRgbDataLen_out);
 
+/**
+ * @brief Transposes the input RGB data from row x column x channel to channel x column x row (reverse dimensions order)
+ * @brief pRgbData Pointer to the RGB image data
+ * @brief imageWidth Width of the image
+ * @brief imageHeight Height of the image
+ * @brief ppTransposedRgbData_out [out] Pointer to the address where the transposed RGB data will be stored
+ * @note This function will allocate memory for the transposed RGB data. The caller is responsible for freeing the memory.
+ */
+void converter_transpose_rgb(uint8_t* pRgbData, 
+                           uint32_t imageWidth, 
+                           uint32_t imageHeight, 
+                           uint8_t** ppTransposedRgbData_out);
+
 #ifdef __cplusplus
 }
 #endif

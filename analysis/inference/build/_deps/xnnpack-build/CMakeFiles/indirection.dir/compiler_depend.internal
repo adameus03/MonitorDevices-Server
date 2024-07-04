@@ -52,7 +52,6 @@ _deps/xnnpack-build/CMakeFiles/indirection.dir/src/indirection.c.o
  /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/operator.h
  /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/allocator.h
  /usr/include/stdlib.h
- /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
  /usr/include/string.h
  /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/params.h

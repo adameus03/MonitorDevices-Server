@@ -149,7 +149,6 @@ _deps/gemmlowp-build/CMakeFiles/eight_bit_int_gemm.dir/__/eight_bit_int_gemm/eig
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/unistd.h \
@@ -189,7 +188,6 @@ _deps/gemmlowp-build/CMakeFiles/eight_bit_int_gemm.dir/__/eight_bit_int_gemm/eig
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   gemmlowp/profiling/pthread_everywhere.h \
   gemmlowp/internal/kernel.h \
   gemmlowp/internal/kernel_reference.h \
@@ -312,8 +310,6 @@ gemmlowp/internal/detect_platform.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
-
 gemmlowp/internal/pack.h:
 
 /usr/include/alloca.h:
@@ -381,8 +377,6 @@ gemmlowp/public/gemmlowp.h:
 /usr/include/c++/12/bit:
 
 /usr/include/string.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
 
 /usr/include/c++/12/bits/stl_uninitialized.h:
 

@@ -77,7 +77,6 @@ _deps/xnnpack-build/CMakeFiles/hardware-config.dir/src/configs/hardware-config.c
  /usr/include/inttypes.h
  /usr/lib/gcc/x86_64-linux-gnu/12/include/stdarg.h
  /usr/include/stdlib.h
- /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
  /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/include/xnnpack.h
  /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/pthreadpool-source/include/pthreadpool.h

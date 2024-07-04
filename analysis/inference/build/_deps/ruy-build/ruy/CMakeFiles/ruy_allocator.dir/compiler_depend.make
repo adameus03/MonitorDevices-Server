@@ -147,7 +147,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_allocator.dir/allocator.cc.o: ruy/ruy/allocat
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/cstdlib \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
@@ -160,7 +159,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_allocator.dir/allocator.cc.o: ruy/ruy/allocat
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/functional \
@@ -171,8 +169,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_allocator.dir/allocator.cc.o: ruy/ruy/allocat
 ruy/ruy/system_aligned_alloc.h:
 
 /usr/include/c++/12/functional:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 /usr/include/alloca.h:
 
@@ -221,8 +217,6 @@ ruy/ruy/opt_set.h:
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/c++/12/bit:
-
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
 
 /usr/include/c++/12/bits/stl_uninitialized.h:
 

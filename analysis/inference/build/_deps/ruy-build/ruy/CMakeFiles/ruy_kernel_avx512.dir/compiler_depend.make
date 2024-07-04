@@ -79,7 +79,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_kernel_avx512.dir/kernel_avx512.cc.o: ruy/ruy
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/cstdint \
@@ -99,7 +98,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_kernel_avx512.dir/kernel_avx512.cc.o: ruy/ruy
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/functional \
   /usr/include/c++/12/bits/stl_function.h \
   /usr/include/c++/12/backward/binders.h \
@@ -356,15 +354,11 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_kernel_avx512.dir/kernel_avx512.cc.o: ruy/ruy
 
 ruy/ruy/cpuinfo.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/12/include/avx512bitalgintrin.h:
-
-ruy/ruy/side_pair.h:
-
-ruy/ruy/profiler/instrumentation.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
 /usr/include/endian.h:
+
+ruy/ruy/profiler/instrumentation.h:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
@@ -411,6 +405,10 @@ ruy/ruy/kernel_x86.h:
 /usr/include/c++/12/bits/stl_construct.h:
 
 /usr/include/c++/12/bits/stl_tempbuf.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/12/include/pmmintrin.h:
+
+/usr/include/string.h:
 
 /usr/include/c++/12/bits/stl_heap.h:
 
@@ -536,12 +534,6 @@ ruy/ruy/time.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/12/include/pmmintrin.h:
-
-/usr/include/string.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
-
 /usr/include/features-time64.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/rtmintrin.h:
@@ -662,8 +654,6 @@ ruy/ruy/platform.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/tsxldtrkintrin.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
-
 ruy/ruy/apply_multiplier.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/immintrin.h:
@@ -695,3 +685,7 @@ ruy/ruy/opt_set.h:
 /usr/lib/gcc/x86_64-linux-gnu/12/include/avx512bwintrin.h:
 
 ruy/ruy/path.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/12/include/avx512bitalgintrin.h:
+
+ruy/ruy/side_pair.h:

@@ -40,7 +40,6 @@ _deps/xnnpack-build/CMakeFiles/operator-run.dir/src/operator-run.c.o
  /usr/include/stdlib.h
  /usr/include/x86_64-linux-gnu/bits/floatn.h
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h
- /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
  /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/node-type.h
  /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/microkernel-type.h

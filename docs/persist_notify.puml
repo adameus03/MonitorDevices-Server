@@ -1,0 +1,47 @@
+@startuml
+partition "Frame reception" {
+(*) --> "Check if recording is set"
+->if "" then
+    ->[is set] "Check if recording threshold time has elapsed"
+    if "" then
+        --> [not elapsed] "Reset autosave timeout"
+        --> "Save frame"
+        --> (*)
+    else
+        ->[elapsed] "Clear autosave timeout"
+        --> "Analyse frame "
+        if "" then
+            -left>[Positive] "Postpone the recording threshold time"
+            -left-> "Reset autosave timeout"
+        else
+            -->[Negative] "Tell the device to stop streaming unconditionally"
+            --> "Unset recording"
+            --> "Save this frame"
+            --> "Convert frames to mp4 video"
+            --> "Save the video"
+            --> "Notify the user about new video clip"
+            --> (*)
+        endif
+    endif
+else
+    -->[is not set] "Analyse frame"
+    if "" then
+        -->[Negative] (*)
+    else
+        -->[Positive] "Set recording and its start time"
+        --> "Save the frame"
+        --> "Notify user about the frame"
+        --> "Tell the device to stream unconditionally"
+        --> "Set timeout for automatic save \nin case device connection is lost"
+        --> (*)
+    endif
+endif
+}
+
+partition "Autosave timeout elapsed handling" {
+    (*) --> "Try to tell the device to stop streaming unconditionally"
+    --> "Unset recording "
+    --> "Convert frames to mp4 video"
+    
+}
+@enduml

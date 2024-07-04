@@ -51,7 +51,6 @@ _deps/xnnpack-build/CMakeFiles/indirection.dir/src/indirection.c.o: xnnpack/src/
   xnnpack/src/xnnpack/operator.h \
   xnnpack/src/xnnpack/allocator.h \
   /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/string.h \
   xnnpack/src/xnnpack/params.h \
@@ -128,8 +127,6 @@ xnnpack/src/xnnpack/compute.h:
 /usr/include/sched.h:
 
 /usr/include/pthread.h:
-
-xnnpack/src/xnnpack/mutex.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
@@ -245,6 +242,8 @@ xnnpack/src/xnnpack/params.h:
 
 xnnpack/include/xnnpack.h:
 
+xnnpack/src/xnnpack/mutex.h:
+
 xnnpack/src/xnnpack/common.h:
 
 xnnpack/src/xnnpack/indirection.h:
@@ -256,8 +255,6 @@ xnnpack/src/xnnpack/math.h:
 xnnpack/src/xnnpack/operator.h:
 
 /usr/include/stdc-predef.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 

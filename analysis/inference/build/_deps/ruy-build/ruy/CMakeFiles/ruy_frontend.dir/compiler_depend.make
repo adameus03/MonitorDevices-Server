@@ -162,7 +162,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_frontend.dir/frontend.cc.o: ruy/ruy/frontend.
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   ruy/ruy/apply_multiplier.h \
@@ -174,7 +173,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_frontend.dir/frontend.cc.o: ruy/ruy/frontend.
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/functional \
   /usr/include/c++/12/bits/std_function.h \
   ruy/ruy/mul_params.h \
@@ -256,8 +254,6 @@ ruy/ruy/opt_set.h:
 ruy/ruy/check_macros.h:
 
 ruy/ruy/apply_multiplier.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 /usr/include/alloca.h:
 
@@ -500,8 +496,6 @@ ruy/ruy/trmul.h:
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
 
 /usr/include/string.h:
 

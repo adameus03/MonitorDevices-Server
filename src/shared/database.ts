@@ -48,10 +48,30 @@ const User = sequelize.define('User', {
     allowNull: false,
     unique: true,
   },
+  phone_number: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  wants_mail_notifications: {
+    type: DataTypes.BOOLEAN,
+    allowNull: false,
+    defaultValue: false,
+  },
+  wants_sms_notifications: {
+    type: DataTypes.BOOLEAN,
+    allowNull: false,
+    defaultValue: false,
+  },
+  wants_app_notifications: {
+    type: DataTypes.BOOLEAN,
+    allowNull: false,
+    defaultValue: false,
+  }
 }, {
   tableName: 'users',
 });
 
+// Device model
 const Device = sequelize.define('Device', {
   device_id: {
     type: DataTypes.BLOB,
@@ -65,6 +85,14 @@ const Device = sequelize.define('Device', {
         }
       }
     },
+  },
+  name: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  last_notification_datetime: {
+    type: DataTypes.DATE,
+    allowNull: true,
   },
   mac_address: {
     type: DataTypes.BLOB,
@@ -109,6 +137,37 @@ const Device = sequelize.define('Device', {
   tableName: 'device',
 });
 
+// VideoClip model
+const VideoClip = sequelize.define('VideoClip', {
+  clip_id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
+  device_id: {// foreign key
+    type: DataTypes.BLOB,
+    allowNull: false,
+    validate: {
+      customValidator(value: Buffer) {
+        if (value.length != 16) {
+          throw new Error(`device_id is of incorrect size: ${value.length}`);
+        }
+      }
+    }
+  },
+  save_timestamp: { //TODO store begin timestamp as well?
+    type: DataTypes.DATE,
+    allowNull: false,
+  },
+  vkey_hash: { // hash of the key to access the video clip
+    type: DataTypes.STRING,
+    allowNull: false,
+    unique: true,
+  }
+}, {
+  tableName: 'video_clip',
+});
+
 const AuthenticationToken = sequelize.define('AuthenticationToken', {
     token: {
         type: DataTypes.STRING,
@@ -149,5 +208,6 @@ export default {
   sequelize: sequelize,
   User: User,
   Device: Device,
+  VideoClip: VideoClip,
   AuthenticationToken: AuthenticationToken,
 };

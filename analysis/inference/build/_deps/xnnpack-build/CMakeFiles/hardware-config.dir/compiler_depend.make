@@ -76,7 +76,6 @@ _deps/xnnpack-build/CMakeFiles/hardware-config.dir/src/configs/hardware-config.c
   /usr/include/inttypes.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/stdarg.h \
   /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   xnnpack/include/xnnpack.h \
   pthreadpool-source/include/pthreadpool.h \
@@ -140,8 +139,6 @@ xnnpack/src/xnnpack/microparams.h:
 xnnpack/src/configs/hardware-config.c:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 /usr/include/stdc-predef.h:
 

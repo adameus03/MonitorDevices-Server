@@ -53,7 +53,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_system_aligned_alloc.dir/system_aligned_alloc
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h
 
@@ -157,8 +156,6 @@ ruy/ruy/system_aligned_alloc.cc:
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
 /usr/include/c++/12/bits/std_abs.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 

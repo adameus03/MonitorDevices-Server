@@ -13,6 +13,16 @@ if [ -d $PERSISTENT_VOL_LOCATION ]; then
             exit 1
         fi
     fi
+    if [ ! -d $DEVFILES_LOCATION ]; then
+        echo "$SCRIPT_NICKNAME: No $DEVFILES_LOCATION directory found. Creating it..." 
+        mkdir -p $DEVFILES_LOCATION
+        if [ $? -eq 0 ]; then
+            echo "$SCRIPT_NICKNAME: Successfully created the $DEVFILES_LOCATION directory"
+        else
+            echo "$SCRIPT_NICKNAME: ERROR - Cannot create the $DEVFILES_LOCATION directory. Maybe a permissions issue?"
+            exit 1
+        fi
+    fi
 else
     echo "$SCRIPT_NICKNAME: ERROR - The persistent volume is not mounted at $PERSISTENT_VOL_LOCATION" 
     exit 1

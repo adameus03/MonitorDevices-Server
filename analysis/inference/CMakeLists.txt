@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.16)
 project(inference LANGUAGES C CXX)
 
+#set(CMAKE_BUILD_TYPE Debug)
+
 set(TENSORFLOW_SOURCE_DIR "/home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/tensorflow" )
 if(NOT TENSORFLOW_SOURCE_DIR)
   get_filename_component(TENSORFLOW_SOURCE_DIR

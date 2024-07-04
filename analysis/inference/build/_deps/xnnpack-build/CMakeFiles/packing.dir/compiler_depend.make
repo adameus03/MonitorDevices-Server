@@ -33,7 +33,6 @@ _deps/xnnpack-build/CMakeFiles/packing.dir/src/packing.c.o: xnnpack/src/packing.
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   xnnpack/src/xnnpack/node-type.h \
   xnnpack/src/xnnpack/math.h \
@@ -141,8 +140,6 @@ xnnpack/src/xnnpack/compute.h:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
-
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
@@ -170,6 +167,8 @@ xnnpack/src/xnnpack/common.h:
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
 
 /usr/include/assert.h:
 
@@ -222,8 +221,6 @@ xnnpack/src/xnnpack/pack.h:
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
 xnnpack/src/xnnpack/params.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 /usr/include/stdc-predef.h:
 

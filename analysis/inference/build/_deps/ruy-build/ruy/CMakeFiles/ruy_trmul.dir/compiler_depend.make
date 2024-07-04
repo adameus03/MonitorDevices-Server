@@ -51,7 +51,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_trmul.dir/trmul.cc.o: ruy/ruy/trmul.cc \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/cstdlib \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
@@ -81,7 +80,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_trmul.dir/trmul.cc.o: ruy/ruy/trmul.cc \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/functional \
@@ -249,6 +247,8 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_trmul.dir/trmul.cc.o: ruy/ruy/trmul.cc \
 
 /usr/include/c++/12/bits/localefwd.h:
 
+/usr/include/c++/12/bits/char_traits.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
 /usr/include/asm-generic/errno.h:
@@ -345,6 +345,10 @@ ruy/ruy/thread_pool.h:
 
 /usr/include/c++/12/memory:
 
+/usr/include/c++/12/bits/stl_uninitialized.h:
+
+/usr/include/string.h:
+
 /usr/include/c++/12/cstring:
 
 /usr/include/c++/12/bits/stl_construct.h:
@@ -431,10 +435,6 @@ ruy/ruy/check_macros.h:
 
 /usr/include/stdint.h:
 
-/usr/include/c++/12/bits/concept_check.h:
-
-/usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h:
-
 /usr/include/c++/12/cstdint:
 
 /usr/include/c++/12/bits/stl_relops.h:
@@ -446,12 +446,6 @@ ruy/ruy/check_macros.h:
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
-
-/usr/include/c++/12/bits/stl_uninitialized.h:
-
-/usr/include/string.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
 
 /usr/include/c++/12/bits/utility.h:
 
@@ -491,6 +485,8 @@ ruy/ruy/check_macros.h:
 
 ruy/ruy/ctx.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
+
 /usr/include/c++/12/type_traits:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
@@ -502,10 +498,6 @@ ruy/ruy/ctx.h:
 /usr/include/c++/12/bits/move.h:
 
 /usr/include/stdc-predef.h:
-
-/usr/include/c++/12/bits/char_traits.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h:
 
@@ -550,8 +542,6 @@ ruy/ruy/mat.h:
 /usr/include/c++/12/bits/new_allocator.h:
 
 /usr/include/c++/12/cstddef:
-
-/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
@@ -614,10 +604,6 @@ ruy/ruy/trmul.cc:
 /usr/include/c++/12/new:
 
 /usr/include/c++/12/tuple:
-
-/usr/include/c++/12/bits/stl_iterator_base_funcs.h:
-
-/usr/include/c++/12/bits/uses_allocator.h:
 
 /usr/include/c++/12/cerrno:
 
@@ -698,3 +684,11 @@ ruy/ruy/matrix.h:
 /usr/include/c++/12/bits/cpp_type_traits.h:
 
 /usr/include/c++/12/bits/stl_iterator_base_types.h:
+
+/usr/include/c++/12/bits/uses_allocator.h:
+
+/usr/include/c++/12/bits/stl_iterator_base_funcs.h:
+
+/usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h:
+
+/usr/include/c++/12/bits/concept_check.h:

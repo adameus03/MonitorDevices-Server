@@ -58,7 +58,6 @@ _deps/xnnpack-build/CMakeFiles/microkernels-prod.dir/src/amalgam/gen/avx.c.o: xn
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/emmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/pmmintrin.h \
@@ -198,7 +197,6 @@ _deps/xnnpack-build/CMakeFiles/microkernels-prod.dir/src/amalgam/gen/avx2.c.o: x
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/emmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/pmmintrin.h \
@@ -323,7 +321,6 @@ _deps/xnnpack-build/CMakeFiles/microkernels-prod.dir/src/amalgam/gen/avx512f.c.o
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/emmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/pmmintrin.h \
@@ -451,7 +448,6 @@ _deps/xnnpack-build/CMakeFiles/microkernels-prod.dir/src/amalgam/gen/avx512skx.c
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/emmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/pmmintrin.h \
@@ -578,7 +574,6 @@ _deps/xnnpack-build/CMakeFiles/microkernels-prod.dir/src/amalgam/gen/avx512vbmi.
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/emmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/pmmintrin.h \
@@ -695,7 +690,6 @@ _deps/xnnpack-build/CMakeFiles/microkernels-prod.dir/src/amalgam/gen/avx512vnni.
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/emmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/pmmintrin.h \
@@ -816,7 +810,6 @@ _deps/xnnpack-build/CMakeFiles/microkernels-prod.dir/src/amalgam/gen/avx512vnnig
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/emmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/pmmintrin.h \
@@ -937,7 +930,6 @@ _deps/xnnpack-build/CMakeFiles/microkernels-prod.dir/src/amalgam/gen/avxvnni.c.o
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/emmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/pmmintrin.h \
@@ -1074,7 +1066,6 @@ _deps/xnnpack-build/CMakeFiles/microkernels-prod.dir/src/amalgam/gen/f16c.c.o: x
   /usr/lib/gcc/x86_64-linux-gnu/12/include/xmmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/mm_malloc.h \
   /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/emmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/pmmintrin.h \
@@ -1209,7 +1200,6 @@ _deps/xnnpack-build/CMakeFiles/microkernels-prod.dir/src/amalgam/gen/fma3.c.o: x
   /usr/lib/gcc/x86_64-linux-gnu/12/include/xmmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/mm_malloc.h \
   /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/emmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/pmmintrin.h \
@@ -1412,7 +1402,6 @@ _deps/xnnpack-build/CMakeFiles/microkernels-prod.dir/src/amalgam/gen/sse.c.o: xn
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/emmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/pmmintrin.h \
@@ -1502,7 +1491,6 @@ _deps/xnnpack-build/CMakeFiles/microkernels-prod.dir/src/amalgam/gen/sse2.c.o: x
   /usr/lib/gcc/x86_64-linux-gnu/12/include/stddef.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h \
   /usr/include/stdint.h \
@@ -1677,7 +1665,6 @@ _deps/xnnpack-build/CMakeFiles/microkernels-prod.dir/src/amalgam/gen/sse41.c.o: 
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/emmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/pmmintrin.h \
@@ -1807,7 +1794,6 @@ _deps/xnnpack-build/CMakeFiles/microkernels-prod.dir/src/amalgam/gen/ssse3.c.o: 
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/emmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/pmmintrin.h \
@@ -2107,7 +2093,9 @@ xnnpack/src/xnnpack/vcvt.h:
 
 xnnpack/src/xnnpack/vbinary.h:
 
-xnnpack/src/xnnpack/transpose.h:
+/usr/lib/gcc/x86_64-linux-gnu/12/include/emmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/12/include/lwpintrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
@@ -2145,6 +2133,10 @@ xnnpack/src/amalgam/gen/scalar.c:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/xsavesintrin.h:
 
+xnnpack/src/xnnpack/transpose.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/12/include/tsxldtrkintrin.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/12/include/adxintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/rtmintrin.h:
@@ -2152,10 +2144,6 @@ xnnpack/src/amalgam/gen/scalar.c:
 /usr/lib/gcc/x86_64-linux-gnu/12/include/popcntintrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/12/include/tsxldtrkintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/wmmintrin.h:
 
@@ -2288,10 +2276,6 @@ xnnpack/src/amalgam/gen/f16c.c:
 /usr/lib/gcc/x86_64-linux-gnu/12/include/avx512bitalgintrin.h:
 
 xnnpack/src/xnnpack/unaligned.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/12/include/lwpintrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/12/include/emmintrin.h:
 
 /usr/include/string.h:
 

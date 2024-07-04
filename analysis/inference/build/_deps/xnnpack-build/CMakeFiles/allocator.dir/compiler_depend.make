@@ -17,7 +17,6 @@ _deps/xnnpack-build/CMakeFiles/allocator.dir/src/allocator.c.o: xnnpack/src/allo
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   xnnpack/include/xnnpack.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/stdbool.h \
@@ -70,8 +69,6 @@ xnnpack/src/xnnpack/common.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/limits.h:
 
-xnnpack/src/xnnpack/allocator.h:
-
 /usr/lib/gcc/x86_64-linux-gnu/12/include/stddef.h:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
@@ -96,6 +93,8 @@ xnnpack/src/xnnpack/allocator.h:
 
 /usr/include/stdlib.h:
 
+/usr/include/assert.h:
+
 /usr/include/stdc-predef.h:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
@@ -113,10 +112,6 @@ xnnpack/src/xnnpack/params.h:
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
-
-/usr/include/assert.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
@@ -137,3 +132,5 @@ xnnpack/include/xnnpack.h:
 /usr/include/features.h:
 
 pthreadpool-source/include/pthreadpool.h:
+
+xnnpack/src/xnnpack/allocator.h:

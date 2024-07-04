@@ -36,7 +36,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_block_map.dir/block_map.cc.o: ruy/ruy/block_m
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/cstdlib \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
@@ -67,7 +66,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_block_map.dir/block_map.cc.o: ruy/ruy/block_m
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/functional \
@@ -187,8 +185,6 @@ ruy/ruy/opt_set.h:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
-
 /usr/include/c++/12/limits:
 
 /usr/include/c++/12/bits/move.h:
@@ -255,8 +251,6 @@ ruy/ruy/side_pair.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
-
 /usr/include/stdc-predef.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
@@ -295,6 +289,10 @@ ruy/ruy/check_macros.h:
 
 /usr/include/features.h:
 
+/usr/include/c++/12/bits/stl_pair.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
+
 /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h:
 
 /usr/include/x86_64-linux-gnu/c++/12/bits/cpu_defines.h:
@@ -310,12 +308,6 @@ ruy/ruy/check_macros.h:
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
-
-/usr/include/c++/12/bits/stl_pair.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
 
 /usr/include/c++/12/cstdio:
 
@@ -356,3 +348,5 @@ ruy/ruy/size_util.h:
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
