@@ -82,7 +82,6 @@ _deps/xnnpack-build/CMakeFiles/memory.dir/src/memory.c.o: xnnpack/src/memory.c \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   xnnpack/src/xnnpack/node-type.h \
   xnnpack/src/xnnpack/math.h \
@@ -150,8 +149,6 @@ xnnpack/src/xnnpack/node-type.h:
 /usr/include/x86_64-linux-gnu/asm/errno.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 /usr/include/stdc-predef.h:
 

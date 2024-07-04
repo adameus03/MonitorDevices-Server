@@ -54,7 +54,6 @@ _deps/xnnpack-build/CMakeFiles/logging.dir/src/enums/datatype-strings.c.o: xnnpa
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   xnnpack/src/xnnpack/node-type.h
 
@@ -145,7 +144,6 @@ _deps/xnnpack-build/CMakeFiles/logging.dir/src/log.c.o: xnnpack/src/log.c \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/types.h \
@@ -158,7 +156,6 @@ _deps/xnnpack-build/CMakeFiles/logging.dir/src/log.c.o: xnnpack/src/log.c \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
@@ -186,8 +183,6 @@ _deps/xnnpack-build/CMakeFiles/logging.dir/src/log.c.o: xnnpack/src/log.c \
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
 /usr/include/unistd.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
@@ -240,8 +235,6 @@ xnnpack/src/xnnpack/allocation-type.h:
 /usr/lib/gcc/x86_64-linux-gnu/12/include/stddef.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 /usr/include/assert.h:
 

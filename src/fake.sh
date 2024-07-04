@@ -11,7 +11,7 @@ if [[ $(sqlite3 $SQLITE_DBS_LOCATION/monitordevicesdb.sqlite "SELECT * FROM user
 else
     echo "$SCRIPT_NICKNAME: Fake user does not exist, creating..."
     
-    sqlite3 $SQLITE_DBS_LOCATION/monitordevicesdb.sqlite "INSERT INTO users (user_id, username, password, email, createdAt, updatedAt) VALUES(X'61616161616161616262626262626262', 'test_user', '10a6e6cc8311a3e2bcc09bf6c199adecd5dd59408c343e926b129c4914f3cb01', 'test_user@testmail.com', '2007-01-01 10:00:00', '2007-01-01 10:00:00')";
+    sqlite3 $SQLITE_DBS_LOCATION/monitordevicesdb.sqlite "INSERT INTO users (user_id, username, password, email, createdAt, updatedAt, wants_mail_notifications) VALUES(X'61616161616161616262626262626262', 'test_user', '10a6e6cc8311a3e2bcc09bf6c199adecd5dd59408c343e926b129c4914f3cb01', 'amadeusz.sitnicki3@gmail.com', '2007-01-01 10:00:00', '2007-01-01 10:00:00', 1)"
 
     if [[ $(sqlite3 $SQLITE_DBS_LOCATION/monitordevicesdb.sqlite "SELECT * FROM users WHERE user_id = X'61616161616161616262626262626262'") ]]; then
         echo "$SCRIPT_NICKNAME: Fake user created successfully"

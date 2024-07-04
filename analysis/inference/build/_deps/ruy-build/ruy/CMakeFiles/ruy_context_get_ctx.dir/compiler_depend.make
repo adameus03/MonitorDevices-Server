@@ -154,7 +154,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_context_get_ctx.dir/context_get_ctx.cc.o: ruy
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/cstdlib \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
@@ -167,7 +166,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_context_get_ctx.dir/context_get_ctx.cc.o: ruy
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/functional \
@@ -248,6 +246,8 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_context_get_ctx.dir/context_get_ctx.cc.o: ruy
 
 /usr/include/c++/12/bits/localefwd.h:
 
+/usr/include/c++/12/bits/char_traits.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
 /usr/include/asm-generic/errno.h:
@@ -281,10 +281,6 @@ ruy/ruy/mat.h:
 /usr/include/c++/12/unordered_map:
 
 /usr/include/c++/12/functional:
-
-/usr/include/c++/12/bits/char_traits.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 /usr/include/alloca.h:
 
@@ -355,8 +351,6 @@ ruy/ruy/platform.h:
 /usr/lib/gcc/x86_64-linux-gnu/12/include/stddef.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
 
 /usr/include/c++/12/bits/stl_uninitialized.h:
 

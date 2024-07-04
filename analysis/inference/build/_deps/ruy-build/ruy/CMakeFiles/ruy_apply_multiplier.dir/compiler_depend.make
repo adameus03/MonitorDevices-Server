@@ -41,7 +41,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_apply_multiplier.dir/apply_multiplier.cc.o: r
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/cstdlib \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
@@ -71,7 +70,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_apply_multiplier.dir/apply_multiplier.cc.o: r
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/functional \
@@ -158,8 +156,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_apply_multiplier.dir/apply_multiplier.cc.o: r
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
-
 /usr/include/stdc-predef.h:
 
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
@@ -223,6 +219,10 @@ ruy/ruy/apply_multiplier.h:
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
 /usr/include/features.h:
+
+/usr/include/c++/12/bits/stl_pair.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
@@ -291,12 +291,6 @@ ruy/ruy/check_macros.h:
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
-
-/usr/include/c++/12/bits/stl_pair.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
 
 /usr/include/c++/12/cstdio:
 

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+export PERSISTENT_VOL_LOCATION="/sau"
+export SQLITE_DBS_LOCATION="/sau/sqlite/databases"
+export DEVFILES_LOCATION="/sau/devfiles"
+
+export MAIL_HOST="xxx"
+export MAIL_USERNAME="yyy"
+export MAIL_PASSWORD="zzz"

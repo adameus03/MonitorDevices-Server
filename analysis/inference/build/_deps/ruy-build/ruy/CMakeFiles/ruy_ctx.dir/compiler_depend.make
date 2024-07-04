@@ -57,7 +57,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_ctx.dir/ctx.cc.o: ruy/ruy/ctx.cc \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/functional \
@@ -131,7 +130,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_ctx.dir/ctx.cc.o: ruy/ruy/ctx.cc \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -324,6 +322,8 @@ ruy/ruy/performance_advisory.h:
 
 /usr/include/c++/12/bits/stl_tempbuf.h:
 
+/usr/include/c++/12/bits/stl_uninitialized.h:
+
 /usr/include/c++/12/memory:
 
 /usr/include/c++/12/ctime:
@@ -354,11 +354,7 @@ ruy/ruy/have_built_path_for.h:
 
 /usr/include/errno.h:
 
-/usr/include/c++/12/bits/stl_uninitialized.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+/usr/include/c++/12/functional:
 
 /usr/include/c++/12/bits/ptr_traits.h:
 
@@ -472,8 +468,6 @@ ruy/ruy/blocking_counter.h:
 
 /usr/include/stdint.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
-
 /usr/include/c++/12/bits/char_traits.h:
 
 /usr/include/asm-generic/errno-base.h:
@@ -557,8 +551,6 @@ ruy/ruy/prepacked_cache.h:
 ruy/ruy/tune.h:
 
 /usr/include/stdlib.h:
-
-/usr/include/c++/12/functional:
 
 /usr/include/c++/12/bits/std_function.h:
 
@@ -683,3 +675,5 @@ ruy/ruy/matrix.h:
 /usr/include/c++/12/ext/type_traits.h:
 
 /usr/include/c++/12/bits/basic_string.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:

@@ -58,7 +58,6 @@ _deps/cpuinfo-build/CMakeFiles/cpuinfo.dir/src/api.c.o: cpuinfo/src/api.c \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   cpuinfo/src/linux/api.h \
   /usr/include/unistd.h \
@@ -169,7 +168,6 @@ _deps/cpuinfo-build/CMakeFiles/cpuinfo.dir/src/init.c.o: cpuinfo/src/init.c \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
 
 _deps/cpuinfo-build/CMakeFiles/cpuinfo.dir/src/linux/cpulist.c.o: cpuinfo/src/linux/cpulist.c \
@@ -223,7 +221,6 @@ _deps/cpuinfo-build/CMakeFiles/cpuinfo.dir/src/linux/cpulist.c.o: cpuinfo/src/li
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/string.h \
   /usr/include/strings.h \
@@ -328,7 +325,6 @@ _deps/cpuinfo-build/CMakeFiles/cpuinfo.dir/src/linux/multiline.c.o: cpuinfo/src/
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/string.h \
   /usr/include/strings.h \
@@ -429,7 +425,6 @@ _deps/cpuinfo-build/CMakeFiles/cpuinfo.dir/src/linux/processors.c.o: cpuinfo/src
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/stdio.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/stdarg.h \
@@ -441,7 +436,6 @@ _deps/cpuinfo-build/CMakeFiles/cpuinfo.dir/src/linux/processors.c.o: cpuinfo/src
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/string.h \
   /usr/include/strings.h \
   /usr/include/sched.h \
@@ -505,7 +499,6 @@ _deps/cpuinfo-build/CMakeFiles/cpuinfo.dir/src/linux/smallfile.c.o: cpuinfo/src/
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/string.h \
   /usr/include/strings.h \
@@ -605,7 +598,6 @@ _deps/cpuinfo-build/CMakeFiles/cpuinfo.dir/src/log.c.o: cpuinfo/src/log.c \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
@@ -616,7 +608,6 @@ _deps/cpuinfo-build/CMakeFiles/cpuinfo.dir/src/log.c.o: cpuinfo/src/log.c \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/environments.h \
@@ -716,7 +707,6 @@ _deps/cpuinfo-build/CMakeFiles/cpuinfo.dir/src/x86/cache/deterministic.c.o: cpui
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
 
 _deps/cpuinfo-build/CMakeFiles/cpuinfo.dir/src/x86/cache/init.c.o: cpuinfo/src/x86/cache/init.c \
@@ -775,7 +765,6 @@ _deps/cpuinfo-build/CMakeFiles/cpuinfo.dir/src/x86/cache/init.c.o: cpuinfo/src/x
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   cpuinfo/src/x86/cpuid.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/cpuid.h \
@@ -868,7 +857,6 @@ _deps/cpuinfo-build/CMakeFiles/cpuinfo.dir/src/x86/init.c.o: cpuinfo/src/x86/ini
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
 
 _deps/cpuinfo-build/CMakeFiles/cpuinfo.dir/src/x86/isa.c.o: cpuinfo/src/x86/isa.c \
@@ -949,7 +937,6 @@ _deps/cpuinfo-build/CMakeFiles/cpuinfo.dir/src/x86/linux/cpuinfo.c.o: cpuinfo/sr
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/string.h \
   /usr/include/strings.h \
@@ -1012,7 +999,6 @@ _deps/cpuinfo-build/CMakeFiles/cpuinfo.dir/src/x86/linux/init.c.o: cpuinfo/src/x
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/string.h \
   /usr/include/strings.h \
@@ -1060,7 +1046,6 @@ _deps/cpuinfo-build/CMakeFiles/cpuinfo.dir/src/x86/name.c.o: cpuinfo/src/x86/nam
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/string.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
@@ -1125,7 +1110,6 @@ _deps/cpuinfo-build/CMakeFiles/cpuinfo.dir/src/x86/topology.c.o: cpuinfo/src/x86
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   cpuinfo/src/x86/api.h \
   cpuinfo/src/cpuinfo/common.h \
@@ -1211,8 +1195,6 @@ cpuinfo/src/linux/smallfile.c:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
-
 /usr/include/x86_64-linux-gnu/bits/stat.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
@@ -1238,8 +1220,6 @@ cpuinfo/src/x86/init.c:
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
 
 /usr/include/string.h:
 
@@ -1287,6 +1267,10 @@ cpuinfo/include/cpuinfo.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
+cpuinfo/src/linux/api.h:
+
+/usr/include/stdint.h:
+
 /usr/include/inttypes.h:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
@@ -1306,6 +1290,8 @@ cpuinfo/src/api.c:
 /usr/include/asm-generic/posix_types.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 cpuinfo/src/cpuinfo/internal-api.h:
 
@@ -1330,10 +1316,6 @@ cpuinfo/src/cpuinfo/internal-api.h:
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_core.h:
-
-/usr/include/stdint.h:
-
-cpuinfo/src/linux/api.h:
 
 cpuinfo/src/cpuinfo/log.h:
 
@@ -1374,8 +1356,6 @@ cpuinfo/src/x86/cpuid.h:
 cpuinfo/src/cache.c:
 
 /usr/include/pthread.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 /usr/include/x86_64-linux-gnu/asm/types.h:
 

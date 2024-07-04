@@ -269,6 +269,9 @@ export class ConnectedDevice extends EventEmitter {
 	lastPacketReceived: EpochTimeStamp = Date.now();
 	videoManager: DeviceVideoManager;
 
+	public isRecording: boolean = false;
+	public recordingStartDateTime: Date|null = null;
+
 	constructor(socket: net.Socket, deviceID: Uint8Array, sessionID: Uint8Array) {
 		super();
 		this.socket = socket;

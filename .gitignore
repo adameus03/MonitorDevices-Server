@@ -1,5 +1,8 @@
+.env
 #Application-specific
+helpers/config.sh
 analysis/tflite_build
+analysis/tags
 #analysis/inference/build
 analysis-old
 

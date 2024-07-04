@@ -27,7 +27,6 @@ _deps/fft2d-build/CMakeFiles/fft2d_fftsg2d.dir/__/__/fft2d/fftsg2d.c.o: fft2d/ff
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
@@ -55,7 +54,6 @@ _deps/fft2d-build/CMakeFiles/fft2d_fftsg2d.dir/__/__/fft2d/fftsg2d.c.o: fft2d/ff
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
 
 
@@ -88,8 +86,6 @@ _deps/fft2d-build/CMakeFiles/fft2d_fftsg2d.dir/__/__/fft2d/fftsg2d.c.o: fft2d/ff
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/stddef.h:
 
@@ -151,10 +147,6 @@ fft2d/fftsg2d.c:
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
@@ -170,3 +162,5 @@ fft2d/fftsg2d.c:
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
 /usr/include/stdlib.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:

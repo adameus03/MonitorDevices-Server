@@ -44,7 +44,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_pack_avx.dir/pack_avx.cc.o: ruy/ruy/pack_avx.
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/cstdlib \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
@@ -72,7 +71,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_pack_avx.dir/pack_avx.cc.o: ruy/ruy/pack_avx.
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/functional \
@@ -299,6 +297,8 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_pack_avx.dir/pack_avx.cc.o: ruy/ruy/pack_avx.
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/uintrintrin.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/12/include/tsxldtrkintrin.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/12/include/sgxintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/rdseedintrin.h:
@@ -349,7 +349,7 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_pack_avx.dir/pack_avx.cc.o: ruy/ruy/pack_avx.
 
 /usr/include/c++/12/chrono:
 
-ruy/ruy/cpuinfo.h:
+/usr/include/c++/12/cstddef:
 
 ruy/ruy/size_util.h:
 
@@ -382,10 +382,6 @@ ruy/ruy/profiler/instrumentation.h:
 /usr/lib/gcc/x86_64-linux-gnu/12/include/avx512fp16vlintrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
-
-ruy/ruy/time.h:
-
-/usr/include/c++/12/bits/stl_pair.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/fmaintrin.h:
 
@@ -439,8 +435,6 @@ ruy/ruy/check_macros.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/pmmintrin.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
-
 /usr/include/string.h:
 
 /usr/include/c++/12/bits/stl_tempbuf.h:
@@ -462,6 +456,10 @@ ruy/ruy/check_macros.h:
 /usr/include/features-time64.h:
 
 /usr/include/stdint.h:
+
+ruy/ruy/time.h:
+
+/usr/include/c++/12/bits/stl_pair.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/amxtileintrin.h:
 
@@ -490,10 +488,6 @@ ruy/ruy/check_macros.h:
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/12/include/tsxldtrkintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h:
 
@@ -552,8 +546,6 @@ ruy/ruy/check_macros.h:
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
 ruy/ruy/platform.h:
-
-/usr/include/c++/12/cstddef:
 
 ruy/ruy/pack_common.h:
 
@@ -617,12 +609,6 @@ ruy/ruy/mat.h:
 
 /usr/include/c++/12/bits/functexcept.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/12/include/avx512cdintrin.h:
-
-ruy/ruy/cpu_cache_params.h:
-
-/usr/include/c++/12/bits/exception_defines.h:
-
 /usr/lib/gcc/x86_64-linux-gnu/12/include/emmintrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
@@ -650,6 +636,12 @@ ruy/ruy/pack_x86.h:
 /usr/include/c++/12/debug/debug.h:
 
 /usr/include/c++/12/bits/algorithmfwd.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/12/include/avx512cdintrin.h:
+
+/usr/include/c++/12/bits/exception_defines.h:
+
+ruy/ruy/cpu_cache_params.h:
 
 /usr/include/c++/12/bits/stl_heap.h:
 
@@ -686,3 +678,5 @@ ruy/ruy/path.h:
 /usr/include/stdlib.h:
 
 ruy/ruy/tune.h:
+
+ruy/ruy/cpuinfo.h:

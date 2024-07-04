@@ -62,6 +62,7 @@ CMakeFiles/inference.dir/converter.c.o
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/alloca.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/assert.h
 
 CMakeFiles/inference.dir/main.c.o
  /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/main.c

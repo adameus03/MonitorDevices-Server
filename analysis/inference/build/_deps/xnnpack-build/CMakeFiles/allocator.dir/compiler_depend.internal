@@ -18,7 +18,6 @@ _deps/xnnpack-build/CMakeFiles/allocator.dir/src/allocator.c.o
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h
  /usr/include/x86_64-linux-gnu/bits/floatn.h
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h
- /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
  /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/include/xnnpack.h
  /usr/lib/gcc/x86_64-linux-gnu/12/include/stdbool.h

@@ -55,7 +55,7 @@ export async function registerDevice(data: PacketData, sock: Socket) {
 			}
 		}
 	} else {
-		console.log("Device sent nonexistent user ID to register");
+		console.log(`Device sent nonexistent user ID to register (id=${registrationData.userID})`);
 		sock.end();
 	}
 }

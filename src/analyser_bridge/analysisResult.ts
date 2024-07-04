@@ -9,9 +9,9 @@ export class AnalysisResult {
 }
 
 export class AnalysisResultReport {
-    connectedDevice: ConnectedDevice;
-    frameData: Uint8Array; // JFIF frame data
-    analysisResult: AnalysisResult;
+    public readonly connectedDevice: ConnectedDevice;
+    public readonly frameData: Uint8Array; // JFIF frame data
+    public readonly analysisResult: AnalysisResult;
 
     constructor(connectedDevice: ConnectedDevice, frameData: Uint8Array, analysisResult: AnalysisResult) {
         this.connectedDevice = connectedDevice;
