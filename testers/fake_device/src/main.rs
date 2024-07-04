@@ -16,7 +16,7 @@ fn main() {
 
     println!("fake device starting");
 
-	let image_file = read(config.file_path).unwrap();
+	//let image_file = read(config.file_path).unwrap();
 
 	let mut stream = TcpStream::connect("127.0.0.1:3334").unwrap();
 	let user_id = [0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x62, 0x62, 0x62, 0x62, 0x62, 0x62, 0x62, 0x62]; // update as necessary - maybe include sqlx?
@@ -93,9 +93,25 @@ fn main() {
 	sender.connect("127.0.0.1:3333").unwrap();
 	let mut packet_counter = 0u32;
 
+	// The base path for all the images is /sau/jpeg_frames
+	let base_path = PathBuf::from("/sau/jpeg_frames");
+	let num_digits = 9;
+	let mut image_counter = 620;
+
 	loop {
+		// File path is ./jpeg_frames/000000001.jpg, ./jpeg_frames/000000002.jpg, etc. ...
+		// if image_counter > 1 {
+        //     panic!("image_counter greater than 1");
+        // }
+        image_counter += 1;
+		let file_path = base_path.join(format!("106L_{:0width$}.jpg", image_counter, width = num_digits));
+		println!("Sending image {}", file_path.display());
+
+		let image_file = read(file_path).unwrap();
+
 		let frames = split_bytes_into_image_chunks(&image_file, packet_counter, session_id);
 		packet_counter += frames.len() as u32;
+
 
 		for frame in frames {
 			let frame_packet_bytes = frame.to_bytes().unwrap();
@@ -103,7 +119,12 @@ fn main() {
 			//println!("Packet ID {} send {} bytes", packet_counter, bytes_sent);
 			thread::sleep(Duration::from_millis(20));
 		}
-		thread::sleep(Duration::from_millis(200));
+		thread::sleep(Duration::from_millis(250));
+        //thread::sleep(Duration::from_millis(50));
+
+		// if image_counter == 1 {
+		// 	break;
+		// }
 	}
 
 }

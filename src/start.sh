@@ -32,7 +32,9 @@ if [ $? -eq 0 ]; then
                 exit 1
             fi
             ./inference/inference &
-            cd ..
+	    #whoami
+            #tmux new-session -d -s inference './inference/inference'
+	    cd ..
             # Start mocks
             chmod u+x ./fake.sh
             if [ $? -eq 0 ]; then
@@ -43,6 +45,7 @@ if [ $? -eq 0 ]; then
                     echo "$SCRIPT_NICKNAME: Launching core application (Node.js)"
                     # Start the node server
                     npm run pm2
+		    # tail -f /dev/null
                     # npm run start
                 else
                     echo "$SCRIPT_NICKNAME: ERROR - Failed to start the mocks"

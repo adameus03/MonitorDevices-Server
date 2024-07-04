@@ -39,7 +39,6 @@ _deps/xnnpack-build/CMakeFiles/operator-run.dir/src/operator-run.c.o: xnnpack/sr
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   xnnpack/src/xnnpack/node-type.h \
   xnnpack/src/xnnpack/microkernel-type.h \
@@ -139,8 +138,6 @@ FP16-source/include/fp16/fp16.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
-/usr/include/sched.h:
-
 xnnpack/src/xnnpack/microfnptr.h:
 
 pthreadpool-source/include/pthreadpool.h:
@@ -237,8 +234,6 @@ xnnpack/src/xnnpack/microparams.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
-
 /usr/include/stdc-predef.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
@@ -284,3 +279,5 @@ xnnpack/src/xnnpack/config.h:
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h:
+
+/usr/include/sched.h:

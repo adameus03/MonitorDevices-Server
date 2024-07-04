@@ -127,7 +127,7 @@ router.ws('/web-socket', async (req, res) => {
 
                             //Send frames
                             session.videoManager.on('newFrame', (frameData: any) => {                       
-                                console.log(`New frame received from device ${session.deviceID}`);
+                                // console.log(`New frame received from device ${session.deviceID}`);
                                 ws.send(frameData);
                             });
 

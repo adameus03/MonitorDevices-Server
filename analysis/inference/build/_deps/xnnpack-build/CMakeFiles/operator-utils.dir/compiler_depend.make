@@ -39,7 +39,6 @@ _deps/xnnpack-build/CMakeFiles/operator-utils.dir/src/operator-utils.c.o: xnnpac
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   xnnpack/src/xnnpack/common.h \
   xnnpack/src/xnnpack/params.h \
@@ -172,12 +171,6 @@ xnnpack/include/xnnpack.h:
 
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
-/usr/include/x86_64-linux-gnu/bits/endian.h:
-
-/usr/include/string.h:
-
-xnnpack/src/xnnpack/cache.h:
-
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/stddef.h:
@@ -212,8 +205,6 @@ xnnpack/src/xnnpack/params.h:
 
 xnnpack/src/xnnpack/operator-utils.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
-
 /usr/include/stdc-predef.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
@@ -247,6 +238,12 @@ xnnpack/src/xnnpack/node-type.h:
 xnnpack/src/xnnpack/memory.h:
 
 xnnpack/src/xnnpack/math.h:
+
+/usr/include/string.h:
+
+xnnpack/src/xnnpack/cache.h:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
 
 /usr/include/pthread.h:
 

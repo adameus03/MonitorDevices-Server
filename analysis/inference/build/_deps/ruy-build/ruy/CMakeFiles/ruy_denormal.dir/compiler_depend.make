@@ -61,7 +61,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_denormal.dir/denormal.cc.o: ruy/ruy/denormal.
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/emmintrin.h
@@ -112,8 +111,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_denormal.dir/denormal.cc.o: ruy/ruy/denormal.
 /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 /usr/include/stdc-predef.h:
 

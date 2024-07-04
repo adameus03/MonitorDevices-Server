@@ -153,7 +153,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_thread_pool.dir/thread_pool.cc.o: ruy/ruy/thr
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/cstdio \
@@ -163,7 +162,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_thread_pool.dir/thread_pool.cc.o: ruy/ruy/thr
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/bits/charconv.h \
   /usr/include/c++/12/bits/basic_string.tcc \
   /usr/include/x86_64-linux-gnu/c++/12/bits/gthr.h \
@@ -362,8 +360,6 @@ ruy/ruy/blocking_counter.h:
 
 /usr/include/c++/12/bits/std_mutex.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
-
 /usr/include/c++/12/bits/stl_uninitialized.h:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
@@ -387,8 +383,6 @@ ruy/ruy/blocking_counter.h:
 /usr/include/c++/12/debug/debug.h:
 
 /usr/include/stdint.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 /usr/include/c++/12/bits/char_traits.h:
 

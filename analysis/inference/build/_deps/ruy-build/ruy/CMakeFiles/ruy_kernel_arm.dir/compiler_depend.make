@@ -89,7 +89,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_kernel_arm.dir/kernel_arm32.cc.o: ruy/ruy/ker
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   ruy/ruy/apply_multiplier.h \
@@ -105,7 +104,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_kernel_arm.dir/kernel_arm32.cc.o: ruy/ruy/ker
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/functional \
   /usr/include/c++/12/bits/stl_function.h \
   /usr/include/c++/12/backward/binders.h \
@@ -184,7 +182,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_kernel_arm.dir/kernel_arm64.cc.o: ruy/ruy/ker
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/cstdlib \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
@@ -214,7 +211,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_kernel_arm.dir/kernel_arm64.cc.o: ruy/ruy/ker
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/functional \
@@ -304,8 +300,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_kernel_arm.dir/kernel_arm64.cc.o: ruy/ruy/ker
 
 /usr/include/c++/12/chrono:
 
-ruy/ruy/cpuinfo.h:
-
 /usr/include/c++/12/bits/stl_construct.h:
 
 /usr/include/c++/12/bits/stl_tempbuf.h:
@@ -341,10 +335,6 @@ ruy/ruy/cpu_cache_params.h:
 /usr/include/c++/12/bits/exception_defines.h:
 
 /usr/include/c++/12/bits/stl_algobase.h:
-
-ruy/ruy/tune.h:
-
-/usr/include/stdlib.h:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
@@ -395,8 +385,6 @@ ruy/ruy/time.h:
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
 
 /usr/include/x86_64-linux-gnu/c++/12/bits/cpu_defines.h:
 
@@ -520,8 +508,6 @@ ruy/ruy/kernel_arm64.cc:
 
 /usr/include/alloca.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
-
 ruy/ruy/apply_multiplier.h:
 
 ruy/ruy/opt_set.h:
@@ -573,3 +559,9 @@ ruy/ruy/path.h:
 ruy/ruy/platform.h:
 
 ruy/ruy/side_pair.h:
+
+/usr/include/stdlib.h:
+
+ruy/ruy/tune.h:
+
+ruy/ruy/cpuinfo.h:

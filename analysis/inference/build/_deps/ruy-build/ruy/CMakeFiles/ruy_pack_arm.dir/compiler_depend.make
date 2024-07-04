@@ -80,7 +80,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_pack_arm.dir/pack_arm.cc.o: ruy/ruy/pack_arm.
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/cstdint \
@@ -102,7 +101,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_pack_arm.dir/pack_arm.cc.o: ruy/ruy/pack_arm.
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
   /usr/include/c++/12/functional \
   /usr/include/c++/12/bits/stl_function.h \
   /usr/include/c++/12/backward/binders.h \
@@ -161,8 +159,6 @@ _deps/ruy-build/ruy/CMakeFiles/ruy_pack_arm.dir/pack_arm.cc.o: ruy/ruy/pack_arm.
 
 /usr/include/c++/12/chrono:
 
-ruy/ruy/cpuinfo.h:
-
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
@@ -194,6 +190,8 @@ ruy/ruy/pack_arm.cc:
 /usr/include/c++/12/bits/stl_construct.h:
 
 /usr/include/c++/12/bits/stl_tempbuf.h:
+
+/usr/include/string.h:
 
 /usr/include/c++/12/bits/stl_heap.h:
 
@@ -238,10 +236,6 @@ ruy/ruy/check_macros.h:
 /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h:
 
 /usr/include/c++/12/bits/stl_algobase.h:
-
-ruy/ruy/tune.h:
-
-/usr/include/stdlib.h:
 
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
@@ -297,10 +291,6 @@ ruy/ruy/time.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
-/usr/include/string.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
-
 /usr/include/features-time64.h:
 
 /usr/include/c++/12/algorithm:
@@ -310,8 +300,6 @@ ruy/ruy/time.h:
 /usr/include/c++/12/limits:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
@@ -428,3 +416,9 @@ ruy/ruy/matrix.h:
 ruy/ruy/platform.h:
 
 ruy/ruy/path.h:
+
+/usr/include/stdlib.h:
+
+ruy/ruy/tune.h:
+
+ruy/ruy/cpuinfo.h:

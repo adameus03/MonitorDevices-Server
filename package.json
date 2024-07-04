@@ -34,6 +34,7 @@
     "@andreekeberg/imagedata": "^1.0.2",
     "@types/crypto-js": "^4.2.2",
     "@types/jsonwebtoken": "^9.0.6",
+    "@types/nodemailer": "^6.4.15",
     "@types/ws": "^8.5.10",
     "crypto-js": "^4.2.0",
     "debug": "^4.3.4",
@@ -41,10 +42,12 @@
     "express": "^4.19.2",
     "express-ws": "^5.0.2",
     "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.14",
     "pm2": "^5.4.0",
     "sequelize": "^6.37.1",
     "sqlite3": "^5.1.7",
     "websocket-express": "^3.1.0",
+    "winston": "^3.13.0",
     "ws": "^8.17.0"
   },
   "devDependencies": {

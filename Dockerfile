@@ -38,17 +38,9 @@ RUN apt-get install -y sqlite3 libsqlite3-dev npm
 WORKDIR /opt/app
 COPY src/package.json src/package-lock.json ./
 RUN npm install
-COPY src/ .
 
-RUN npx tsc
-COPY .env ./transpiled/bin/
-
-RUN mkdir helpers
-COPY helpers ./helpers
-EXPOSE $expose_port_1
-EXPOSE $expose_port_2
-EXPOSE $expose_port_3
-
+#RUN apt-get install -y tmux gdb
+RUN apt-get install -y ffmpeg
 
 RUN mkdir -p /opt/app/analysis/inference
 RUN mkdir -p /opt/app/analysis/sauas
@@ -64,14 +56,32 @@ COPY analysis/inference/surveillance_mobilenet_10_epochs_fixed_LS_90_balanced.tf
 WORKDIR /opt/app/analysis/sauas
 COPY analysis/sauas/build/ ./
 
+
+WORKDIR /opt/app
+COPY src/ .
+
+RUN npx tsc
+COPY .env ./transpiled/bin/
+
+RUN mkdir helpers
+COPY helpers ./helpers
+EXPOSE $expose_port_1
+EXPOSE $expose_port_2
+EXPOSE $expose_port_3
+
+
+
+
 # Copy mock programs to the container (for now just the fake device)
 WORKDIR /opt/app
 RUN mkdir -p /opt/app/fake
 WORKDIR /opt/app/fake
 RUN mkdir fakedev
+#RUN mkdir -p fakedev/jpeg_frames
 COPY testers/fake_device/target ./fakedev
 # Copy fakedev images to the container
-COPY testers/fake_device/*.jpg ./fakedev/
+#COPY testers/fake_device/*.jpg ./fakedev/
+#COPY testers/fake_device/jpeg_frames/*.jpg ./fakedev/jpeg_frames/
 
 WORKDIR /opt/app
 RUN mkdir /sau

@@ -56,7 +56,6 @@ _deps/xnnpack-build/CMakeFiles/logging.dir/src/enums/datatype-strings.c.o
  /usr/include/stdlib.h
  /usr/include/x86_64-linux-gnu/bits/floatn.h
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h
- /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
  /home/mundus/base/esp/esp32_cam_surv_ai/server/analysis/inference/build/xnnpack/src/xnnpack/node-type.h
 
@@ -151,7 +150,6 @@ _deps/xnnpack-build/CMakeFiles/logging.dir/src/log.c.o
  /usr/include/stdlib.h
  /usr/include/x86_64-linux-gnu/bits/floatn.h
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h
- /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
  /usr/include/stdio.h
  /usr/include/x86_64-linux-gnu/bits/types.h
@@ -164,7 +162,6 @@ _deps/xnnpack-build/CMakeFiles/logging.dir/src/log.c.o
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
- /usr/include/x86_64-linux-gnu/bits/stdio.h
  /usr/include/unistd.h
  /usr/include/x86_64-linux-gnu/bits/posix_opt.h
  /usr/include/x86_64-linux-gnu/bits/confname.h

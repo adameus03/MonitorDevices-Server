@@ -17,6 +17,8 @@ for running the container
 WARNING:
 After a few container image builds you can notice an increased disk space usage. You can run `docker system prune` to remove dangling resources and save yourself from buying a bigger drive
 
+NOTE: You need to provide helpers/config.sh configuration file - based on helpers/config.sh.sample
+
 ## Requirements
 
 Before running the application locally, make sure you have the following prerequisites installed:
