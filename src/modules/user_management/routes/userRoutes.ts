@@ -47,7 +47,10 @@ router.post("/login", async (req, res, next) => {
                     await res.setHeader('Authorization', token);
                 }
 		console.log(`UUUUU USERNAME: ${user.get('username')}`);
-                res.status(200).json({ username: user.get('username') });
+                res.status(200).json({ 
+		    username: user.get('username'), 
+                    user_id: user.get("user_id")
+		});
                 console.log("-- [login] after res,sendStatus --");
             } else {
 		console.log("[dbg] In /login else(user)");
